@@ -1,8 +1,8 @@
 function App() {
   return (
     <>
-      <div className="text-green-500 ">
-        Hello ffsdf dfsdf dfdsf dfdsfa dfsdfsdf dfdfdf world
+      <div className="h-[90vh] flex justify-center items-center text-8xl italic ">
+        Drifty
       </div>
     </>
   );
