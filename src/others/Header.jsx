@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
-export const Header = () => {
-  const [open, setOpen] = React.useState(false);
+const Header = () => {
+  const [open, setOpen] = useState(false);
 
   // const [flyer, setFlyer] = React.useState(false);
 
@@ -391,4 +391,4 @@ export const Header = () => {
   );
 };
 
-
+export default Header;

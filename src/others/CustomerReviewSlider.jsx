@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import customerReview from "./../assets/How It Works/CustomerReview1.png";
 
 // Import Swiper styles
@@ -67,7 +67,8 @@ export default function CustomerReviewSlider() {
       <div className="container mx-auto mb-10 overflow-visible select-none">
         <Swiper
           pagination={{
-            type: "fraction",
+            dynamicBullets: true,
+            clickable:true
           }}
           loop={true}
           centeredSlides={true}
@@ -103,6 +104,20 @@ export default function CustomerReviewSlider() {
           modules={[Pagination, Navigation, Autoplay]}
           className="relative overflow-visible customerSwiper"
         >
+          <div className="absolute z-10 flex  gap-4 right-2 md:right-20  -top-16 ">
+            <div
+              ref={navigationPrevRef}
+              className=" p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125"
+            >
+              <AiOutlineArrowLeft />
+            </div>
+            <div
+              ref={navigationNextRef}
+              className=" p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125"
+            >
+              <AiOutlineArrowRight />
+            </div>
+          </div>
           {data.map((x, i) => {
             return (
               <SwiperSlide
@@ -146,20 +161,8 @@ export default function CustomerReviewSlider() {
           {/* <div className="absolute z-10 text-white bottom-10 right-44 md:bottom-[83px]">
           2/3
          </div> */}
-          <div className="absolute z-10 flex border divide-x shadow-md right-2 md:right-[47.8%] shadow-black bottom-10 ">
-            <div
-              ref={navigationPrevRef}
-              className=" p-1.5 sm:p-2 cursor-pointer bg-white hover:bg-[#1D3A8A] text-red-600"
-            >
-              <GrFormPrevious />
-            </div>
-            <div
-              ref={navigationNextRef}
-              className=" p-1.5 sm:p-2 cursor-pointer bg-white hover:bg-[#1D3A8A] hover:text-white "
-            >
-              <GrFormNext />
-            </div>
-          </div>
+
+          <div className="h-10"></div>
         </Swiper>
       </div>
     </>

@@ -69,7 +69,7 @@ const ForSellers = () => {
             );
           })}
         </div>
-        <div className=" lg:flex items-end gap-8 mb-2">
+        <div className=" lg:flex items-end gap-8 mb-2 justify-end">
           <div>
             <div className="text-[9rem] text-[#BFBFBF] -mb-10 -ml-4">02</div>
             <div className="text-5xl">Close the Deal</div>

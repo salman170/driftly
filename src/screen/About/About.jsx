@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../../others/Header";
+import  Header  from "../../others/Header";
 
 const About = () => {
   return (

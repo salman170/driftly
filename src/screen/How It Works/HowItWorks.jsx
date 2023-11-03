@@ -4,7 +4,7 @@ import VideoThumbnail from "../../assets/How It Works/Videothumbnail.png";
 import ForBuyer from "./ForBuyer";
 import ForSellers from "./ForSellers";
 import CustomerReview from "../../others/CustomerReview";
-import { Header } from "../../others/Header";
+import Header  from "../../others/Header";
 // import { ImPlay3 } from "react-icons/im";
 
 const HowItWorks = () => {
