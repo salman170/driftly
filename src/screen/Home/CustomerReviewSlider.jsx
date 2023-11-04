@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
-import customerReview from "./../assets/How It Works/CustomerReview1.png";
+import customerReview from "./../../assets/How It Works/CustomerReview1.png"
 
 // Import Swiper styles
 import "swiper/css";
@@ -68,7 +68,7 @@ export default function CustomerReviewSlider() {
         <Swiper
           pagination={{
             dynamicBullets: true,
-            clickable:true
+            clickable: true,
           }}
           loop={true}
           centeredSlides={true}
@@ -126,13 +126,16 @@ export default function CustomerReviewSlider() {
               >
                 <div className=" overflow-hidden bg-[#171614]  duration-200 grid grid-cols-3">
                   <div className="p-4 my-auto space-y-3 text-left h-full lg:p-6  text-white flex flex-col justify-center ">
-                    <div className="mb-3 text-2xl font-semibold uppercase ml-6">
+                    <div className="mb-3 lg:text-2xl font-semibold uppercase ml-6">
                       " {x.name} "
                     </div>
                     <div className="flex  gap-4">
                       <div className="w-1.5 round3 bg-gradient-to-tr from-[#00bbb8] to-[#0cf2b4] h-full rounded-full"></div>
                       <div className="pt-4">
-                        <span className="font-bold">Amit Kumar, </span> Mumbai
+                        <span className="font-medium lg:font-bold">
+                          Amit Kumar,{" "}
+                        </span>{" "}
+                        <span className="font-extralight"> Mumbai</span>
                       </div>
                     </div>
                   </div>

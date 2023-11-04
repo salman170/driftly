@@ -3,7 +3,7 @@ import HeroImage from "../../assets/How It Works/Howitwork-HeroImage.png";
 import VideoThumbnail from "../../assets/How It Works/Videothumbnail.png";
 import ForBuyer from "./ForBuyer";
 import ForSellers from "./ForSellers";
-import CustomerReview from "../../others/CustomerReview";
+import CustomerReview from "../Home/CustomerReview";
 import Header  from "../../others/Header";
 // import { ImPlay3 } from "react-icons/im";
 
@@ -15,7 +15,7 @@ const HowItWorks = () => {
       {/* Hero Section */}
       <section className="overflow-hidden">
         <div className="relative">
-          <img src={HeroImage} alt="" srcset="" className="w-full" />
+          <img src={HeroImage} alt="" srcSet="" className="w-full" />
           <div className="container mx-auto absolute  text-white  top-1/3 left-40">
             <div className="text-5xl mb-4">
               Buying & Selling <br /> made easy
@@ -61,7 +61,7 @@ const HowItWorks = () => {
       {/* Video Section  */}
       <section className="overflow-hidden">
         <div className="mt-20 mb-10 relative">
-          <img src={VideoThumbnail} alt="" srcset="" className="w-full" />
+          <img src={VideoThumbnail} alt="" srcSet="" className="w-full" />
           <div className=" lg:absolute top-1/3 left-10 container mx-auto w-full  lg:text-white font-extralight text-black mt-4 lg:mt-0">
             <div className="text-4xl  mb-4">Ready for your next great car?</div>
             <div className="mb-4">

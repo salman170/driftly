@@ -11,6 +11,7 @@ import About from "./screen/About/About";
 import CarList from "./screen/Car List/CarList";
 import Finance from "./screen/Finance/Finance";
 import Sell from "./screen/Sell/Sell";
+import ExperienceCenter from "./screen/About/ExperienceCenter";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/car-care" element={<CarCare />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/about" element={<About />} />
+          <Route exact path="/experience-center" element={<ExperienceCenter />} />
           <Route exact path="/car-lists" element={<CarList />} />
 
           <Route exact path="/sell" element={<Sell />} />

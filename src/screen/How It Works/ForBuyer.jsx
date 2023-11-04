@@ -73,7 +73,7 @@ const ForBuyer = () => {
      
       <div className="   p-24 relative ">
         <div className=" lg:flex items-end gap-8 mb-2">
-          <img src={ForBuyer1} alt="" srcset="" />
+          <img src={ForBuyer1} alt="" srcSet="" />
           <div>
             <div className="text-[9rem] text-[#BFBFBF] -mb-10 -ml-4">01</div>
             <div className="text-5xl">Browse Online</div>
@@ -105,7 +105,7 @@ const ForBuyer = () => {
             <div className="text-[9rem] text-[#BFBFBF] -mb-10 -ml-4">02</div>
             <div className="text-5xl">Make it Yours</div>
           </div>
-          <img src={ForBuyer2} alt="" srcset="" />
+          <img src={ForBuyer2} alt="" srcSet="" />
         </div>
         <div className="grid lg:grid-cols-2 gap-x-2 gap-y-12 mb-20 container mx-auto lg:px-24 pt-12">
           {data[1].map((x, i) => {
@@ -128,7 +128,7 @@ const ForBuyer = () => {
           })}
         </div>
         <div className=" lg:flex items-end gap-8 ">
-          <img src={ForBuyer3} alt="" srcset="" />
+          <img src={ForBuyer3} alt="" srcSet="" />
           <div>
             <div className="text-[9rem] text-[#BFBFBF] -mb-10 -ml-4">03</div>
             <div className="text-5xl">Get it Delivered</div>
@@ -146,7 +146,7 @@ const ForBuyer = () => {
                 {/* <img
                   src={CheckCircle}
                   alt=""
-                  srcset=""
+                  srcSet=""
                   className="h-min w-min scale-[1.20]"
                 /> */}
                 <div key={i}>
