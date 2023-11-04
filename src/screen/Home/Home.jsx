@@ -204,7 +204,7 @@ const BrowseByBrand = () => {
         ))}
       </div>
       <div className="hover:bg-gradient-to-l select-none from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-8 py-3 cursor-pointer bg-white text-black hover:text-white border border-gray-300 mx-auto">
-        View More
+        View More kjdfjkldj
       </div>
     </div>
   );
