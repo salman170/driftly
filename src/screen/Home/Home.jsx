@@ -23,11 +23,14 @@ import DC from "../../assets/Home/DC.png";
 import Chrysler from "../../assets/Home/Chrysler.png";
 import Nisan from "../../assets/Home/Nisan.png";
 
+import DriftyBenefitsSlider from "./DriftyBenefitsSlider";
+
 const Home = () => {
   return (
     <div className="">
       {/* <Header /> */}
       <HeroSection />
+      <DriftlyBanefits />
       <HDW />
       <BrowseByBrand />
       <DCEC />
@@ -68,9 +71,18 @@ const HeroSection = () => {
   );
 };
 
-// const DriftlyBanefits = () => {
-//   return <div></div>;
-// };
+const DriftlyBanefits = () => {
+  return (
+    <div className="container relative py-20 mx-auto">
+      <div className="absolute text-5xl top-16 left-[5%] font-light">
+        Driftly Banefits
+      </div>
+      <div className="mt-16 ">
+        <DriftyBenefitsSlider />
+      </div>
+    </div>
+  );
+};
 
 const HDW = () => {
   return (
@@ -78,7 +90,7 @@ const HDW = () => {
       <div className="relative mb-10 ">
         <img src={VideoThumbnail} alt="" srcSet="" className="w-full" />
         <div className=" lg:absolute top-1/3 left-[8%] container mx-auto w-full  lg:text-white font-extralight text-black mt-4 lg:mt-0">
-          <div className="mb-4 text-4xl font-medium">How Driftly Works</div>
+          <div className="mb-4 text-5xl font-light">How Driftly Works</div>
           <div className="mb-6">
             Search, order, customise and finance your <br />
             car - All from the comfort of your sofa and get <br />a doorstep
@@ -157,7 +169,7 @@ export const DCEC = ({ butVisible }) => {
       </div>
 
       <div className="container py-10 mx-auto ">
-        <div className="grid gap-2 lg:grid-cols-4">
+        <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-4">
           {data.map((x, i) => {
             return (
               <div key={i} className="space-y-4 text-white">
@@ -189,9 +201,11 @@ const BrowseByBrand = () => {
     Nisan,
   ];
   return (
-    <div className="container py-20 mx-auto">
-      <div className="mb-10 text-4xl">Browse by Brands</div>
-      <div className="grid grid-cols-6 mb-10 border-none ">
+    <div className="container relative py-16 mx-auto">
+      <div className="absolute mb-10 text-4xl font-light left-[6%]">
+        Browse by Brands
+      </div>
+      <div className="grid grid-cols-6 mx-10 mt-16 mb-20 border-none">
         {data.map((x, i) => (
           <div
             key={i}
