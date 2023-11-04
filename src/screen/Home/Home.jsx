@@ -32,7 +32,10 @@ const Home = () => {
       <HeroSection />
       <DriftlyBanefits />
       <HDW />
+      <BrowseByLifestyle />
+      <LimitedEditions />
       <BrowseByBrand />
+      <BrowsebyBodyType />
       <DCEC />
       <CustomerReview />
     </div>
@@ -84,10 +87,52 @@ const DriftlyBanefits = () => {
   );
 };
 
+const BrowseByLifestyle = () => {
+  const data = [
+    require("../../assets/Home/Family Friendly.png"),
+    require("../../assets/Home/Daily Commuter.png"),
+    require("../../assets/Home/Style Seeker.png"),
+    require("../../assets/Home/Outdoor Loving.png"),
+    require("../../assets/Home/Value For Money.png"),
+    require("../../assets/Home/Featured Packed.png"),
+  ];
+  return (
+    <div className=" pt-20  bg-[#000000]">
+      <div className="container mx-auto mb-10 text-4xl font-light text-white pl-14">
+        Browse by Lifestyle
+      </div>
+      <div className="container flex justify-center gap-4 mx-auto xl:gap-8 ">
+        {data.map((x, i) => {
+          return (
+            <div className="cursor-pointer group">
+              <img
+                src={x}
+                alt=""
+                srcset=""
+                className="duration-200 select-none group-hover:-translate-y-2"
+              />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+const LimitedEditions = () => {
+  return (
+    <div className=" py-20  bg-[#000000]">
+      <div className="container pl-16 mx-auto mb-10 text-4xl font-light text-white">
+        Limited Editions
+      </div>
+    </div>
+  );
+};
+
 const HDW = () => {
   return (
     <section className="overflow-hidden">
-      <div className="relative mb-10 ">
+      <div className="relative ">
         <img src={VideoThumbnail} alt="" srcSet="" className="w-full" />
         <div className=" lg:absolute top-1/3 left-[8%] container mx-auto w-full  lg:text-white font-extralight text-black mt-4 lg:mt-0">
           <div className="mb-4 text-5xl font-light">How Driftly Works</div>
@@ -219,6 +264,16 @@ const BrowseByBrand = () => {
       </div>
       <div className="hover:bg-gradient-to-l select-none from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-8 py-3 cursor-pointer bg-white text-black hover:text-white border border-gray-300 mx-auto">
         View More
+      </div>
+    </div>
+  );
+};
+
+const BrowsebyBodyType = () => {
+  return (
+    <div className="container py-20 mx-auto">
+      <div className="container pl-16 mx-auto mb-10 text-4xl font-light ">
+        Browse by Body type
       </div>
     </div>
   );

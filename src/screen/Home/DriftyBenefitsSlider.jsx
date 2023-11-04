@@ -149,7 +149,7 @@ export default function DriftyBenefitsSlider() {
                     <div> 
                       <img src={x.img1} alt="" srcset="" className="duration-200 group-hover:-translate-y-1" />
                     </div>
-                    <div className="mb-2 font-semibold">{x.title}</div>
+                    <div className="mt-1 mb-2 font-semibold">{x.title}</div>
                     <div className="text-sm ">{x.content}</div>
                   </div>
                 </SwiperSlide>
