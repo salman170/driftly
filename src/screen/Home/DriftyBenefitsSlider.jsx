@@ -12,6 +12,13 @@ import YearWarranty from "../../assets/Home/1 Year Warranty.png";
 import RoadSideAssistance from "../../assets/Home/Roadside Assistance.png";
 import DoorstepDelivery from "../../assets/Home/Doorstep Delivery & Collection.png";
 import MoneyBackGurantee from "../../assets/Home/Money Back Guarantee.png";
+import QualityAssuranceW from "../../assets/Home/QA-WHITE.png";
+import OnlyRefurbishedW from "../../assets/Home/Only Refurbished Vehicles - White.png";
+import VehicleTradeInW from "../../assets/Home/Vehicle Trade-in - White.png";
+import YearWarrantyW from "../../assets/Home/1 Year Warranty - White.png";
+import RoadSideAssistanceW from "../../assets/Home/Roadside Assistance - White.png";
+import DoorstepDeliveryW from "../../assets/Home/Doorstep Delivery & Collection - White.png";
+import MoneyBackGuranteeW from "../../assets/Home/Money Back Guarantee - White.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -29,57 +36,57 @@ export default function DriftyBenefitsSlider() {
   const data = [
     {
       img1: QualityAssurance,
-      img2: "",
+      img2: QualityAssuranceW,
       title: "Quality Assurance",
       content:
         "All cars go through a 360-point inspection & are reconditioned ensuring there are no hidden issues with your car",
     },
 
-    {
-      img1: OnlyRefurbished,
-      img2: "",
-      title: "Only Refurbished Vehicles",
-      content:
-        "All customers get a 7-day/250 miles full money-back guarantee to make sure they love their Drively car",
-    },
+   
     {
       img1: VehicleTradeIn,
-      img2: "",
+      img2: VehicleTradeInW,
       title: "Vehicle Trade-In",
       content:
         "All cars go through a 360-point inspection & are reconditioned ensuring there are no hidden issues with your car",
     },
     {
       img1: YearWarranty,
-      img2: "",
+      img2: YearWarrantyW,
       title: "1 Year Warranty",
       content:
         "All customers get a 7-day/250 miles full money-back guarantee to make sure they love their Drively car",
     },
     {
       img1: RoadSideAssistance,
-      img2: "",
+      img2: RoadSideAssistanceW,
       title: "Roadside Assistance",
       content:
         "All customers get a 7-day/250 miles full money-back guarantee to make sure they love their Drively car",
     },
     {
       img1: VehicleTradeIn,
-      img2: "",
+      img2: VehicleTradeInW,
       title: "Vehicle Buyback",
       content:
         "All cars go through a 360-point inspection & are reconditioned ensuring there are no hidden issues with your car",
+    }, {
+      img1: OnlyRefurbished,
+      img2: OnlyRefurbishedW,
+      title: "Only Refurbished Vehicles",
+      content:
+        "All customers get a 7-day/250 miles full money-back guarantee to make sure they love their Drively car",
     },
     {
       img1: DoorstepDelivery,
-      img2: "",
+      img2: DoorstepDeliveryW,
       title: "Doorstep Delivery & Collection",
       content:
         "All cars go through a 360-point inspection & are reconditioned ensuring there are no hidden issues with your car",
     },
     {
       img1: MoneyBackGurantee,
-      img2: "",
+      img2: MoneyBackGuranteeW,
       title: "Money Back Guarantee",
       content:
         "All customers get a 7-day/250 miles full money-back guarantee to make sure they love their Drively car",
@@ -109,18 +116,18 @@ export default function DriftyBenefitsSlider() {
           breakpoints={{
             640: {
               slidesPerView: 1,
-              spaceBetween: 20,
+              spaceBetween: 5,
             },
             768: {
               slidesPerView: 2,
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 40,
+              spaceBetween: 10,
             },
             1280: {
-              slidesPerView: 5,
-              spaceBetween: 40,
+              slidesPerView: 5.1,
+              spaceBetween: 10,
             },
           }}
           modules={[Pagination, Navigation, Autoplay]}
@@ -146,10 +153,21 @@ export default function DriftyBenefitsSlider() {
               return (
                 <SwiperSlide key={i} className="relative rounded-xl">
                   <div className=" hover:bg-gradient-to-b from-[#00BAB8] to-[#0BF2B3]  shadow-lg rounded-xl  cursor-pointer  p-5  hover:text-white border group ">
-                    <div> 
-                      <img src={x.img1} alt="" srcset="" className="duration-200 group-hover:-translate-y-1" />
+                    <div className="relative h-16" >
+                      <img
+                        src={x.img1}
+                        alt=""
+                        srcset=""
+                        className="absolute inset-0 duration-200 group-hover:-translate-y-2 group-hover:opacity-0"
+                      />
+                      <img
+                        src={x.img2}
+                        alt=""
+                        srcset=""
+                        className="duration-200 group-hover:-translate-y-2 "
+                      />
                     </div>
-                    <div className="mt-1 mb-2 font-semibold">{x.title}</div>
+                    <div className="h-10 mt-1 mb-2 font-semibold">{x.title}</div>
                     <div className="text-sm ">{x.content}</div>
                   </div>
                 </SwiperSlide>
