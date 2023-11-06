@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CustomerReview from "./CustomerReview";
-// import Header from "../../others/Header";
+import Header from "../../others/Header";
 
 import VideoThumbnail from "../../assets/Home/HowItWorksLarger.png";
 import CustomerExp from "../../assets/Home/DriftlyCustomerExp.png";
@@ -28,7 +28,7 @@ import DriftyBenefitsSlider from "./DriftyBenefitsSlider";
 const Home = () => {
   return (
     <div className="">
-      {/* <Header /> */}
+      <Header />
       <HeroSection />
       <DriftlyBenefits />
       <HDW />
@@ -270,10 +270,122 @@ const BrowseByBrand = () => {
 };
 
 const BrowsebyBodyType = () => {
+  const [select, setSelected] = useState(2);
+
+  const data = [
+    {
+      title: "Hatchback",
+      img1: require("../../assets/Home/HATCHBACK.png"),
+      img2: require("../../assets/Home/HATCHBACK-B.png"),
+      content:
+        "A compact car with a rear door that opens upward, providing easy access to the cargo area. Known for their versatility and space efficiency, hatchbacks are ideal for urban driving.",
+    },
+    {
+      title: "SUV",
+      img1: require("../../assets/Home/SUV.png"),
+      img2: require("../../assets/Home/SUV-B.png"),
+      content:
+        "A robust vehicle with elevated ground clearance, spacious interiors, and off-road capabilities. Popular for family travel and varying terrains.",
+    },
+    {
+      title: "SEDAN",
+      img1: require("../../assets/Home/SEDAN.png"),
+      img2: require("../../assets/Home/SEDAN-B.png"),
+      content:
+        "A passenger car in a three-box configuration with separate compartments for engine, passenger, and cargo.",
+    },
+    {
+      title: "MUV",
+      img1: require("../../assets/Home/MUV.png"),
+      img2: require("../../assets/Home/MUV-B.png"),
+      content:
+        "A spacious vehicle designed for passenger comfort and multiple seating configurations. Ideal for families or group travel.",
+    },
+    {
+      title: "Coupe",
+      img1: require("../../assets/Home/COUPE.png"),
+      img2: require("../../assets/Home/COUPE-B.png"),
+      content:
+        "A two-door car with a sleek design, often emphasizing style and performance. Known for its sporty appearance.",
+    },
+    {
+      title: "Convertible",
+      img1: require("../../assets/Home/CONVERTIBLE.png"),
+      img2: require("../../assets/Home/Convertible-B.png"),
+      content:
+        "A car featuring a retractable or removable roof, allowing an open-air driving experience. Offers a sense of freedom and stylish design.",
+    },
+  ];
+
   return (
     <div className="container py-20 mx-auto">
       <div className="container pl-16 mx-auto mb-10 text-4xl font-light ">
         Browse by Body type
+      </div>
+      <div className="flex overflow-hidden duration-200">
+        {data.map((x, i) => {
+          return (
+            <div
+              key={i}
+              className={`text-center group relative p-10 duration-200 cursor-pointer  `}
+              onMouseEnter={() => setSelected(i)}
+            >
+              <div
+                className={`${
+                  select === i
+                    ? "block font-bold text-xl text-white mx-auto"
+                    : "hidden"
+                }`}
+              >
+                {x.title}
+              </div>
+              <div className="flex items-end justify-center h-36">
+                <img
+                  src={x.img1}
+                  alt=""
+                  srcset=""
+                  className={`${select === i ? " hidden" : " block"}`}
+                />
+                <img
+                  src={x.img2}
+                  alt=""
+                  srcset=""
+                  className={`${select === i ? "block w-max    " : "hidden"}`}
+                />
+              </div>
+              <div
+                className={`${
+                  select === i ? "hidden " : " block mt-6 text-xl  mx-auto"
+                }`}
+              >
+                {x.title}
+              </div>
+              <div
+                className={`${
+                  select === i
+                    ? "block w-60 text-white mx-auto mt-4 text-sm"
+                    : "hidden"
+                }`}
+              >
+                {x.content}
+              </div>
+              <div
+                className={`${
+                  select === i ? "block   mx-auto  text-sm mt-4 " : "hidden"
+                } px-8 py-3 text-black uppercase bg-white rounded-r-full rounded-bl-full cursor-pointer w-min whitespace-nowrap `}
+              >
+                BROWSE
+              </div>
+              <div
+                className={`absolute inset-0 -z-10 mx-auto w-[280px] ${
+                  select === i
+                    ? "bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-xl"
+                    : ""
+                }`}
+              ></div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
