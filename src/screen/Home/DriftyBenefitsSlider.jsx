@@ -93,8 +93,27 @@ export default function DriftyBenefitsSlider() {
     },
   ];
 
+  const styles = `
+  .swiper-pagination-bullet {
+    /* Add gradient styles */
+    background: linear-gradient(to right, #00BAB8, #0BF2B3); /* Your gradient color */
+    /* Other styles */
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+  }
+  
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 12px; /* You can adjust the active bullet size */
+  }
+  `;
+
   return (
     <>
+    <style>{styles}</style>
       <div className="container relative mx-auto overflow-visible select-none">
         <Swiper
           pagination={{

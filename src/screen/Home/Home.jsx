@@ -24,6 +24,7 @@ import Chrysler from "../../assets/Home/Chrysler.png";
 import Nisan from "../../assets/Home/Nisan.png";
 
 import DriftyBenefitsSlider from "./DriftyBenefitsSlider";
+import PopularCarsSlider from "./PopularCarsSlider";
 
 const Home = () => {
   return (
@@ -34,6 +35,7 @@ const Home = () => {
       <HDW />
       <BrowseByLifestyle />
       <LimitedEditions />
+      <PopularCars />
       <BrowseByBrand />
       <BrowsebyBodyType />
       <DCEC />
@@ -80,7 +82,7 @@ const DriftlyBenefits = () => {
       <div className="absolute text-5xl top-16 left-[5%] font-light">
         Driftly Benefits
       </div>
-      <div className="mt-4 ">
+      <div className="mt-4 lg:ml-16">
         <DriftyBenefitsSlider />
       </div>
     </div>
@@ -246,8 +248,8 @@ const BrowseByBrand = () => {
     Nisan,
   ];
   return (
-    <div className="container relative py-16 mx-auto">
-      <div className="absolute mb-10 text-4xl font-light left-[6%]">
+    <div className="container relative pt-16 mx-auto">
+      <div className="absolute mb-10 text-4xl font-light left-[4%]">
         Browse by Brands
       </div>
       <div className="grid grid-cols-6 mx-10 mt-16 mb-20 border-none">
@@ -318,17 +320,18 @@ const BrowsebyBodyType = () => {
   ];
 
   return (
-    <div className="container py-20 mx-auto">
+    <div className="container pt-10 mx-auto pb-14">
       <div className="container pl-16 mx-auto mb-10 text-4xl font-light ">
         Browse by Body type
       </div>
-      <div className="flex overflow-hidden duration-200">
+      <div className="flex overflow-hidden duration-500">
         {data.map((x, i) => {
           return (
             <div
               key={i}
               className={`text-center group relative p-10 duration-200 cursor-pointer  `}
               onMouseEnter={() => setSelected(i)}
+              // onMouseLeave={() => setSelected(2)}
             >
               <div
                 className={`${
@@ -363,7 +366,7 @@ const BrowsebyBodyType = () => {
               <div
                 className={`${
                   select === i
-                    ? "block w-60 text-white mx-auto mt-4 text-sm"
+                    ? "block w-60 text-white mx-auto mt-4 text-sm px-2"
                     : "hidden"
                 }`}
               >
@@ -372,7 +375,7 @@ const BrowsebyBodyType = () => {
               <div
                 className={`${
                   select === i ? "block   mx-auto  text-sm mt-4 " : "hidden"
-                } px-8 py-3 text-black uppercase bg-white rounded-r-full rounded-bl-full cursor-pointer w-min whitespace-nowrap `}
+                } px-12 py-3 text-black uppercase bg-white rounded-r-full rounded-bl-full cursor-pointer w-min whitespace-nowrap `}
               >
                 BROWSE
               </div>
@@ -386,6 +389,21 @@ const BrowsebyBodyType = () => {
             </div>
           );
         })}
+      </div>
+    </div>
+  );
+};
+
+const PopularCars = () => {
+  return (
+    <div className="py-20 bg-[#F8F8F8] ">
+      <div className="container relative mx-auto">
+        <div className="absolute text-4xl font-light left-[4%]">
+          Popular Cars
+        </div>
+        <div className="mt-4 lg:ml-14">
+          <PopularCarsSlider />
+        </div>
       </div>
     </div>
   );
