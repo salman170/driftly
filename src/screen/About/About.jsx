@@ -1,5 +1,22 @@
-import React from "react";
-import Header from "../../others/Header";
+import React, { useRef } from 'react';
+import Header from '../../others/Header';
+import CustomerReview from '../Home/CustomerReview';
+import { DCEC } from '../Home/Home';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai';
+import customerReview from './../../assets/How It Works/CustomerReview1.png';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+// import "./HomeSlider.css";
+
+// import required modules
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 const About = () => {
   return (
@@ -7,6 +24,10 @@ const About = () => {
       <Header />
       <HeroImage />
       <ImageBanner />
+      <CardLayout />
+      <CustomerReview />
+      <DCEC />
+      <CardSlider />
     </div>
   );
 };
@@ -114,41 +135,276 @@ const ImageBanner = () => {
   );
 };
 
-const ImageBanner2 = () => {
+const CardLayout = () => {
   return (
-    <>
-      <header>
-        <div
-          className='relative overflow-hidden bg-no-repeat bg-cover'
-          style={{
-            backgroundPosition: '50%',
-            backgroundImage: `url('https://tecdn.b-cdn.net/img/new/slides/146.webp')`,
-            height: '350px',
-          }}
-        >
-          <div
-            class='absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed'
-            style={{ backgroundColor: 'rgba(0, 0, 0, 0.75)' }}
-          >
-            <div class='flex h-full items-center justify-center'>
-              <div class='px-6 text-center text-white md:px-12'>
-                <h1 class='mb-6 text-5xl font-bold'>Heading</h1>
-                <h3 class='mb-8 text-3xl font-bold'>Subeading</h3>
-                <button
-                  type='button'
-                  class='inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                  data-te-ripple-init
-                  data-te-ripple-color='light'
-                >
-                  Get started
-                </button>
-              </div>
+    <div class='my-12 mx-auto px-4 md:px-12 bg-black text-white'>
+      <div class='flex flex-wrap -mx-1 lg:-mx-4'>
+        <div class='container mx-auto px-4 flex h-full mt-10'>
+          <div class='text-left text-white  lg:pt-2'>
+            <div class='mt-2 text-xs font-extralight tracking-tight md:text-4xl xl:text-m'>
+              Our Values
+            </div>
+
+            <div className='p-2 text-xs'>
+              To give our customers the best car experience, <br></br>we stand
+              by our key values. We are:
             </div>
           </div>
         </div>
-      </header>
+        <div class='container mx-auto px-4 flex h-full mt-3 pl-1'>
+          <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+            <article class='overflow-hidden'>
+              <a href='#'>
+                <img
+                  alt='Placeholder'
+                  class='block h-auto w-full'
+                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-1.webp'
+                />
+              </a>
+
+              <a href='#' class='block max-w-sm pt-2'>
+                <h5 class='text-xl font-normal tracking-tight'>
+                  Customer Obsessed
+                </h5>
+                <p class='font-light text-sm text-gray-700 dark:text-gray-400'>
+                  We put the customer first in everything we do. We want to be
+                  famous for delivering the best experience and wowing our
+                  customers.
+                </p>
+              </a>
+            </article>
+          </div>
+          <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+            <article class='overflow-hidden'>
+              <a href='#'>
+                <img
+                  alt='Placeholder'
+                  class='block h-auto w-full'
+                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-2.webp'
+                />
+              </a>
+
+              <a href='#' class='block max-w-sm pt-2'>
+                <h5 class='mb-2 text-xl font-normal tracking-tight'>
+                  Fast Drivers
+                </h5>
+                <p class='font-light text-sm text-gray-700 dark:text-gray-400'>
+                  We have an entrepreneurial passion for working at speed. We
+                  move fast and drive fast towards our goals.
+                </p>
+              </a>
+            </article>
+          </div>
+          <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+            <article class='overflow-hidden'>
+              <a href='#'>
+                <img
+                  alt='Placeholder'
+                  class='block h-auto w-full'
+                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-3.webp'
+                />
+              </a>
+
+              <a href='#' class='block max-w-sm pt-2'>
+                <h5 class='mb-2 text-xl font-normal tracking-tight'>
+                  Data Driven
+                </h5>
+                <p class='font-light text-sm text-gray-700 dark:text-gray-400'>
+                  Data is a part of our DNA and drives all decision making.
+                  We're informed, results-driven and seek insights to help us
+                  improve and grow.
+                </p>
+              </a>
+            </article>
+          </div>
+          <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+            <article class='overflow-hidden'>
+              <a href='#'>
+                <img
+                  alt='Placeholder'
+                  class='block h-auto w-full'
+                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-4.webp'
+                />
+              </a>
+
+              <a href='#' class='block max-w-sm pt-2'>
+                <h5 class='mb-2 text-xl font-normal tracking-tight'>
+                  Team Players
+                </h5>
+                <p class='font-light text-sm text-gray-700 dark:text-gray-400'>
+                  We're better as a team than as individuals. Everyone counts.
+                  We're here to have fun and win together on this exciting
+                  journey.
+                </p>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const CardSlider = () => {
+  return (
+    <>
+      <div className='overflow-hidden'>
+        <div className=' container mx-auto font-extralight'>
+          <div className='my-10 text-4xl pl-6'>Media Coverage</div>
+        </div>
+        <CiustomerReviewSlider />
+      </div>
     </>
   );
 };
+
+function CiustomerReviewSlider() {
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
+
+  const data = [
+    {
+      img: '',
+      name: 'card 1',
+      desg: 'Founder',
+      body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quae ipsam vel unde, maiores eaque harum architecto alias
+      at iure consectetur id dicta tempore eos saepe
+      reprehenderit deleniti porro temporibus error.`,
+    },
+    {
+      img: '',
+      name: 'card 2',
+      desg: 'Chairman & Managing Director',
+      body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quae ipsam vel unde, maiores eaque harum architecto alias
+      at iure consectetur id dicta tempore eos saepe
+      reprehenderit deleniti porro temporibus error.`,
+    },
+    {
+      img: '',
+      name: 'card 3',
+      desg: 'JOINT MANAGING DIRECTOR',
+      body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quae ipsam vel unde, maiores eaque harum architecto alias
+      at iure consectetur id dicta tempore eos saepe
+      reprehenderit deleniti porro temporibus error.`,
+    },
+    {
+      img: '',
+      name: 'card 4',
+      desg: 'DIRECTOR OF SALES & MARKETING',
+      body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quae ipsam vel unde, maiores eaque harum architecto alias
+      at iure consectetur id dicta tempore eos saepe
+      reprehenderit deleniti porro temporibus error.`,
+    },
+    {
+      img: '',
+      name: 'card 5',
+      desg: 'VICE PRESIDENT FINANCE',
+      body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quae ipsam vel unde, maiores eaque harum architecto alias
+      at iure consectetur id dicta tempore eos saepe
+      reprehenderit deleniti porro temporibus error.`,
+    },
+  ];
+  const styles = `
+    .customerSwiper .swiper-slide {
+     opacity: 0.5;
+     
+    }
+
+    .customerSwiper .swiper-slide-active  {
+      opacity: 1;
+    }
+  `;
+
+  return (
+    <>
+      <style>{styles}</style>
+      <div className='container mx-auto mb-10 overflow-visible select-none'>
+        <Swiper
+          pagination={{
+            dynamicBullets: true,
+            clickable: true,
+          }}
+          loop={true}
+          centeredSlides={true}
+          navigation={{
+            nextEl: navigationNextRef.current,
+            prevEl: navigationPrevRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = navigationPrevRef.current;
+            swiper.params.navigation.nextEl = navigationNextRef.current;
+          }}
+          // autoplay={{
+          //   delay: 4000,
+          //   disableOnInteraction: false,
+          // }}
+          breakpoints={{
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          }}
+          modules={[Pagination, Navigation, Autoplay]}
+          className='relative overflow-visible customerSwiper'
+        >
+          <div className='absolute z-10 flex  gap-4 right-2 md:right-20  -top-16 '>
+            <div
+              ref={navigationPrevRef}
+              className=' p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
+            >
+              <AiOutlineArrowLeft />
+            </div>
+            <div
+              ref={navigationNextRef}
+              className=' p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
+            >
+              <AiOutlineArrowRight />
+            </div>
+          </div>
+          {data.map((x, i) => {
+            return (
+              <SwiperSlide key={i} className='relative h-full overflow-hidden '>
+                <div className='bg-white shadow-lg'>
+                  <img
+                    src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-3.webp'
+                    alt='Card Image'
+                    className='w-100 h-300 object-cover'
+                  />
+                  <div className=''>
+                    <h2 className='text-xl font-semibold'>{x.name}</h2>
+                    <p className='text-gray-600 mt-2'>{x.desg}</p>
+                    <p className='text-gray-600 mt-2'>{x.body}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+
+          {/* <div className="absolute z-10 text-white bottom-10 right-44 md:bottom-[83px]">
+          2/3
+         </div> */}
+
+          <div className='h-10'></div>
+        </Swiper>
+      </div>
+    </>
+  );
+}
 
 export default About;
