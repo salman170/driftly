@@ -178,13 +178,13 @@ export default function DriftyBenefitsSlider() {
                       <img
                         src={x.img1}
                         alt=""
-                        srcset=""
+                        srcSet=""
                         className="absolute inset-0 duration-200 group-hover:-translate-y-2 group-hover:opacity-0"
                       />
                       <img
                         src={x.img2}
                         alt=""
-                        srcset=""
+                        srcSet=""
                         className="duration-200 group-hover:-translate-y-2 "
                       />
                     </div>

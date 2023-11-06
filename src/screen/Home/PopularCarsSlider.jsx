@@ -94,7 +94,7 @@ export default function PopularCarsSlider() {
                     <img
                       src={x.img}
                       alt=""
-                      srcset=""
+                      srcSet=""
                       className="scale-110 w-min"
                     />
                     <div className="mt-8 text-xl font-semibold ">{x.title}</div>

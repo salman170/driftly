@@ -127,7 +127,7 @@ export default function LimitedEditonCarSlider() {
                     <img
                       src={x.img}
                       alt=""
-                      srcset=""
+                      srcSet=""
                       className="scale-110 w-min "
                     />
                     <div className="mt-8 mb-4 text-3xl font-bold ">

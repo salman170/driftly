@@ -107,11 +107,11 @@ const BrowseByLifestyle = () => {
       <div className="container flex justify-center gap-4 mx-auto xl:gap-8 ">
         {data.map((x, i) => {
           return (
-            <div className="cursor-pointer group">
+            <div key={i} className="cursor-pointer group">
               <img
                 src={x}
                 alt=""
-                srcset=""
+                srcSet=""
                 className="duration-200 select-none group-hover:-translate-y-2"
               />
             </div>
@@ -350,13 +350,13 @@ const BrowsebyBodyType = () => {
                 <img
                   src={x.img1}
                   alt=""
-                  srcset=""
+                  srcSet=""
                   className={`${select === i ? " hidden" : " block"}`}
                 />
                 <img
                   src={x.img2}
                   alt=""
-                  srcset=""
+                  srcSet=""
                   className={`${select === i ? "block w-max    " : "hidden"}`}
                 />
               </div>
