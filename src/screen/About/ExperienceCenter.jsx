@@ -1,12 +1,12 @@
-import React from 'react'
-import { DCEC } from '../Home/Home'
+import React from "react";
+import { DCEC } from "../Home/Home";
 
 const ExperienceCenter = () => {
   return (
     <div>
-        <DCEC butVisible={false} />
+      <DCEC butVisible={false} />
     </div>
-  )
-}
+  );
+};
 
-export default ExperienceCenter
+export default ExperienceCenter;
