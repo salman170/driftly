@@ -115,25 +115,26 @@ export default function DriftyBenefitsSlider() {
           // }}
           breakpoints={{
             640: {
-              slidesPerView: 1,
+              slidesPerView: 1.5,
               spaceBetween: 5,
             },
             768: {
-              slidesPerView: 2,
+              slidesPerView: 2.5,
             },
             1024: {
               slidesPerView: 3,
               spaceBetween: 10,
             },
             1280: {
-              slidesPerView: 5.1,
+              slidesPerView: 4.5,
               spaceBetween: 10,
             },
           }}
           modules={[Pagination, Navigation, Autoplay]}
-          className="overflow-hidden bg-transparent mySwiper"
+          className="flex flex-col-reverse py-10 overflow-hidden bg-transparent mySwiper"
         >
-          <div className="absolute z-10 flex gap-4 right-2 md:right-20 -top-16">
+           
+          <div className="flex justify-end gap-4 mb-4 mr-10 -mt-10 ">
             <div
               ref={navigationPrevRef}
               className=" p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125"
@@ -147,12 +148,13 @@ export default function DriftyBenefitsSlider() {
               <AiOutlineArrowRight />
             </div>
           </div>
+          {/* <div className="h-10"></div> */}
 
-          <div className="overflow-hidden ">
+          <div className="pb-10 overflow-hidden">
             {data.map((x, i) => {
               return (
                 <SwiperSlide key={i} className="relative rounded-xl">
-                  <div className=" hover:bg-gradient-to-b from-[#00BAB8] to-[#0BF2B3]  shadow-lg rounded-xl  cursor-pointer  p-5  hover:text-white border group ">
+                  <div className=" hover:bg-gradient-to-b from-[#00BAB8] to-[#0BF2B3]  shadow-lg rounded-xl  cursor-pointer  p-5  hover:text-white border group h-60 flex  flex-col justify-center ">
                     <div className="relative h-16" >
                       <img
                         src={x.img1}
@@ -167,15 +169,15 @@ export default function DriftyBenefitsSlider() {
                         className="duration-200 group-hover:-translate-y-2 "
                       />
                     </div>
-                    <div className="h-10 mt-1 mb-2 font-semibold">{x.title}</div>
-                    <div className="text-sm ">{x.content}</div>
+                    <div className="mt-1 mb-2 font-semibold ">{x.title}</div>
+                    <div className="h-16 text-sm">{x.content}</div>
                   </div>
                 </SwiperSlide>
               );
             })}
           </div>
 
-          <div className="h-10"></div>
+         
         </Swiper>
       </div>
     </>

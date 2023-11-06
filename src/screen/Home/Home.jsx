@@ -30,7 +30,7 @@ const Home = () => {
     <div className="">
       {/* <Header /> */}
       <HeroSection />
-      <DriftlyBanefits />
+      <DriftlyBenefits />
       <HDW />
       <BrowseByLifestyle />
       <LimitedEditions />
@@ -74,13 +74,13 @@ const HeroSection = () => {
   );
 };
 
-const DriftlyBanefits = () => {
+const DriftlyBenefits = () => {
   return (
     <div className="container relative py-20 mx-auto">
       <div className="absolute text-5xl top-16 left-[5%] font-light">
-        Driftly Banefits
+        Driftly Benefits
       </div>
-      <div className="mt-16 ">
+      <div className="mt-4 ">
         <DriftyBenefitsSlider />
       </div>
     </div>
