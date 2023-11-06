@@ -25,6 +25,7 @@ import Nisan from "../../assets/Home/Nisan.png";
 
 import DriftyBenefitsSlider from "./DriftyBenefitsSlider";
 import PopularCarsSlider from "./PopularCarsSlider";
+import LimitedEditonCarSlider from "./LimitedEditonCarSlider";
 
 const Home = () => {
   return (
@@ -123,9 +124,12 @@ const BrowseByLifestyle = () => {
 
 const LimitedEditions = () => {
   return (
-    <div className=" py-20  bg-[#000000]">
+    <div className=" pt-20  bg-[#000000]">
       <div className="container pl-16 mx-auto mb-10 text-4xl font-light text-white">
         Limited Editions
+      </div>
+      <div>
+        <LimitedEditonCarSlider />
       </div>
     </div>
   );
@@ -398,7 +402,7 @@ const PopularCars = () => {
   return (
     <div className="py-20 bg-[#F8F8F8] ">
       <div className="container relative mx-auto">
-        <div className="absolute text-4xl font-light left-[4%]">
+        <div className="absolute text-4xl font-light left-[4%] -top-4">
           Popular Cars
         </div>
         <div className="mt-4 lg:ml-14">
