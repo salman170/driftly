@@ -219,7 +219,7 @@ export const DCEC = ({ butVisible }) => {
   </div> */}
       </div>
 
-      <div className="container py-10 mx-auto ">
+      <div className="container px-4 py-10 mx-auto">
         <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-4">
           {data.map((x, i) => {
             return (

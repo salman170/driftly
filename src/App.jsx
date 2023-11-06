@@ -16,8 +16,7 @@ import { useState } from "react";
 import ModalLoaction from "./others/ModalLoaction";
 
 function App() {
-  const [showMyModal, setShowMyModal] = useState(true);
-  const handleOnClose = () => setShowMyModal(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <div>
@@ -44,7 +43,7 @@ function App() {
           <Route exact path="/*" element={<NotFound />} />
         </Routes>
       </div>
-      <ModalLoaction onClose={handleOnClose} visible={showMyModal} />
+      <ModalLoaction visible={open} setShowMyModal={setOpen} />
     </div>
   );
 }
