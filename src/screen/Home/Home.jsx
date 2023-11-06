@@ -379,7 +379,7 @@ const BrowsebyBodyType = () => {
               <div
                 className={`absolute inset-0 -z-10 mx-auto w-[280px] ${
                   select === i
-                    ? "bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-xl"
+                    ? "bg-gradient-to-t from-[#00BAB8] to-[#0BF2B3] rounded-xl"
                     : ""
                 }`}
               ></div>
