@@ -458,11 +458,11 @@ export const EmailForm = ({ setFormNumber }) => {
             />
           </div>
         </div>
-        <div className="p-1.5 text-sm border rounded-full bg-[#f9f9f9] font-extralight w-min absolute top-4 right-4 cursor-pointer hover:shadow-lg">
+        {/* <div className="p-1.5 text-sm border rounded-full bg-[#f9f9f9] font-extralight w-min absolute top-4 right-4 cursor-pointer hover:shadow-lg">
           <Link to="/">
             <AiOutlineClose />
           </Link>
-        </div>
+        </div> */}
       </div>
     </form>
   );
