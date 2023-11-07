@@ -12,11 +12,11 @@ import CarList from "./screen/Car List/CarList";
 import Finance from "./screen/Finance/Finance";
 import Sell from "./screen/Sell/Sell";
 import ExperienceCenter from "./screen/About/ExperienceCenter";
-import { useState } from "react";
-import ModalLoaction from "./others/ModalLoaction";
+// import { useState } from "react";
+// import ModalLoaction from "./others/ModalLoaction";
 
 function App() {
-  const [open, setOpen] = useState(true);
+  // const [open, setOpen] = useState(true);
 
   return (
     <div>
@@ -43,7 +43,7 @@ function App() {
           <Route exact path="/*" element={<NotFound />} />
         </Routes>
       </div>
-      <ModalLoaction visible={open} setShowMyModal={setOpen} />
+      {/* <ModalLoaction visible={open} setShowMyModal={setOpen} /> */}
     </div>
   );
 }

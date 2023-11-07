@@ -56,7 +56,7 @@ const ModalLoaction = ({ visible, setShowMyModal }) => {
               <div key={i} className="">
                 <div className="px-8 py-6 mb-4 border border-[#D1D1D1] cursor-pointer rounded-xl hover:bg-[#E9E9E9] hover:shadow-lg">
                   <div className="h-20 ">
-                    <img src={x.img} alt={x.val} srcset="" className="" />
+                    <img src={x.img} alt={x.val} srcSet="" className="" />
                   </div>
                 </div>
                 <div className="text-lg">{x.val}</div>
