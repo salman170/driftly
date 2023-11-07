@@ -1,18 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
-import customerReview from "./../../assets/How It Works/CustomerReview1.png"
+import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai';
+import customerReview from './../../assets/How It Works/CustomerReview1.png';
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 // import "./HomeSlider.css";
 
 // import required modules
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 export default function CustomerReviewSlider() {
   const navigationPrevRef = useRef(null);
@@ -20,34 +20,34 @@ export default function CustomerReviewSlider() {
 
   const data = [
     {
-      img: "",
-      name: "The inspection & security they give you is very much impressive",
-      desg: "Founder",
-      body: "A person of strong principles who believed in Gandhian Philosophy Customer is God. He inculcated Customer Centric Culture which is the corner stone of our organization. We always strived to imbibe the same culture in Saboo RKS operations.",
+      img: '',
+      name: 'The inspection & security they give you is very much impressive',
+      desg: 'Founder',
+      body: 'A person of strong principles who believed in Gandhian Philosophy Customer is God. He inculcated Customer Centric Culture which is the corner stone of our organization. We always strived to imbibe the same culture in Saboo RKS operations.',
     },
     {
-      img: "",
-      name: "The inspection & security they give you is very much impressive",
-      desg: "Chairman & Managing Director",
-      body: "A visionary entrepreneur with over four decades of experience in the automobile sector. He began his journey as a dealer for Luna mopeds and Kinetic scooters in 1973. He served as a Director in Kinetic Leasing & Finance Ltd. ",
+      img: '',
+      name: 'The inspection & security they give you is very much impressive',
+      desg: 'Chairman & Managing Director',
+      body: 'A visionary entrepreneur with over four decades of experience in the automobile sector. He began his journey as a dealer for Luna mopeds and Kinetic scooters in 1973. He served as a Director in Kinetic Leasing & Finance Ltd. ',
     },
     {
-      img: "",
-      name: "The inspection & security they give you is very much impressive",
-      desg: "JOINT MANAGING DIRECTOR",
-      body: "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------",
+      img: '',
+      name: 'The inspection & security they give you is very much impressive',
+      desg: 'JOINT MANAGING DIRECTOR',
+      body: '------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
     },
     {
-      img: "",
-      name: "The inspection & security they give you is very much impressive",
-      desg: "DIRECTOR OF SALES & MARKETING",
-      body: "He brings a strong financial background, having worked at Ernst & Young for three years and Purnartha Investment Advisory for one year. In 2016, he joined the family business, Saboo RKS, with a vision to carry forward the legacy. ",
+      img: '',
+      name: 'The inspection & security they give you is very much impressive',
+      desg: 'DIRECTOR OF SALES & MARKETING',
+      body: 'He brings a strong financial background, having worked at Ernst & Young for three years and Purnartha Investment Advisory for one year. In 2016, he joined the family business, Saboo RKS, with a vision to carry forward the legacy. ',
     },
     {
-      img: "",
-      name: "The inspection & security they give you is very much impressive",
-      desg: "VICE PRESIDENT FINANCE",
-      body: "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------",
+      img: '',
+      name: 'The inspection & security they give you is very much impressive',
+      desg: 'VICE PRESIDENT FINANCE',
+      body: '------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
     },
   ];
   const styles = `
@@ -64,7 +64,7 @@ export default function CustomerReviewSlider() {
   return (
     <>
       <style>{styles}</style>
-      <div className="container mx-auto mb-10 overflow-visible select-none">
+      <div className='container mx-auto mb-10 overflow-visible select-none'>
         <Swiper
           pagination={{
             dynamicBullets: true,
@@ -102,18 +102,18 @@ export default function CustomerReviewSlider() {
             },
           }}
           modules={[Pagination, Navigation, Autoplay]}
-          className="relative overflow-visible customerSwiper"
+          className='relative overflow-visible customerSwiper'
         >
-          <div className="absolute z-10 flex  gap-4 right-2 md:right-20  -top-16 ">
+          <div className='absolute z-10 flex  gap-4 right-2 md:right-20  -top-16 '>
             <div
               ref={navigationPrevRef}
-              className=" p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125"
+              className=' p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
             >
               <AiOutlineArrowLeft />
             </div>
             <div
               ref={navigationNextRef}
-              className=" p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125"
+              className=' p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
             >
               <AiOutlineArrowRight />
             </div>
@@ -122,29 +122,32 @@ export default function CustomerReviewSlider() {
             return (
               <SwiperSlide
                 key={i}
-                className="relative h-full overflow-hidden border-2   "
+                className='relative h-full overflow-hidden border-2   '
               >
-                <div className=" overflow-hidden bg-[#171614]  duration-200 grid grid-cols-3">
-                  <div className="p-4 my-auto space-y-3 text-left h-full lg:p-6  text-white flex flex-col justify-center ">
-                    <div className="mb-3 lg:text-2xl font-semibold uppercase ml-6">
+                <div className=' overflow-hidden bg-[#171614]  duration-200 grid grid-cols-3'>
+                  <div className='p-4 my-auto space-y-3 text-left h-full lg:p-6  text-white flex flex-col justify-center '>
+                    <div className='mb-3 lg:text-2xl font-extralight tracking-tight ml-6'>
                       " {x.name} "
                     </div>
-                    <div className="flex  gap-4">
-                      <div className="w-1.5 round3 bg-gradient-to-tr from-[#00bbb8] to-[#0cf2b4] h-full rounded-full"></div>
-                      <div className="pt-4">
-                        <span className="font-medium lg:font-bold">
-                          Amit Kumar,{" "}
-                        </span>{" "}
-                        <span className="font-extralight"> Mumbai</span>
+                    <div className='flex  gap-4'>
+                      <div className='w-1.5 round3 bg-gradient-to-tr from-[#00bbb8] to-[#0cf2b4] h-full rounded-full'></div>
+                      <div className='pt-4'>
+                        <span className='font-medium lg:font-bold'>
+                          Amit Kumar,{' '}
+                        </span>{' '}
+                        <span className='font-extralight text-gray-500'>
+                          {' '}
+                          Mumbai
+                        </span>
                       </div>
                     </div>
                   </div>
-                  <div className="col-span-2">
+                  <div className='col-span-2'>
                     <img
                       src={customerReview}
-                      srcSet=""
-                      className="w-full"
-                      alt=""
+                      srcSet=''
+                      className='w-full'
+                      alt=''
                     />
                   </div>
 
@@ -165,7 +168,7 @@ export default function CustomerReviewSlider() {
           2/3
          </div> */}
 
-          <div className="h-10"></div>
+          <div className='h-10'></div>
         </Swiper>
       </div>
     </>

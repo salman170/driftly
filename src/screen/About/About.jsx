@@ -7,7 +7,6 @@ import { DCEC } from '../Home/Home';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai';
-import customerReview from './../../assets/How It Works/CustomerReview1.png';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -121,12 +120,17 @@ const ImageBanner = () => {
           >
             <div className='flex items-center justify-center h-full'>
               <div className='text-white'>
-                <h4 className='mb-6 text-xl font-regular'>
+                <h4 className='mb-6 text-base font-light tracking-wide italic leading-loose'>
                   We want to make buying your next car no different to ordering
-                  any other product today. Where consumers can simply and
-                  seamlessly buy, finance or subscribe to a car entirely online
+                  any other product today. <br></br>Where consumers can simply
+                  and seamlessly buy, finance or subscribe to a car entirely
+                  online
+                  <br />
                   for delivery or collection in as little as 72 hours.
                 </h4>
+                <div className='text-sm font-semibold italic'>
+                  -&nbsp;John Doe
+                </div>
               </div>
             </div>
           </div>
@@ -156,7 +160,7 @@ const CardLayout = () => {
           <div class='container mx-auto px-4 flex h-full mt-3 pl-1'>
             <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
               <article class='overflow-hidden'>
-                <a href='#'>
+                <a href='/'>
                   <img
                     alt='Placeholder'
                     class='block h-auto w-full'
@@ -164,7 +168,7 @@ const CardLayout = () => {
                   />
                 </a>
 
-                <a href='#' class='block max-w-sm pt-2'>
+                <a href='/' class='block max-w-sm pt-2'>
                   <h5 class='text-xl font-normal tracking-tight'>
                     Customer Obsessed
                   </h5>
@@ -178,7 +182,7 @@ const CardLayout = () => {
             </div>
             <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
               <article class='overflow-hidden'>
-                <a href='#'>
+                <a href='/'>
                   <img
                     alt='Placeholder'
                     class='block h-auto w-full'
@@ -186,7 +190,7 @@ const CardLayout = () => {
                   />
                 </a>
 
-                <a href='#' class='block max-w-sm pt-2'>
+                <a href='/' class='block max-w-sm pt-2'>
                   <h5 class='mb-2 text-xl font-normal tracking-tight'>
                     Fast Drivers
                   </h5>
@@ -199,7 +203,7 @@ const CardLayout = () => {
             </div>
             <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
               <article class='overflow-hidden'>
-                <a href='#'>
+                <a href='/'>
                   <img
                     alt='Placeholder'
                     class='block h-auto w-full'
@@ -207,7 +211,7 @@ const CardLayout = () => {
                   />
                 </a>
 
-                <a href='#' class='block max-w-sm pt-2'>
+                <a href='/' class='block max-w-sm pt-2'>
                   <h5 class='mb-2 text-xl font-normal tracking-tight'>
                     Data Driven
                   </h5>
@@ -221,7 +225,7 @@ const CardLayout = () => {
             </div>
             <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
               <article class='overflow-hidden'>
-                <a href='#'>
+                <a href='/'>
                   <img
                     alt='Placeholder'
                     class='block h-auto w-full'
@@ -229,7 +233,7 @@ const CardLayout = () => {
                   />
                 </a>
 
-                <a href='#' class='block max-w-sm pt-2'>
+                <a href='/' class='block max-w-sm pt-2'>
                   <h5 class='mb-2 text-xl font-normal tracking-tight'>
                     Team Players
                   </h5>
@@ -268,8 +272,8 @@ function CiustomerReviewSlider() {
   const data = [
     {
       img: '',
-      name: 'card 1',
-      desg: 'Founder',
+      name: 'New Insurance Policy',
+      desg: 'September 15, 2020',
       body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Quae ipsam vel unde, maiores eaque harum architecto alias
       at iure consectetur id dicta tempore eos saepe
@@ -277,8 +281,8 @@ function CiustomerReviewSlider() {
     },
     {
       img: '',
-      name: 'card 2',
-      desg: 'Chairman & Managing Director',
+      name: 'Driftly No.1 Car buying Platform',
+      desg: 'September 15, 2020',
       body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Quae ipsam vel unde, maiores eaque harum architecto alias
       at iure consectetur id dicta tempore eos saepe
@@ -286,8 +290,8 @@ function CiustomerReviewSlider() {
     },
     {
       img: '',
-      name: 'card 3',
-      desg: 'JOINT MANAGING DIRECTOR',
+      name: 'Buying made easy',
+      desg: 'September 15, 2020',
       body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Quae ipsam vel unde, maiores eaque harum architecto alias
       at iure consectetur id dicta tempore eos saepe
@@ -295,17 +299,8 @@ function CiustomerReviewSlider() {
     },
     {
       img: '',
-      name: 'card 4',
-      desg: 'DIRECTOR OF SALES & MARKETING',
-      body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Quae ipsam vel unde, maiores eaque harum architecto alias
-      at iure consectetur id dicta tempore eos saepe
-      reprehenderit deleniti porro temporibus error.`,
-    },
-    {
-      img: '',
-      name: 'card 5',
-      desg: 'VICE PRESIDENT FINANCE',
+      name: 'Experience Center',
+      desg: 'September 15, 2020',
       body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Quae ipsam vel unde, maiores eaque harum architecto alias
       at iure consectetur id dicta tempore eos saepe
@@ -326,85 +321,97 @@ function CiustomerReviewSlider() {
   return (
     <>
       <style>{styles}</style>
-      <div className='container mx-auto mb-10 overflow-visible select-none'>
-        <Swiper
-          pagination={{
-            dynamicBullets: true,
-            clickable: true,
-          }}
-          loop={true}
-          centeredSlides={true}
-          navigation={{
-            nextEl: navigationNextRef.current,
-            prevEl: navigationPrevRef.current,
-          }}
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = navigationPrevRef.current;
-            swiper.params.navigation.nextEl = navigationNextRef.current;
-          }}
-          // autoplay={{
-          //   delay: 4000,
-          //   disableOnInteraction: false,
-          // }}
-          breakpoints={{
-            640: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-            1280: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-          }}
-          modules={[Pagination, Navigation, Autoplay]}
-          className='relative overflow-visible customerSwiper'
-        >
-          <div className='absolute z-10 flex  gap-4 right-2 md:right-20  -top-16 '>
-            <div
-              ref={navigationPrevRef}
-              className=' p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
-            >
-              <AiOutlineArrowLeft />
+      <div className='container mx-auto mb-5 overflow-visible select-none'>
+        <div className=''>
+          <Swiper
+            pagination={{
+              dynamicBullets: true,
+              clickable: true,
+            }}
+            loop={true}
+            centeredSlides={true}
+            navigation={{
+              nextEl: navigationNextRef.current,
+              prevEl: navigationPrevRef.current,
+            }}
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = navigationPrevRef.current;
+              swiper.params.navigation.nextEl = navigationNextRef.current;
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 5,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+            modules={[Pagination, Navigation, Autoplay]}
+            className='relative overflow-visible customerSwiper'
+          >
+            <div className='absolute z-10 flex  gap-2 right-2 md:right-10  -top-16 '>
+              <div
+                ref={navigationPrevRef}
+                className=' p-1 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
+              >
+                <AiOutlineArrowLeft />
+              </div>
+              <div
+                ref={navigationNextRef}
+                className=' sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
+              >
+                <AiOutlineArrowRight />
+              </div>
             </div>
-            <div
-              ref={navigationNextRef}
-              className=' p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
-            >
-              <AiOutlineArrowRight />
-            </div>
-          </div>
-          {data.map((x, i) => {
-            return (
-              <SwiperSlide key={i} className='relative h-full overflow-hidden '>
-                <div className='bg-white shadow-lg'>
-                  <img
-                    src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-3.webp'
-                    alt='Card Image'
-                    className='w-100 h-300 object-cover'
-                  />
-                  <div className=''>
-                    <h2 className='text-xl font-semibold'>{x.name}</h2>
-                    <p className='text-gray-600 mt-2'>{x.desg}</p>
-                    <p className='text-gray-600 mt-2'>{x.body}</p>
+            {data.map((x, i) => {
+              return (
+                <SwiperSlide
+                  key={i}
+                  className='relative h-full overflow-hidden '
+                >
+                  <div className='bg-white shadow-lg'>
+                    <div className='w-70 h-200'>
+                      <img
+                        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-3.webp'
+                        alt='Card'
+                        className='w-full h-full object-cover'
+                      />
+                    </div>
+                    <div className='p-1'>
+                      <h2 className='text-sm md:text-base font-semibold'>
+                        {x.name}
+                      </h2>
+                      <p className='text-xs font-extralight md:text-sm text-gray-600 mt-1'>
+                        {x.desg}
+                      </p>
+                      <p className='text-sm font-light md:text-base text-gray-900 mt-1'>
+                        {x.body}
+                      </p>
+                      <a
+                        href='/'
+                        className='text-xs md:text-sm text-[#0CF2B4] underline'
+                      >
+                        View
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
+                </SwiperSlide>
+              );
+            })}
 
-          {/* <div className="absolute z-10 text-white bottom-10 right-44 md:bottom-[83px]">
-          2/3
-         </div> */}
-
-          <div className='h-10'></div>
-        </Swiper>
+            <div className='h-10'></div>
+          </Swiper>
+        </div>
       </div>
     </>
   );
