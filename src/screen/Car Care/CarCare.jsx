@@ -28,7 +28,7 @@ const CarCare = () => {
         </div>
       </section>
 
-      <div className="relative px-24 pt-10 pb-20 container mx-auto">
+      <div className="container relative px-24 pt-10 pb-20 mx-auto">
         <div className="items-end gap-8 my-20 lg:flex">
           <img src={CoverExtended} alt="" srcSet="" className="lg:w-1/2 " />
           <div className="lg:w-1/2">
@@ -46,7 +46,7 @@ const CarCare = () => {
               <li>Car hire and much more!</li>
             </ul>
             <div className="cursor-pointer text-[#00BAB8] underline underline-offset-2">
-              Learn more
+              <Link to="/car-care-extended"> Learn more </Link>
             </div>
           </div>
         </div>
@@ -68,12 +68,13 @@ const CarCare = () => {
               <li>One-time coating that lasts for the lifetime of your car</li>
             </ul>
             <div className="cursor-pointer text-[#00BAB8] underline underline-offset-2">
+            <Link to="/car-care-extended"> Learn more </Link>
               Learn more
             </div>
           </div>
           <img src={GuardPaint} alt="" srcSet="" className="lg:w-1/2 " />
         </div>
-        <div className="text-center text-5xl font-extralight my-10">
+        <div className="my-10 text-5xl text-center font-extralight">
           A Complete Car Protection
         </div>
         <div>
@@ -81,14 +82,14 @@ const CarCare = () => {
             src={require("../../assets/Car Care/CarProtection.png")}
             alt=""
             srcSet=""
-            className="mx-auto h-full w-full"
+            className="w-full h-full mx-auto"
           />
         </div>
 
-        <div className="my-10 container mx-auto flex justify-center gap-10">
+        <div className="container flex justify-center gap-10 mx-auto my-10">
           <div className="relative border rounded-xl shadow  bg-white w-[400px]">
-            <div className="p-5   ">
-              <div className=" flex items-center gap-4 text-xl  ">
+            <div className="p-5 ">
+              <div className="flex items-center gap-4 text-xl ">
                 <img
                   src={require("../../assets/Car Care/RightTick.png")}
                   alt=""
@@ -97,26 +98,26 @@ const CarCare = () => {
                 <div>Included With Vehicle</div>
               </div>
             </div>
-            <div className="p-7  space-y-5 border-t  ">
-              <div className="flex gap-4 items-center">
+            <div className="space-y-5 border-t p-7 ">
+              <div className="flex items-center gap-4">
                 <div className="h-2.5 w-2.5 -mt-1 bg-black rounded-full"></div>
                 <div className="">360 point inspection and reconditioning</div>
               </div>
-              <div className="flex gap-4 items-center">
+              <div className="flex items-center gap-4">
                 <div className="h-2.5 w-2.5 -mt-1 bg-black rounded-full"></div>
                 <div className="">
                   7-day/250 miles full money back guarantee
                 </div>
               </div>
-              <div className="flex gap-4 items-center">
+              <div className="flex items-center gap-4">
                 <div className="h-2.5 w-2.5 -mt-1 bg-black rounded-full"></div>
                 <div className="">1 year warranty and road side assistance</div>
               </div>
             </div>
           </div>
           <div className="relative border rounded-xl shadow bg-white w-[400px]">
-            <div className="p-5  ">
-              <div className=" flex items-center gap-4 text-xl  ">
+            <div className="p-5 ">
+              <div className="flex items-center gap-4 text-xl ">
                 <img
                   src={require("../../assets/Car Care/CareExtra.png")}
                   alt=""
@@ -125,12 +126,12 @@ const CarCare = () => {
                 <div>Car Care Extra</div>
               </div>
             </div>
-            <div className="p-7 border-t rounded-b-xl space-y-4 ">
-              <div className="flex gap-4 items-center">
+            <div className="space-y-4 border-t p-7 rounded-b-xl ">
+              <div className="flex items-center gap-4">
                 <div className="h-2.5 w-2.5 -mt-1 bg-black rounded-full"></div>
                 <div className="">Driftly Cover extended warranty</div>
               </div>
-              <div className="flex gap-4 items-center">
+              <div className="flex items-center gap-4">
                 <div className="h-2.5 w-2.5 -mt-1 bg-black rounded-full"></div>
                 <div className="">Driftly Guard Paint & Fabric Protection</div>
               </div>
@@ -138,7 +139,7 @@ const CarCare = () => {
           </div>
         </div>
 
-        <div className="text-center text-xl">
+        <div className="text-xl text-center">
           Find your perfect Driftly car and get it delivered to your doorstep
         </div>
 
@@ -171,8 +172,9 @@ const CarCare = () => {
           </div>
         </div>
 
-        <div className="cursor-pointer text-[#00BAB8] underline underline-offset-2 container mx-auto w-[80%] ">View All</div>
-
+        <div className="cursor-pointer text-[#00BAB8] underline underline-offset-2 container mx-auto w-[80%] ">
+          View All
+        </div>
       </div>
     </div>
   );

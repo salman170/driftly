@@ -12,6 +12,7 @@ import CarList from "./screen/Car List/CarList";
 import Finance from "./screen/Finance/Finance";
 import Sell from "./screen/Sell/Sell";
 import ExperienceCenter from "./screen/About/ExperienceCenter";
+import CarCareExtended from "./screen/Car Care/CarCareExtended";
 // import { useState } from "react";
 // import ModalLoaction from "./others/ModalLoaction";
 
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/support" element={<Support />} />
           <Route exact path="/how-it-works" element={<HowItWorks />} />
           <Route exact path="/car-care" element={<CarCare />} />
+          <Route exact path="/car-care-extended" element={<CarCareExtended />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/about" element={<About />} />
           <Route
