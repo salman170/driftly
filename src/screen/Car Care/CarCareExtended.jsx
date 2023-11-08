@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import HeroImage from "../../assets/How It Works/Howitwork-HeroImage.png";
 import StartPrice from "../../assets/Car Care/StartPrice.png";
@@ -9,8 +9,12 @@ import ExpArtboard from "../../assets/Home/Artboard.png";
 import ExpAuto from "../../assets/Home/automated.png";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { BsChevronDown } from "react-icons/bs";
 
 const CarCareExtended = () => {
+  const [include, setInclude] = useState(true);
+  const [notInclude, setNotInclude] = useState(false);
+
   const data = [
     {
       img: ExpKey,
@@ -31,50 +35,74 @@ const CarCareExtended = () => {
     },
   ];
 
-//   const mechData = [
-//     {
-//       title: "Drivetrain",
-//       content: [
-//         "Braking system",
-//         "Suspension",
-//         "Steering",
-//         "Drive system",
-//         "Propshaft",
-//       ],
-//     },
-//     {
-//       title: "Engine",
-//       content: [
-//         "Cooling system",
-//         "ECUs",
-//         "Engine",
-//         "Timing belt(s)",
-//         "Supercharger",
-//         "Turbo",
-//         "Fuel system",
-//         "Catalytic converter",
-//         "Diesel particulate filter (DPF)",
-//       ],
-//     },
-//     {
-//       title: "Transmission",
-//       content: [
-//         "Manual and automatic gearbox",
-//         "Clutch",
-//         "Continuously variable transmission",
-//       ],
-//     },
-//     {
-//       title: "Electrical",
-//       content: [
-//         "Air conditioning",
-//         " Electrical system",
-//         "Steering",
-//         "Drive system",
-//         "ICE/Multi-media/Touchscreen display",
-//       ],
-//     },
-//   ];
+  const mechData = [
+    {
+      title: "Drivetrain",
+      content: [
+        "Braking system",
+        "Suspension",
+        "Steering",
+        "Drive system",
+        "Propshaft",
+      ],
+    },
+    {
+      title: "Engine",
+      content: [
+        "Cooling system",
+        "ECUs",
+        "Engine",
+        "Timing belt(s)",
+        "Supercharger",
+        "Turbo",
+        "Fuel system",
+        "Catalytic converter",
+        "Diesel particulate filter (DPF)",
+      ],
+    },
+    {
+      title: "Transmission",
+      content: [
+        "Manual and automatic gearbox",
+        "Clutch",
+        "Continuously variable transmission",
+      ],
+    },
+    {
+      title: "Electrical",
+      content: [
+        "Air conditioning",
+        " Electrical system",
+        "Steering",
+        "Drive system",
+        "ICE/Multi-media/Touchscreen display",
+      ],
+    },
+  ];
+
+  const PriceByEngineData = [
+    {
+      title: "0-2 Litres",
+      Year1: "29,999",
+      Year2: "54,999",
+      Year3: "84,999",
+      Year4: "1,19,999",
+    },
+    {
+      title: "2.1-3 Litres",
+      Year1: "29,999",
+      Year2: "54,999",
+      Year3: "84,999",
+      Year4: "1,19,999",
+    },
+    {
+      title: "Over 3 Liters",
+      Year1: "29,999",
+      Year2: "54,999",
+      Year3: "84,999",
+      Year4: "1,19,999",
+    },
+  ];
 
   return (
     <div>
@@ -108,9 +136,10 @@ const CarCareExtended = () => {
           </div>
         </div>
         <div className="w-1/2">
-          <img src={GuardPaint} alt="" srcset="" className="w-full " />
+          <img src={GuardPaint} alt="" srcSet="" className="w-full " />
         </div>
       </section>
+
       <section className="overflow-hidden bg-[#363636]">
         <div className="container px-4 py-20 mx-auto">
           <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
@@ -128,41 +157,74 @@ const CarCareExtended = () => {
           </div>
         </div>
       </section>
+
       <section className="container py-20 mx-auto">
         <div className="text-4xl font-extralight text-[#5E5E5E] pb-10">
           Mechanical & Electrical Parts Coverage
         </div>
 
-        <div className="bg-[#F8F8F8]  rounded-lg mb-8 ">
-          <div className="px-5 py-3 bg-[#363636] rounded-t-md text-xl uppercase text-white  ">
-            What's Included
+        <div className="bg-[#F8F8F8]  rounded-lg mb-10 select-none ">
+          <div
+            className={`px-5 py-3 bg-[#363636] rounded-t-md text-md uppercase text-white   flex justify-between items-center cursor-pointer  ${
+              !include && "rounded-b-md"
+            }`}
+            onClick={() => setInclude(!include)}
+          >
+            <div className=""> What's Included ?</div>
+            <div className={`duration-200 ${include ? "rotate-180" : ""}`}>
+              <BsChevronDown />
+            </div>
           </div>
-          <section className="px-5 py-5">
-            <div>Drivley Cover Includes:</div>
-            <div></div>
-          </section>
+          {include && (
+            <section className="px-5 py-5">
+              <div className="pb-2">Drivley Cover Includes:</div>
+              <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+                {mechData.map((x, i) => (
+                  <div key={i}>
+                    <div className="text-lg font-bold">{x.title}</div>
+                    <ul className="ml-4 font-light list-disc select-none">
+                      {x.content.map((y, index) => (
+                        <li key={index}>{y}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
-        <div className="bg-[#F8F8F8]  rounded-lg ">
-          <div className="px-5 py-3 bg-[#363636] rounded-t-md text-xl uppercase text-white  ">
-            What's Included
+        <div className="bg-[#F8F8F8]  rounded-lg select-none ">
+          <div
+            className={`px-5 py-3 bg-[#363636] rounded-t-md text-md uppercase text-white   flex justify-between items-center cursor-pointer  ${
+              !notInclude && "rounded-b-md"
+            }`}
+            onClick={() => setNotInclude(!notInclude)}
+          >
+            <div className=""> What's Included ?</div>
+            <div className={`duration-200 ${notInclude ? "rotate-180" : ""}`}>
+              <BsChevronDown />
+            </div>
           </div>
-          <section className="px-5 py-5 ">
-            <div className="mb-4">
-              Your cover doesn’t include high-use touch points where everyday
-              wear and tear is to be expected, for example, brake pads, seats,
-              carpets and more. <br />
-              You can see the full list of exclusions here:{" "}
-              <span className="text-[#00BAB8] font-semibold">
-                terms and conditions.
-              </span>
-            </div>
-            <div>
-              The total combined claim value can’t be greater than the purchase
-              price of the car. Individual claim limits also apply.
-            </div>
-          </section>
+          {notInclude && (
+            <section className="px-5 py-5 ">
+              <div className="mb-4">
+                Your cover doesn’t include high-use touch points where everyday
+                wear and tear is to be expected, for example, brake pads, seats,
+                carpets and more. <br />
+                You can see the full list of exclusions here:{" "}
+                <span className="text-[#00BAB8] font-semibold">
+                  terms and conditions.
+                </span>
+              </div>
+              <div>
+                The total combined claim value can’t be greater than the
+                purchase price of the car. Individual claim limits also apply.
+              </div>
+            </section>
+          )}
         </div>
       </section>
+
       <section className="overflow-hidden">
         <div className="relative ">
           <img src={StartPrice} alt="" srcSet="" className="w-full" />
@@ -192,6 +254,39 @@ const CarCareExtended = () => {
         </div>
       </section>
 
+      <section className="container mx-auto">
+        <div className="mt-14  container mx-auto text-[2.5rem] font-extralight mb-6">
+          Price by Engine Size
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {PriceByEngineData.map((x, i) => {
+            return (
+              <div key={i} className="bg-[#F4F4F4] p-6 rounded-xl">
+                <div className="font-bold">{x.title}</div>
+                <section className="mt-3 ml-2">
+                  <div className="flex justify-between py-2 border-b border-white">
+                    <div>1 Year</div>
+                    <div>₹{x.Year1}</div>
+                  </div>
+                  <div className="flex justify-between py-2 border-b border-white">
+                    <div>2 Year</div>
+                    <div>₹{x.Year2}</div>
+                  </div>
+                  <div className="flex justify-between py-2 border-b border-white">
+                    <div>3 Year</div>
+                    <div>₹{x.Year3}</div>
+                  </div>
+                  <div className="flex justify-between py-2 ">
+                    <div>4 Year</div>
+                    <div>₹{x.Year4}</div>
+                  </div>
+                </section>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
       <section>
         <div className="mb-10">
           <div className="mt-14 w-[90%] container mx-auto text-[2.5rem] font-extralight mb-6">
@@ -216,7 +311,7 @@ const CarCareExtended = () => {
             </div>
           </div>
 
-          <div className="cursor-pointer text-[#00BAB8] underline underline-offset-2 container mx-auto w-[80%] ">
+          <div className="cursor-pointer text-[#00BAB8] underline underline-offset-2 container mx-auto w-[90%] ">
             View All Extended Warranty FAQ
           </div>
         </div>
