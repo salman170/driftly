@@ -417,7 +417,7 @@ function CiustomerReviewSlider() {
   );
 }
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <>
       <footer class=' text-center text-white bg-black  lg:text-left'>
