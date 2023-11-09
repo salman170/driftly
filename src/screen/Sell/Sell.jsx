@@ -25,16 +25,16 @@ const SearchPanel = () => {
         All Car &gt; <span className="text-[#00BAB8]">Sedan</span>{" "}
       </div>
 
-      <div class="pt-2 relative  text-gray-600">
+      <div className="pt-2 relative  text-gray-600">
         <input
-          class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+          className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
           type="search"
           name="search"
           placeholder="Search"
         />
-        <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+        <button type="submit" className="absolute right-0 top-0 mt-5 mr-4">
           <svg
-            class="text-gray-600 h-4 w-4 fill-current"
+            className="text-gray-600 h-4 w-4 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             xlinkHref="http://www.w3.org/1999/xlink" // Change from 'xmlns:xlink' to 'xlinkHref'
             version="1.1"
@@ -52,28 +52,28 @@ const SearchPanel = () => {
         </button>
       </div>
 
-      {/* <div class="mt-6 bg-transparent border rounded-lg dark:border-gray-700 lg:w-2/3 focus-within:border-primary focus-within:ring focus-within:ring-primary dark:focus-within:border-primary focus-within:ring-opacity-20">
+      {/* <div className="mt-6 bg-transparent border rounded-lg dark:border-gray-700 lg:w-2/3 focus-within:border-primary focus-within:ring focus-within:ring-primary dark:focus-within:border-primary focus-within:ring-opacity-20">
         <form
           action="/search"
-          class="flex flex-wrap justify-between md:flex-row"
+          className="flex flex-wrap justify-between md:flex-row"
         >
           <input
             type="search"
             name="query"
             placeholder="Search Components"
             required="required"
-            class="flex-1 h-10 px-4 m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none lg:h-12 dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0"
+            className="flex-1 h-10 px-4 m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none lg:h-12 dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0"
           />{" "}
           <button
             type="submit"
-            class="flex items-center justify-center w-full p-2 m-1 text-white transition-colors duration-300 transform rounded-lg lg:w-12 lg:h-12 lg:p-0 bg-primary hover:bg-primary/70 focus:outline-none focus:bg-primary/70"
+            className="flex items-center justify-center w-full p-2 m-1 text-white transition-colors duration-300 transform rounded-lg lg:w-12 lg:h-12 lg:p-0 bg-primary hover:bg-primary/70 focus:outline-none focus:bg-primary/70"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              class="w-6 h-6"
+              className="w-6 h-6"
             >
               <path
                 stroke-linecap="round"
