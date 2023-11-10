@@ -10,7 +10,7 @@ const Sell = () => {
     <div className="container mx-auto">
       <SearchPanel />
       <div className="flex gap-4 ">
-        <div className="w-[400px]  rounded-3xl p-2 ">
+        <div className="w-[400px]  rounded-3xl p-2 h-screen overflow-y-scroll">
           <FilteringPanel />
         </div>
         <div className="bg-gray-50 w-full h-[80vh] rounded-3xl">
