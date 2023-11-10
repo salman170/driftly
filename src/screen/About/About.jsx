@@ -454,38 +454,40 @@ export const Footer = () => {
                   Search Cars
                 </p>
                 <p class='mb-4'>
-                  <a href='#!' class='text-white '>
+                  <a href='/sell' class='text-white '>
                     Sell/Trade
                   </a>
                 </p>
                 <p class='mb-4'>
-                  <a href='#!' class='text-white '>
+                  <a href='/finance' class='text-white '>
                     Financing
                   </a>
                 </p>
                 <p class='mb-4'>
-                  <a href='#!' class='text-white '>
+                  <a href='/car-care' class='text-white '>
                     Car Care
                   </a>
                 </p>
               </div>
 
               <div class='font-light w-40 m-auto'>
-                <h6 class='mb-4 flex justify-center uppercase md:justify-start'>
-                  How it Works
-                </h6>
                 <p class='mb-4'>
-                  <a href='#!' class='text-white '>
+                  <a href='/how-it-works' class='text-white '>
+                    How it Works
+                  </a>
+                </p>
+                <p class='mb-4'>
+                  <a href='/about' class='text-white '>
                     About Us
                   </a>
                 </p>
                 <p class='mb-4'>
                   <a href='#!' class='text-white '>
-                    Career
+                    Careers
                   </a>
                 </p>
                 <p class='mb-4'>
-                  <a href='#!' class='text-white '>
+                  <a href='/support' class='text-white '>
                     Support
                   </a>
                 </p>
