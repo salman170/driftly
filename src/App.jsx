@@ -15,6 +15,8 @@ import ExperienceCenter from "./screen/About/ExperienceCenter";
 import CarCareExtended from "./screen/Car Care/CarCareExtended";
 import Compare from './screen/Compare/Compare';
 import Footer2 from "./others/Footer2";
+import Wishlist from "./screen/Wishlist/Wishlist";
+import Accounts from "./screen/Accounts/Accounts";
 // import { useState } from "react";
 // import ModalLoaction from "./others/ModalLoaction";
 
@@ -34,17 +36,13 @@ function App() {
           <Route exact path="/car-care-extended" element={<CarCareExtended />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/about" element={<About />} />
-          <Route
-            exact
-            path="/experience-center"
-            element={<ExperienceCenter />}
-          />
+          <Route exact path="/experience-center" element={<ExperienceCenter />} />
           <Route exact path="/car-lists" element={<CarList />} />
-
           <Route exact path="/sell" element={<Sell />} />
           <Route exact path="/finance" element={<Finance />} />
           <Route exact path='/compare' element={<Compare />} />
-
+          <Route exact path='/wishlist' element={<Wishlist />} />
+          <Route exact path='/accounts' element={<Accounts />} />
           <Route exact path="/*" element={<NotFound />} />
         </Routes>
       </div>

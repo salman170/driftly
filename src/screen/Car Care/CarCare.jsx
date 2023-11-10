@@ -153,19 +153,19 @@ const CarCare = () => {
         <div className="mt-14 w-[80%] container mx-auto text-[2.5rem] font-extralight mb-6">
           Frequently Asked Questions
         </div>
-        <div className="flex container mx-auto justify-between w-[80%] border py-4 text-xl px-4 items-center rounded-xl hover:shadow-dirftyShdaow cursor-pointer mb-8">
+        <div className="flex container mx-auto justify-between w-[80%] border py-4 text-xl px-4 items-center rounded-xl hover:shadow-driftyShdaow cursor-pointer mb-8">
           <div>What's included with my Driftly car?</div>
           <div className=" text-[#0BF2B3] ">
             <AiOutlineArrowRight className="text-xl" />
           </div>
         </div>
-        <div className="flex container mx-auto justify-between w-[80%] border py-4 text-xl px-4 items-center rounded-xl  hover:shadow-dirftyShdaow cursor-pointer mb-8">
+        <div className="flex container mx-auto justify-between w-[80%] border py-4 text-xl px-4 items-center rounded-xl  hover:shadow-driftyShdaow cursor-pointer mb-8">
           <div>How does the 7-Day Money Back Guarantee work?</div>
           <div className=" text-[#0BF2B3] ">
             <AiOutlineArrowRight className="text-xl" />
           </div>
         </div>
-        <div className="flex container mx-auto justify-between w-[80%] border py-4 text-xl px-4 items-center rounded-xl hover:shadow-dirftyShdaow cursor-pointer mb-12">
+        <div className="flex container mx-auto justify-between w-[80%] border py-4 text-xl px-4 items-center rounded-xl hover:shadow-driftyShdaow cursor-pointer mb-12">
           <div>What is 360 point inspection?</div>
           <div className=" text-[#0BF2B3] ">
             <AiOutlineArrowRight className="text-xl" />

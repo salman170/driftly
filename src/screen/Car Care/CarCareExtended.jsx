@@ -292,19 +292,19 @@ const CarCareExtended = () => {
           <div className="mt-14 w-[90%] container mx-auto text-[2.5rem] font-extralight mb-6">
             Frequently Asked Questions
           </div>
-          <div className="flex container mx-auto justify-between w-[90%] border py-4 text-xl px-4 items-center rounded-xl hover:shadow-dirftyShdaow cursor-pointer mb-8">
+          <div className="flex container mx-auto justify-between w-[90%] border py-4 text-xl px-4 items-center rounded-xl hover:shadow-driftyShdaow cursor-pointer mb-8">
             <div>How long can I extend my warranty for?</div>
             <div className=" text-[#0BF2B3] ">
               <AiOutlineArrowRight className="text-xl" />
             </div>
           </div>
-          <div className="flex container mx-auto justify-between w-[90%] border py-4 text-xl px-4 items-center rounded-xl  hover:shadow-dirftyShdaow cursor-pointer mb-8">
+          <div className="flex container mx-auto justify-between w-[90%] border py-4 text-xl px-4 items-center rounded-xl  hover:shadow-driftyShdaow cursor-pointer mb-8">
             <div>How do I pay for Driftly Cover Extended Warranty?</div>
             <div className=" text-[#0BF2B3] ">
               <AiOutlineArrowRight className="text-xl" />
             </div>
           </div>
-          <div className="flex container mx-auto justify-between w-[90%] border py-4 text-xl px-4 items-center rounded-xl hover:shadow-dirftyShdaow cursor-pointer mb-12">
+          <div className="flex container mx-auto justify-between w-[90%] border py-4 text-xl px-4 items-center rounded-xl hover:shadow-driftyShdaow cursor-pointer mb-12">
             <div>How do I cancel my extend warranty?</div>
             <div className=" text-[#0BF2B3] ">
               <AiOutlineArrowRight className="text-xl" />

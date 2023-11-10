@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'dirftyShdaow': '4px 6px 20px 5px rgba(11,242,179,0.3)',
+        'driftyShdaow': '4px 6px 20px 5px rgba(11,242,179,0.3)',
+        'driftyShdaow2': '4px 6px 20px 5px rgba(48,46,40,0.3)',
       }
     },
   },
