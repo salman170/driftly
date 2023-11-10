@@ -363,7 +363,7 @@ const BrandModelFilter = () => {
           </div>
         )}
       </div>
-      <div>
+      <div className="max-h-[45vh] overflow-y-scroll">
         {(searchText.length > 0 ? searchResults : BrandModelData).map(
           (data, index) => (
             <div key={index} className="mb-1">
@@ -645,7 +645,7 @@ const BodyTypeFiter = () => {
         return (
           <div
             key={i}
-            className={`bg-[#${x.color}] rounded text-center cursor-pointer relative`}
+            className={`bg-[#${x.color}] rounded text-center cursor-pointer relative select-none`}
             onClick={() => handleSelect(x.title)}
           >
             <div className="flex items-end justify-center mb-2 h-14 ">
