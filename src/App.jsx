@@ -13,8 +13,8 @@ import Finance from "./screen/Finance/Finance";
 import Sell from "./screen/Sell/Sell";
 import ExperienceCenter from "./screen/About/ExperienceCenter";
 import CarCareExtended from "./screen/Car Care/CarCareExtended";
-import Footer from "./others/Footer";
 import Compare from './screen/Compare/Compare';
+import Footer2 from "./others/Footer2";
 // import { useState } from "react";
 // import ModalLoaction from "./others/ModalLoaction";
 
@@ -48,7 +48,8 @@ function App() {
           <Route exact path="/*" element={<NotFound />} />
         </Routes>
       </div>
-      <Footer />
+     
+      <Footer2 />
       {/* <ModalLoaction visible={open} setShowMyModal={setOpen} /> */}
     </div>
   );
