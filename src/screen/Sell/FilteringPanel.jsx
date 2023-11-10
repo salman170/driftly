@@ -598,32 +598,32 @@ const BodyTypeFiter = () => {
     {
       title: "Hatchback",
       img2: require("../../assets/Home/HATCHBACK-B.png"),
-      color: "F4F4F4",
+      color: "#F4F4F4",
     },
     {
       title: "SUV",
       img2: require("../../assets/Home/SUV-B.png"),
-      color: "fff7eb",
+      color: "#fff7eb",
     },
     {
       title: "SEDAN",
       img2: require("../../assets/Home/SEDAN-B.png"),
-      color: "ecfad7",
+      color: "#ecfad7",
     },
     {
       title: "MUV",
       img2: require("../../assets/Home/MUV-B.png"),
-      color: "d4faf6",
+      color: "#d4faf6",
     },
     {
       title: "Coupe",
       img2: require("../../assets/Home/COUPE-B.png"),
-      color: "deebff",
+      color: "#deebff",
     },
     {
       title: "Convertible",
       img2: require("../../assets/Home/Convertible-B.png"),
-      color: "e7e1fa",
+      color: "#e7e1fa",
     },
   ];
 
@@ -645,7 +645,8 @@ const BodyTypeFiter = () => {
         return (
           <div
             key={i}
-            className={`bg-[#${x.color}] rounded text-center cursor-pointer relative select-none`}
+            className={`bg-[#F4F4F4] rounded text-center cursor-pointer relative select-none`}
+            // className={`bg-[${x.color}] rounded text-center cursor-pointer relative select-none`}
             onClick={() => handleSelect(x.title)}
           >
             <div className="flex items-end justify-center mb-2 h-14 ">
@@ -671,36 +672,36 @@ const BodyTypeFiter = () => {
 const ColourFilter = () => {
   const [selectedColourTypes, setSelectedColourTypes] = useState([]);
 
-  const ColourFilterData = [
-    {
-      title: "Red",
-      color: "#D91414",
-    },
-    {
-      title: "Blue",
-      color: "#18386C",
-    },
-    {
-      title: "Black",
-      color: "#000000",
-    },
-    {
-      title: "White",
-      color: "#FAFAFA",
-    },
-    {
-      title: "Silver",
-      color: "#F4F4F4",
-    },
-    {
-      title: "Brown",
-      color: "#8B461B",
-    },
-    {
-      title: "Yellow",
-      color: "#FFCE2C",
-    },
-  ];
+  // const ColourFilterData = [
+  //   {
+  //     title: "Red",
+  //     color: "#D91414",
+  //   },
+  //   {
+  //     title: "Blue",
+  //     color: "#18386C",
+  //   },
+  //   {
+  //     title: "Black",
+  //     color: "#000000",
+  //   },
+  //   {
+  //     title: "White",
+  //     color: "#FAFAFA",
+  //   },
+  //   {
+  //     title: "Silver",
+  //     color: "#F4F4F4",
+  //   },
+  //   {
+  //     title: "Brown",
+  //     color: "#8B461B",
+  //   },
+  //   {
+  //     title: "Yellow",
+  //     color: "#FFCE2C",
+  //   },
+  // ];
 
   const handleSelect = (title) => {
     if (selectedColourTypes.includes(title)) {
@@ -714,7 +715,7 @@ const ColourFilter = () => {
 
   return (
     <div className="grid grid-cols-3 gap-4 mb-6 lg:gap-5 lg:grid-cols-4">
-      {ColourFilterData.map((x, i) => {
+      {/* {ColourFilterData.map((x, i) => {
         const isSelected = selectedColourTypes.includes(x.title);
         return (
           <div
@@ -727,7 +728,7 @@ const ColourFilter = () => {
                 x.color
               }]  ${isSelected ? " shadow-lg shadow-gray-600" : "border"} `}
             ></div>
-            <div className={`text-xs ${isSelected && "font-semibold text-xl"}`}>
+            <div className={`text-xs ${isSelected && "font-semibold text-xl"}  `}>
               {" "}
               {x.title}
             </div>
@@ -739,10 +740,147 @@ const ColourFilter = () => {
                   srcSet=""
                 />
               </div>
-            )} */}
+            )} 
           </div>
         );
-      })}
+      })} */}
+
+      <div
+        className={` rounded text-center cursor-pointer relative`}
+        onClick={() => handleSelect("Red")}
+      >
+        <div
+          className={`flex items-end justify-center mb-2 h-14 rounded duration-200  bg-[#D91414] ${
+            selectedColourTypes.includes("Red")
+              ? " shadow-lg shadow-gray-600"
+              : "border"
+          } `}
+        ></div>
+        <div
+          className={`text-xs ${
+            selectedColourTypes.includes("Red") && "font-semibold text-xl"
+          }`}
+        >
+          Red
+        </div>
+      </div>
+
+      <div
+        className={` rounded text-center cursor-pointer relative`}
+        onClick={() => handleSelect("Blue")}
+      >
+        <div
+          className={`flex items-end justify-center mb-2 h-14 rounded duration-200  bg-blue-900 ${
+            selectedColourTypes.includes("Blue")
+              ? " shadow-lg shadow-gray-600"
+              : "border"
+          } `}
+        ></div>
+        <div
+          className={`text-xs ${
+            selectedColourTypes.includes("Blue") && "font-semibold text-xl"
+          }`}
+        >
+          Blue
+        </div>
+      </div>
+      <div
+        className={` rounded text-center cursor-pointer relative`}
+        onClick={() => handleSelect("Black")}
+      >
+        <div
+          className={`flex items-end justify-center mb-2 h-14 rounded duration-200  bg-black ${
+            selectedColourTypes.includes("Black")
+              ? " shadow-lg shadow-gray-600"
+              : "border"
+          } `}
+        ></div>
+        <div
+          className={`text-xs ${
+            selectedColourTypes.includes("Black") && "font-semibold text-xl"
+          }`}
+        >
+          Black
+        </div>
+      </div>
+
+      <div
+        className={` rounded text-center cursor-pointer relative`}
+        onClick={() => handleSelect("White")}
+      >
+        <div
+          className={`flex items-end justify-center mb-2 h-14 rounded duration-200  bg-white ${
+            selectedColourTypes.includes("White")
+              ? " shadow-lg shadow-gray-600"
+              : "border"
+          } `}
+        ></div>
+        <div
+          className={`text-xs ${
+            selectedColourTypes.includes("White") && "font-semibold text-xl"
+          }`}
+        >
+          White
+        </div>
+      </div>
+
+      <div
+        className={` rounded text-center cursor-pointer relative`}
+        onClick={() => handleSelect("Silver")}
+      >
+        <div
+          className={`flex items-end justify-center mb-2 h-14 rounded duration-200  bg-[#F4F4F4] ${
+            selectedColourTypes.includes("Silver")
+              ? " shadow-lg shadow-gray-600"
+              : "border"
+          } `}
+        ></div>
+        <div
+          className={`text-xs ${
+            selectedColourTypes.includes("Silver") && "font-semibold text-xl"
+          }`}
+        >
+          Silver
+        </div>
+      </div>
+      <div
+        className={` rounded text-center cursor-pointer relative`}
+        onClick={() => handleSelect("Brown")}
+      >
+        <div
+          className={`flex items-end justify-center mb-2 h-14 rounded duration-200  bg-[#8B461B] ${
+            selectedColourTypes.includes("Brown")
+              ? " shadow-lg shadow-gray-600"
+              : "border"
+          } `}
+        ></div>
+        <div
+          className={`text-xs ${
+            selectedColourTypes.includes("Brown") && "font-semibold text-xl"
+          }`}
+        >
+          Brown
+        </div>
+      </div>
+      <div
+        className={` rounded text-center cursor-pointer relative`}
+        onClick={() => handleSelect("Yellow")}
+      >
+        <div
+          className={`flex items-end justify-center mb-2 h-14 rounded duration-200  bg-[#FFCE2C] ${
+            selectedColourTypes.includes("Yellow")
+              ? " shadow-lg shadow-gray-600"
+              : "border"
+          } `}
+        ></div>
+        <div
+          className={`text-xs ${
+            selectedColourTypes.includes("Yellow") && "font-semibold text-xl"
+          }`}
+        >
+          Yellow
+        </div>
+      </div>
 
       <div
         className={` rounded text-center cursor-pointer relative`}

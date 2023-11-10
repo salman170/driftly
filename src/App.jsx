@@ -14,6 +14,7 @@ import Sell from "./screen/Sell/Sell";
 import ExperienceCenter from "./screen/About/ExperienceCenter";
 import CarCareExtended from "./screen/Car Care/CarCareExtended";
 import Footer from "./others/Footer";
+import Compare from './screen/Compare/Compare';
 // import { useState } from "react";
 // import ModalLoaction from "./others/ModalLoaction";
 
@@ -42,6 +43,7 @@ function App() {
 
           <Route exact path="/sell" element={<Sell />} />
           <Route exact path="/finance" element={<Finance />} />
+          <Route exact path='/compare' element={<Compare />} />
 
           <Route exact path="/*" element={<NotFound />} />
         </Routes>

@@ -7,7 +7,6 @@ import { DCEC } from '../Home/Home';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai';
-import customerReview from './../../assets/How It Works/CustomerReview1.png';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -37,7 +36,7 @@ const HeroImage = () => {
     <>
       <header>
         <div
-          className='relative overflow-hidden bg-cover bg-no-repeat'
+          class='relative overflow-hidden bg-cover bg-no-repeat'
           style={{
             backgroundPosition: '50%',
 
@@ -46,10 +45,10 @@ const HeroImage = () => {
             height: '350px',
           }}
         >
-          <div className='absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed'>
-            <div className='container mx-auto px-4 flex h-full mt-10'>
-              <div className='p-6 text-left text-white md:px-12'>
-                <div className='mt-2 text-xl font-bold tracking-tight md:text-4xl xl:text-4xl'>
+          <div class='absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed'>
+            <div class='container mx-auto px-4 flex h-full mt-10'>
+              <div class='p-6 text-left text-white md:px-12'>
+                <div class='mt-2 text-xl font-bold tracking-tight md:text-4xl xl:text-4xl'>
                   We sell cars, but <br></br>we aren't car salesmen <br />
                   <span>Hotel Inner Circle</span>
                 </div>
@@ -120,12 +119,17 @@ const ImageBanner = () => {
           >
             <div className='flex items-center justify-center h-full'>
               <div className='text-white'>
-                <h4 className='mb-6 text-xl font-regular'>
+                <h4 className='mb-6 text-base italic font-light leading-loose tracking-wide'>
                   We want to make buying your next car no different to ordering
-                  any other product today. Where consumers can simply and
-                  seamlessly buy, finance or subscribe to a car entirely online
+                  any other product today. <br></br>Where consumers can simply
+                  and seamlessly buy, finance or subscribe to a car entirely
+                  online
+                  <br />
                   for delivery or collection in as little as 72 hours.
                 </h4>
+                <div className='text-sm italic font-semibold'>
+                  -&nbsp;John Doe
+                </div>
               </div>
             </div>
           </div>
@@ -137,111 +141,113 @@ const ImageBanner = () => {
 
 const CardLayout = () => {
   return (
-    <div className='my-12 mx-auto px-4 md:px-12 bg-black text-white'>
-      <div className='flex flex-wrap -mx-1 lg:-mx-4'>
-        <div className='container mx-auto px-4 flex h-full mt-10'>
-          <div className='text-left text-white  lg:pt-2'>
-            <div className='mt-2 text-xs font-extralight tracking-tight md:text-4xl xl:text-m'>
-              Our Values
+    <>
+      <div class='my-12 mx-auto px-4 md:px-12 bg-black text-white'>
+        <div class='flex flex-wrap -mx-1 lg:-mx-4'>
+          <div class='container mx-auto px-4 flex h-full mt-10'>
+            <div class='text-left text-white  lg:pt-2'>
+              <div class='mt-2 text-xs font-extralight tracking-tight md:text-4xl xl:text-m'>
+                Our Values
+              </div>
+
+              <div className='p-2 text-xs'>
+                To give our customers the best car experience, <br></br>we stand
+                by our key values. We are:
+              </div>
             </div>
+          </div>
+          <div class='container mx-auto px-4 flex h-full mt-3 pl-1'>
+            <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+              <article class='overflow-hidden'>
+                <a href='/'>
+                  <img
+                    alt='Placeholder'
+                    class='block h-auto w-full'
+                    src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-1.webp'
+                  />
+                </a>
 
-            <div className='p-2 text-xs'>
-              To give our customers the best car experience, <br></br>we stand
-              by our key values. We are:
+                <a href='/' class='block max-w-sm pt-2'>
+                  <h5 class='text-xl font-normal tracking-tight'>
+                    Customer Obsessed
+                  </h5>
+                  <p class='font-light text-sm text-white'>
+                    We put the customer first in everything we do. We want to be
+                    famous for delivering the best experience and wowing our
+                    customers.
+                  </p>
+                </a>
+              </article>
             </div>
-          </div>
-        </div>
-        <div className='container mx-auto px-4 flex h-full mt-3 pl-1'>
-          <div className='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
-            <article className='overflow-hidden'>
-              <a href='#'>
-                <img
-                  alt='Placeholder'
-                  className='block h-auto w-full'
-                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-1.webp'
-                />
-              </a>
+            <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+              <article class='overflow-hidden'>
+                <a href='/'>
+                  <img
+                    alt='Placeholder'
+                    class='block h-auto w-full'
+                    src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-2.webp'
+                  />
+                </a>
 
-              <a href='#' className='block max-w-sm pt-2'>
-                <h5 className='text-xl font-normal tracking-tight'>
-                  Customer Obsessed
-                </h5>
-                <p className='font-light text-sm text-gray-700 dark:text-gray-400'>
-                  We put the customer first in everything we do. We want to be
-                  famous for delivering the best experience and wowing our
-                  customers.
-                </p>
-              </a>
-            </article>
-          </div>
-          <div className='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
-            <article className='overflow-hidden'>
-              <a href='#'>
-                <img
-                  alt='Placeholder'
-                  className='block h-auto w-full'
-                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-2.webp'
-                />
-              </a>
+                <a href='/' class='block max-w-sm pt-2'>
+                  <h5 class='mb-2 text-xl font-normal tracking-tight'>
+                    Fast Drivers
+                  </h5>
+                  <p class='font-light text-sm text-white '>
+                    We have an entrepreneurial passion for working at speed. We
+                    move fast and drive fast towards our goals.
+                  </p>
+                </a>
+              </article>
+            </div>
+            <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+              <article class='overflow-hidden'>
+                <a href='/'>
+                  <img
+                    alt='Placeholder'
+                    class='block h-auto w-full'
+                    src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-3.webp'
+                  />
+                </a>
 
-              <a href='#' className='block max-w-sm pt-2'>
-                <h5 className='mb-2 text-xl font-normal tracking-tight'>
-                  Fast Drivers
-                </h5>
-                <p className='font-light text-sm text-gray-700 dark:text-gray-400'>
-                  We have an entrepreneurial passion for working at speed. We
-                  move fast and drive fast towards our goals.
-                </p>
-              </a>
-            </article>
-          </div>
-          <div className='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
-            <article className='overflow-hidden'>
-              <a href='#'>
-                <img
-                  alt='Placeholder'
-                  className='block h-auto w-full'
-                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-3.webp'
-                />
-              </a>
+                <a href='/' class='block max-w-sm pt-2'>
+                  <h5 class='mb-2 text-xl font-normal tracking-tight'>
+                    Data Driven
+                  </h5>
+                  <p class='font-light text-sm text-white '>
+                    Data is a part of our DNA and drives all decision making.
+                    We're informed, results-driven and seek insights to help us
+                    improve and grow.
+                  </p>
+                </a>
+              </article>
+            </div>
+            <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+              <article class='overflow-hidden'>
+                <a href='/'>
+                  <img
+                    alt='Placeholder'
+                    class='block h-auto w-full'
+                    src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-4.webp'
+                  />
+                </a>
 
-              <a href='#' className='block max-w-sm pt-2'>
-                <h5 className='mb-2 text-xl font-normal tracking-tight'>
-                  Data Driven
-                </h5>
-                <p className='font-light text-sm text-gray-700 dark:text-gray-400'>
-                  Data is a part of our DNA and drives all decision making.
-                  We're informed, results-driven and seek insights to help us
-                  improve and grow.
-                </p>
-              </a>
-            </article>
-          </div>
-          <div className='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
-            <article className='overflow-hidden'>
-              <a href='#'>
-                <img
-                  alt='Placeholder'
-                  className='block h-auto w-full'
-                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-4.webp'
-                />
-              </a>
-
-              <a href='#' className='block max-w-sm pt-2'>
-                <h5 className='mb-2 text-xl font-normal tracking-tight'>
-                  Team Players
-                </h5>
-                <p className='font-light text-sm text-gray-700 dark:text-gray-400'>
-                  We're better as a team than as individuals. Everyone counts.
-                  We're here to have fun and win together on this exciting
-                  journey.
-                </p>
-              </a>
-            </article>
+                <a href='/' class='block max-w-sm pt-2'>
+                  <h5 class='mb-2 text-xl font-normal tracking-tight'>
+                    Team Players
+                  </h5>
+                  <p class='font-light text-sm text-white '>
+                    We're better as a team than as individuals. Everyone counts.
+                    We're here to have fun and win together on this exciting
+                    journey.
+                  </p>
+                </a>
+              </article>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -249,7 +255,7 @@ const CardSlider = () => {
   return (
     <>
       <div className='overflow-hidden'>
-        <div className='container mx-auto  font-extralight'>
+        <div className='container mx-auto font-extralight'>
           <div className='pl-6 my-10 text-4xl'>Media Coverage</div>
         </div>
         <CiustomerReviewSlider />
@@ -265,8 +271,8 @@ function CiustomerReviewSlider() {
   const data = [
     {
       img: '',
-      name: 'card 1',
-      desg: 'Founder',
+      name: 'New Insurance Policy',
+      desg: 'September 15, 2020',
       body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Quae ipsam vel unde, maiores eaque harum architecto alias
       at iure consectetur id dicta tempore eos saepe
@@ -274,8 +280,8 @@ function CiustomerReviewSlider() {
     },
     {
       img: '',
-      name: 'card 2',
-      desg: 'Chairman & Managing Director',
+      name: 'Driftly No.1 Car buying Platform',
+      desg: 'September 15, 2020',
       body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Quae ipsam vel unde, maiores eaque harum architecto alias
       at iure consectetur id dicta tempore eos saepe
@@ -283,8 +289,8 @@ function CiustomerReviewSlider() {
     },
     {
       img: '',
-      name: 'card 3',
-      desg: 'JOINT MANAGING DIRECTOR',
+      name: 'Buying made easy',
+      desg: 'September 15, 2020',
       body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Quae ipsam vel unde, maiores eaque harum architecto alias
       at iure consectetur id dicta tempore eos saepe
@@ -292,17 +298,8 @@ function CiustomerReviewSlider() {
     },
     {
       img: '',
-      name: 'card 4',
-      desg: 'DIRECTOR OF SALES & MARKETING',
-      body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Quae ipsam vel unde, maiores eaque harum architecto alias
-      at iure consectetur id dicta tempore eos saepe
-      reprehenderit deleniti porro temporibus error.`,
-    },
-    {
-      img: '',
-      name: 'card 5',
-      desg: 'VICE PRESIDENT FINANCE',
+      name: 'Experience Center',
+      desg: 'September 15, 2020',
       body: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Quae ipsam vel unde, maiores eaque harum architecto alias
       at iure consectetur id dicta tempore eos saepe
@@ -323,88 +320,101 @@ function CiustomerReviewSlider() {
   return (
     <>
       <style>{styles}</style>
-      <div className='container mx-auto mb-10 overflow-visible select-none'>
-        <Swiper
-          pagination={{
-            dynamicBullets: true,
-            clickable: true,
-          }}
-          loop={true}
-          centeredSlides={true}
-          navigation={{
-            nextEl: navigationNextRef.current,
-            prevEl: navigationPrevRef.current,
-          }}
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = navigationPrevRef.current;
-            swiper.params.navigation.nextEl = navigationNextRef.current;
-          }}
-          // autoplay={{
-          //   delay: 4000,
-          //   disableOnInteraction: false,
-          // }}
-          breakpoints={{
-            640: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-            1280: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-          }}
-          modules={[Pagination, Navigation, Autoplay]}
-          className='relative overflow-visible customerSwiper'
-        >
-          <div className='absolute z-10 flex gap-4 right-2 md:right-20 -top-16 '>
-            <div
-              ref={navigationPrevRef}
-              className=' p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
-            >
-              <AiOutlineArrowLeft />
+      <div className='container mx-auto mb-5 overflow-visible select-none'>
+        <div className=''>
+          <Swiper
+            pagination={{
+              dynamicBullets: true,
+              clickable: true,
+            }}
+            loop={true}
+            centeredSlides={true}
+            navigation={{
+              nextEl: navigationNextRef.current,
+              prevEl: navigationPrevRef.current,
+            }}
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = navigationPrevRef.current;
+              swiper.params.navigation.nextEl = navigationNextRef.current;
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 5,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+            modules={[Pagination, Navigation, Autoplay]}
+            className='relative overflow-visible customerSwiper'
+          >
+            <div className='absolute z-10 flex gap-2 right-2 md:right-10 -top-16 '>
+              <div
+                ref={navigationPrevRef}
+                className=' p-1 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
+              >
+                <AiOutlineArrowLeft />
+              </div>
+              <div
+                ref={navigationNextRef}
+                className=' sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
+              >
+                <AiOutlineArrowRight />
+              </div>
             </div>
-            <div
-              ref={navigationNextRef}
-              className=' p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125'
-            >
-              <AiOutlineArrowRight />
-            </div>
-          </div>
-          {data.map((x, i) => {
-            return (
-              <SwiperSlide key={i} className='relative h-full overflow-hidden '>
-                <div className='bg-white shadow-lg'>
-                  <img
-                    src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-3.webp'
-                    alt='Card Image'
-                    className='object-cover w-100 h-300'
-                  />
-                  <div className=''>
-                    <h2 className='text-xl font-semibold'>{x.name}</h2>
-                    <p className='mt-2 text-gray-600'>{x.desg}</p>
-                    <p className='mt-2 text-gray-600'>{x.body}</p>
+            {data.map((x, i) => {
+              return (
+                <SwiperSlide
+                  key={i}
+                  className='relative h-full overflow-hidden '
+                >
+                  <div className='bg-white shadow-lg'>
+                    <div className='w-70 h-200'>
+                      <img
+                        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-3.webp'
+                        alt='Card'
+                        className='object-cover w-full h-full'
+                      />
+                    </div>
+                    <div className='p-1'>
+                      <h2 className='text-sm font-semibold md:text-base'>
+                        {x.name}
+                      </h2>
+                      <p className='mt-1 text-xs text-gray-600 font-extralight md:text-sm'>
+                        {x.desg}
+                      </p>
+                      <p className='mt-1 text-sm font-light text-gray-900 md:text-base'>
+                        {x.body}
+                      </p>
+                      <a
+                        href='/'
+                        className='text-xs md:text-sm text-[#0CF2B4] underline'
+                      >
+                        View
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
+                </SwiperSlide>
+              );
+            })}
 
-          {/* <div className="absolute z-10 text-white bottom-10 right-44 md:bottom-[83px]">
-          2/3
-         </div> */}
-
-          <div className='h-10'></div>
-        </Swiper>
+            <div className='h-10'></div>
+          </Swiper>
+        </div>
       </div>
     </>
   );
 }
+
 
 export default About;
