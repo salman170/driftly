@@ -1,29 +1,12 @@
 import React from "react";
 import Slider from "react-slider";
-import { useState } from "react";
 
-const RangeSlider = () => {
-  const MIN = 100000;
-  const MAX = 3000000;
-  const [values, setValues] = useState([MIN, MAX]);
-
+const RangeSlider = ({ MIN, MAX, values, setValues,steps }) => {
   const styles = `
-  .swiper-pagination-bullet {
-    /* Add gradient styles */
-    background: linear-gradient(to right, #00BAB8, #0BF2B3); /* Your gradient color */
-    /* Other styles */
-    width: 10px;
-    height: 10px;
-    margin: 0 8px;
-    opacity: 1;
-    transition: opacity 0.2s ease-out;
-  }
-  
   .slider {
-   
     width: 100%;
     height: 4px;
-    background: linear-gradient(to right, #00BAB8, #0BF2B3);
+    background: linear-gradient(to left, #00BAB8, #0BF2B3);
     margin-top : 20px;
   }
 
@@ -48,23 +31,16 @@ const RangeSlider = () => {
   return (
     <>
       <style>{styles}</style>
-      <div className=" ">
-        <div>
-          <div>{MIN}</div>
-          <div>{MAX}</div>
-          <div> {values[0]}</div>
-          {values[1]}
-          <div className="px-4">
-            <Slider
-              className="slider "
-              min={MIN}
-              max={MAX}
-              step={10000}
-              onChange={setValues}
-              value={values}
-            />
-          </div>
-        </div>
+
+      <div className="mb-4">
+        <Slider
+          className="slider "
+          min={MIN}
+          max={MAX}
+          step={steps}
+          onChange={setValues}
+          value={values}
+        />
       </div>
     </>
   );

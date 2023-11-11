@@ -89,7 +89,7 @@ const Header = () => {
                 </div>
                 <div className="absolute right-0 z-10 invisible top-4 group-hover:visible">
                   <div className="relative z-10 p-5 mt-8 bg-white rounded-xl shadow-driftyShdaow2">
-                    <Link to="/accounts">
+                    <Link to="/login">
                       <div className="flex items-center w-48 gap-5 pb-3 border-b cursor-pointer hover:font-semibold">
                         <RiUser6Fill className="text-2xl text-[#808080] hover:text-[#0BF2B3]" />
                         <div className="my-auto mt-2">Accounts</div>

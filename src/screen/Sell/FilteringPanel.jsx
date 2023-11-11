@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { PiSlidersLight } from "react-icons/pi";
 import { BsChevronDown } from "react-icons/bs";
+import RangeSlider from "./RangeSlider";
 
 const FilteringPanel = () => {
-  const [Budget, setBudget] = useState(false);
+  const [Budget, setBudget] = useState(true);
   const [BrandModel, setBrandModel] = useState(false);
   const [ModalYear, setModalYear] = useState(false);
   const [Kilometers, setKilometers] = useState(false);
   const [GearBox, setGearBox] = useState(false);
   const [FuelType, setFuelType] = useState(false);
-  const [BodyType, setBodyType] = useState(true);
-  const [colors, setColors] = useState(true);
+  const [BodyType, setBodyType] = useState(false);
+  const [colors, setColors] = useState(false);
   const [OtherFeatures, setOtherFeatures] = useState(false);
 
   return (
@@ -165,42 +166,38 @@ const FilteringPanel = () => {
 };
 
 const BudgetFilter = () => {
-  const [minValue, setMinValue] = useState(5000);
-  const [maxValue, setMaxValue] = useState(1000000);
+  const MIN = 1;
+  const MAX = 100;
+  const steps = 1;
 
-  const handleMinChange = (event) => {
-    setMinValue(parseInt(event.target.value, 10));
-  };
+  const initialValues = [MIN, MAX];
+  const [values, setValues] = useState(initialValues);
 
-  const handleMaxChange = (event) => {
-    setMaxValue(parseInt(event.target.value, 10));
+  // Function to reset values to initial state
+  const resetValues = () => {
+    setValues(initialValues);
   };
 
   return (
     <div className="mb-6 text-xs">
       <div className="flex justify-between mb-4">
-        <div className="px-5 py-2 rounded bg-[#F4F4F4] w-min">{minValue}</div>
-        <div className="px-5 py-2 rounded bg-[#F4F4F4] w-min">{maxValue}</div>
+        <div className="px-3 py-2 rounded bg-[#F4F4F4] w-min flex gap-1 items-center">
+          <div className="text-base font-bold">{values[0]}</div>{" "}
+          <div> Lakhs</div>
+        </div>
+        <div className="px-3 py-2 rounded bg-[#F4F4F4] w-min flex gap-1 items-center">
+          <div className="text-base font-bold">{values[1]}</div>{" "}
+          <div> Lakhs</div>
+        </div>
       </div>
       <div>
-        <div className="flex mb-1">
-          <input
-            type="range"
-            min="0"
-            max={maxValue}
-            value={minValue}
-            step={10000}
-            onChange={handleMinChange}
-            className="w-full bg-none"
-          />
-          <input
-            type="range"
-            min={100000}
-            max={1000000}
-            value={maxValue}
-            step={10000}
-            onChange={handleMaxChange}
-            className="w-full "
+        <div className="">
+          <RangeSlider
+            MIN={MIN}
+            MAX={MAX}
+            values={values}
+            setValues={setValues}
+            steps={steps}
           />
         </div>
         <div className="flex justify-between">
@@ -208,10 +205,7 @@ const BudgetFilter = () => {
           <div>Max</div>
         </div>
         <div
-          onClick={() => {
-            setMaxValue(1000000);
-            setMinValue(5000);
-          }}
+          onClick={resetValues}
           className="mt-2 underline cursor-pointer text-end underline-offset-2 text-[#00BAB8]"
         >
           Clear filter
@@ -363,7 +357,7 @@ const BrandModelFilter = () => {
           </div>
         )}
       </div>
-      <div className="max-h-[45vh] overflow-y-scroll">
+      <div className="max-h-[30vh] overflow-y-scroll">
         {(searchText.length > 0 ? searchResults : BrandModelData).map(
           (data, index) => (
             <div key={index} className="mb-1">
@@ -401,42 +395,36 @@ const BrandModelFilter = () => {
 };
 
 const ModelYearFilter = () => {
-  const [minYear, setMinYear] = useState(2009);
-  const [maxYear, setMaxYear] = useState(2023);
+  const MIN = 2009;
+  const MAX = 2023;
+  const steps = 1;
 
-  const handleMinChange = (event) => {
-    setMinYear(parseInt(event.target.value, 10));
-  };
+  const initialValues = [MIN, MAX];
+  const [values, setValues] = useState(initialValues);
 
-  const handleMaxChange = (event) => {
-    setMaxYear(parseInt(event.target.value, 10));
+  // Function to reset values to initial state
+  const resetValues = () => {
+    setValues(initialValues);
   };
 
   return (
     <div className="mb-6 text-xs">
       <div className="flex justify-between mb-4">
-        <div className="px-5 py-2 rounded bg-[#F4F4F4] w-min">{minYear}</div>
-        <div className="px-5 py-2 rounded bg-[#F4F4F4] w-min">{maxYear}</div>
+        <div className="px-4 py-2 rounded bg-[#F4F4F4] w-min ">
+          <div className=" ">{values[0]}</div>
+        </div>
+        <div className="px-4 py-2 rounded bg-[#F4F4F4] w-min ">
+          <div className=" ">{values[1]}</div>
+        </div>
       </div>
       <div>
-        <div className="flex mb-1">
-          <input
-            type="range"
-            min={2009}
-            max={maxYear}
-            value={minYear}
-            step={1}
-            onChange={handleMinChange}
-            className="w-full bg-none"
-          />
-          <input
-            type="range"
-            min={2009}
-            max={2023}
-            value={maxYear}
-            step={1}
-            onChange={handleMaxChange}
-            className="w-full "
+        <div className="">
+          <RangeSlider
+            MIN={MIN}
+            MAX={MAX}
+            values={values}
+            setValues={setValues}
+            steps={steps}
           />
         </div>
         <div className="flex justify-between">
@@ -444,10 +432,7 @@ const ModelYearFilter = () => {
           <div>Max</div>
         </div>
         <div
-          onClick={() => {
-            setMaxYear(1000000);
-            setMinYear(5000);
-          }}
+          onClick={resetValues}
           className="mt-2 underline cursor-pointer text-end underline-offset-2 text-[#00BAB8]"
         >
           Clear filter
@@ -458,42 +443,36 @@ const ModelYearFilter = () => {
 };
 
 const KilometersDrivenFilter = () => {
-  const [minKM, setMinKM] = useState(0);
-  const [maxKM, setMaxKM] = useState(50000);
+  const MIN = 0;
+  const MAX = 50000;
+  const steps = 1000;
 
-  const handleMinChange = (event) => {
-    setMinKM(parseInt(event.target.value, 10));
-  };
+  const initialValues = [MIN, MAX];
+  const [values, setValues] = useState(initialValues);
 
-  const handleMaxChange = (event) => {
-    setMaxKM(parseInt(event.target.value, 10));
+  // Function to reset values to initial state
+  const resetValues = () => {
+    setValues(initialValues);
   };
 
   return (
     <div className="mb-6 text-xs">
       <div className="flex justify-between mb-4">
-        <div className="px-5 py-2 rounded bg-[#F4F4F4] w-min">{minKM}</div>
-        <div className="px-5 py-2 rounded bg-[#F4F4F4] w-min">{maxKM}</div>
+        <div className="px-4 py-2 rounded bg-[#F4F4F4] w-min ">
+          <div className="">{values[0]}</div>
+        </div>
+        <div className="px-4 py-2 rounded bg-[#F4F4F4] w-min ">
+          <div className="">{values[1]}</div>
+        </div>
       </div>
       <div>
-        <div className="flex mb-1">
-          <input
-            type="range"
-            min={0}
-            max={maxKM}
-            value={minKM}
-            step={1000}
-            onChange={handleMinChange}
-            className="w-full bg-none"
-          />
-          <input
-            type="range"
-            min={0}
-            max={50000}
-            value={maxKM}
-            step={1000}
-            onChange={handleMaxChange}
-            className="w-full "
+        <div className="">
+          <RangeSlider
+            MIN={MIN}
+            MAX={MAX}
+            values={values}
+            setValues={setValues}
+            steps={steps}
           />
         </div>
         <div className="flex justify-between">
@@ -501,16 +480,28 @@ const KilometersDrivenFilter = () => {
           <div>50K+</div>
         </div>
         <div
-          onClick={() => {
-            setMaxKM(1000000);
-            setMinKM(5000);
-          }}
+          onClick={resetValues}
           className="mt-2 underline cursor-pointer text-end underline-offset-2 text-[#00BAB8]"
         >
           Clear filter
         </div>
       </div>
     </div>
+    // <div className="flex justify-between">
+    //   <div>0</div>
+    //   <div>50K+</div>
+    // </div>
+    // <div
+    //   onClick={() => {
+    //     setMaxKM(1000000);
+    //     setMinKM(5000);
+    //   }}
+    //   className="mt-2 underline cursor-pointer text-end underline-offset-2 text-[#00BAB8]"
+    // >
+    //   Clear filter
+    // </div>
+    // </div>
+    // </div>
   );
 };
 

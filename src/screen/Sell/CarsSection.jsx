@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const CarsSection = () => {
-  return (
-    <div>CarsSection</div>
-  )
-}
+  return <div></div>;
+};
 
-export default CarsSection
+export default CarsSection;
