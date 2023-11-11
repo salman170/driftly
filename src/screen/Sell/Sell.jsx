@@ -2,6 +2,7 @@ import React from "react";
 import FilteringPanel from "./FilteringPanel";
 import CarsSection from "./CarsSection";
 import Header from "../../others/Header";
+import RangeSlider from "./RangeSlider";
 
 const Sell = () => {
   return (
@@ -14,6 +15,7 @@ const Sell = () => {
           <FilteringPanel />
         </div>
         <div className="bg-gray-50 w-full h-[80vh] rounded-3xl">
+          <RangeSlider />
           <CarsSection />
         </div>
       </div>

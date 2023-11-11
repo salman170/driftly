@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Footer2 = () => {
   return (
     <div className="px-1 text-sm bg-black md:px-0">
-      <div className="container flex w-full pt-10 mx-auto md:justify-center">
+      <div className="container flex w-full pt-10 mx-auto ">
         <img
-          className="mb-6 h-14 "
+          className="mb-6 h-14 -ml-3"
           src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/Driftly_Logo_Reverse.webp"
           alt=""
         />
