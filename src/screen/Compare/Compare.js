@@ -30,9 +30,7 @@ const CompareHero = () => {
               </a>
             </li>
             <li>
-              <span class='mx-2 text-neutral-500 dark:text-neutral-400'>
-                &gt;
-              </span>
+              <span class='mx-2 text-neutral-500 '>&gt;</span>
             </li>
             <li>
               <a href='#/' class='text-[#0CF2B4]'>
@@ -334,7 +332,7 @@ const AccordianCompare = () => {
                         2023
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white'>
                       <td class='whitespace-nowrap px-6 py-4 '>Ownership</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         1st
@@ -346,7 +344,7 @@ const AccordianCompare = () => {
                         1st
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>Kms Driven</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         23000
@@ -358,7 +356,7 @@ const AccordianCompare = () => {
                         23000
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>Body Type</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         Sedan
@@ -370,7 +368,7 @@ const AccordianCompare = () => {
                         Sedan
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Registration Year
                       </td>
@@ -384,7 +382,7 @@ const AccordianCompare = () => {
                         2019
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>Fuel</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         Petrol
@@ -455,7 +453,7 @@ const AccordianCompare = () => {
                         5 Star (Global NCAP)
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Overspeed Warning
                       </td>
@@ -469,7 +467,7 @@ const AccordianCompare = () => {
                         beeps over 120 kmph
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Emergency Brake Light Flashing
                       </td>
@@ -483,7 +481,7 @@ const AccordianCompare = () => {
                         No
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>Puncture Kit</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         Yes
@@ -495,7 +493,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100'>
                       <td class='whitespace-nowrap px-6 py-4 '>Air Bags</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         Yes
@@ -507,7 +505,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Middle Rear Three - Point Seat Belt
                       </td>
@@ -560,7 +558,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Electronic Brake - force Distribution (EBD)
                       </td>
@@ -574,7 +572,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Brake Assist (BA)
                       </td>
@@ -588,7 +586,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Electronic Stability Program (ESP)
                       </td>
@@ -602,7 +600,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Hill Hold Control
                       </td>
@@ -616,7 +614,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Traction Control System (TC/TCS)
                       </td>
@@ -669,7 +667,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Central Locking
                       </td>
@@ -683,7 +681,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Speed Sensing Door Lock
                       </td>
@@ -697,7 +695,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Electronic Stability Program
                       </td>
@@ -711,7 +709,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Child Safety Lock
                       </td>
@@ -750,7 +748,7 @@ const AccordianCompare = () => {
                         Yes (Manual)
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>Front AC</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         Single Zone, <br />
@@ -765,13 +763,13 @@ const AccordianCompare = () => {
                         Common Fan Speed Control
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>Rear AC</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>-</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>-</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>-</td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>Heater</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         Yes
@@ -783,7 +781,7 @@ const AccordianCompare = () => {
                         Yes
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Vanity Mirrors on Sun Visors
                       </td>
@@ -830,7 +828,7 @@ const AccordianCompare = () => {
                         180 kmph
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-2 '>No of Valves</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         16
@@ -842,7 +840,7 @@ const AccordianCompare = () => {
                         16
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         No of Cylinders
                       </td>
@@ -850,7 +848,7 @@ const AccordianCompare = () => {
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>4</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>4</td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>Acceleration</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         11.3 seconds
@@ -862,7 +860,7 @@ const AccordianCompare = () => {
                         11.3 seconds
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>Economy</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         14 kmpl
@@ -874,7 +872,7 @@ const AccordianCompare = () => {
                         14 kmpl
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-2 '>Power</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         110 bhp
@@ -886,7 +884,7 @@ const AccordianCompare = () => {
                         110 bhp
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-2 '>Torque</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         14 kmpl
@@ -921,7 +919,7 @@ const AccordianCompare = () => {
                         1572 mm
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-2 '>Width</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         1758 mm
@@ -933,7 +931,7 @@ const AccordianCompare = () => {
                         1758 mm
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-2 '>Length</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         3994 mm
@@ -945,7 +943,7 @@ const AccordianCompare = () => {
                         3994 mm
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-2 '>Wheelbase</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         ₹6000 per year
@@ -957,7 +955,7 @@ const AccordianCompare = () => {
                         ₹6000 per year
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Fuel Tank Capacity
                       </td>
@@ -971,7 +969,7 @@ const AccordianCompare = () => {
                         ₹12054 / year
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Boot Space (seats down)
                       </td>
@@ -1042,7 +1040,7 @@ const AccordianCompare = () => {
                         6000 per year
                       </td>
                     </tr>
-                    <tr class='border-b bg-white dark:border-neutral-500 dark:bg-neutral-600'>
+                    <tr class='border-b bg-white '>
                       <td class='whitespace-nowrap px-6 py-2 '>Insurance</td>
                       <td class='whitespace-nowrap px-6 py-2 font-medium'>
                         12054 / year
@@ -1054,7 +1052,7 @@ const AccordianCompare = () => {
                         12054 / year
                       </td>
                     </tr>
-                    <tr class='border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700'>
+                    <tr class='border-b bg-neutral-100 '>
                       <td class='whitespace-nowrap px-6 py-4 '>
                         Fuel Consumption
                       </td>
@@ -1111,9 +1109,7 @@ const AccordianCompare = () => {
           {accordionStates[index] && (
             <section className='px-1 py-1'>
               <div className='pb-2'>{content}</div>
-              <div className='grid gap-2 sm:grid-cols-1 lg:grid-cols-1'>
-                {/* ... rest of your accordion content ... */}
-              </div>
+              <div className='grid gap-2 sm:grid-cols-1 lg:grid-cols-1'></div>
             </section>
           )}
         </div>
