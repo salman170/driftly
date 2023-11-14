@@ -36,7 +36,7 @@ export default function QuickAnswerSlider() {
 
   return (
     <>
-      <div className="mt-14   text-[2.8rem] font-extralight text-[#5E5E5E] container mx-auto">
+      <div className="mt-4   text-[2.8rem] font-extralight text-[#5E5E5E] container mx-auto">
         Quick Answers
       </div>
       <div className="container relative mx-auto overflow-visible select-none">
@@ -93,7 +93,7 @@ export default function QuickAnswerSlider() {
             {data.map((x, i) => {
               return (
                 <SwiperSlide key={i} className="relative ">
-                  <div className="flex flex-col justify-center  overflow-hidden cursor-pointer h-[24rem] border">
+                  <div className="flex flex-col justify-center  overflow-hidden cursor-pointer h-[24rem] border border-[#ebebeb] shadow-lg">
                     <img src={x.img} alt="" srcSet="" className="h-full " />
                     <div className="px-2 my-4 font-semibold">{x.title}</div>
                   </div>

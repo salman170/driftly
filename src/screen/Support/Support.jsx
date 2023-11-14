@@ -66,7 +66,7 @@ const HeroSection = () => {
 const ContactDetailsNumber = () => {
   return (
     <div className="py-10">
-      <div className="container flex flex-wrap justify-around px-4 py-6 mx-auto border shadow-lg rounded-xl shadow-gray-200">
+      <div className="container grid gap-4 px-4 py-6 mx-auto border shadow-lg md:grid-cols-2 xl:grid-cols-4 rounded-xl shadow-gray-200">
         <div>
           Call us on
           <a href="tel:+919848898488" className="text-lg font-bold">
@@ -85,7 +85,7 @@ const ContactDetailsNumber = () => {
             +91 98488-98488
           </a>
         </div>
-        <div>
+        <div className="md:col-span-2">
           If you need any help, we’re available from
           <a
             href="https://maps.app.goo.gl/YVPEeXvtrjpTUPz6A"
