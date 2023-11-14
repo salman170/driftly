@@ -7,13 +7,13 @@ const Sell = () => {
   return (
     <>
       <Header />
-      <div className="container mx-auto">
+      <div className="mx-auto xl:container">
         <SearchPanel />
-        <div className="flex gap-4 ">
-          <div className="w-[400px]  rounded-3xl p-2 h-screen overflow-y-scroll">
+        <div className="flex gap-4 mb-10">
+          <div className="w-[350px]  rounded-3xl p-2">
             <FilteringPanel />
           </div>
-          <div className="bg-gray-50 w-full h-[80vh] rounded-3xl">
+          <div className="container mx-auto rounded-3xl">
             <CarsSection />
           </div>
         </div>

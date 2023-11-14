@@ -5,14 +5,14 @@ import RangeSlider from "./RangeSlider";
 
 const FilteringPanel = () => {
   const [Budget, setBudget] = useState(true);
-  const [BrandModel, setBrandModel] = useState(false);
-  const [ModalYear, setModalYear] = useState(false);
-  const [Kilometers, setKilometers] = useState(false);
-  const [GearBox, setGearBox] = useState(false);
-  const [FuelType, setFuelType] = useState(false);
-  const [BodyType, setBodyType] = useState(false);
-  const [colors, setColors] = useState(false);
-  const [OtherFeatures, setOtherFeatures] = useState(false);
+  const [BrandModel, setBrandModel] = useState(true);
+  const [ModalYear, setModalYear] = useState(true);
+  const [Kilometers, setKilometers] = useState(true);
+  const [GearBox, setGearBox] = useState(true);
+  const [FuelType, setFuelType] = useState(true);
+  const [BodyType, setBodyType] = useState(true);
+  const [colors, setColors] = useState(true);
+  const [OtherFeatures, setOtherFeatures] = useState(true);
 
   return (
     <div className="px-2 ">
@@ -131,7 +131,7 @@ const FilteringPanel = () => {
         {BodyType && <BodyTypeFiter />}
       </div>
 
-      {/* Other features */}
+      {/* Colour section */}
       <div className="mt-5 mb-3 border-b-2 ">
         <div
           className="flex items-center justify-between pt-1 pb-3 cursor-pointer"
@@ -411,10 +411,10 @@ const ModelYearFilter = () => {
     <div className="mb-6 text-xs">
       <div className="flex justify-between mb-4">
         <div className="px-4 py-2 rounded bg-[#F4F4F4] w-min ">
-          <div className=" ">{values[0]}</div>
+          <div className="">{values[0]}</div>
         </div>
         <div className="px-4 py-2 rounded bg-[#F4F4F4] w-min ">
-          <div className=" ">{values[1]}</div>
+          <div className="">{values[1]}</div>
         </div>
       </div>
       <div>
@@ -647,7 +647,7 @@ const BodyTypeFiter = () => {
             {isSelected && (
               <div className="absolute top-2 right-2">
                 <img
-                  src={require("../../assets/Home/ionic-ios-checkmark-circle-outline.png")}
+                  src={require("../../assets/Find Car/ionic-ios-checkmark-circle-outline.png")}
                   alt=""
                   srcSet=""
                 />

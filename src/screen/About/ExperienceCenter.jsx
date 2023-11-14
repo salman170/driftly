@@ -131,8 +131,8 @@ const NearExp = () => {
           </div>
         </div>
 
-        <div class="container mx-auto flex p-3">
-          <div class="w-1/2 flex items-center justify-between">
+        <div className="container mx-auto flex p-3">
+          <div className="w-1/2 flex items-center justify-between">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/image.webp"
               alt=""
@@ -140,10 +140,10 @@ const NearExp = () => {
             />
           </div>
 
-          <div class="w-1/2 flex flex-col">
-            <div class="flex-1 flex items-center justify-between">
-              <div class="flex-1">
-                <div class="mb-2">
+          <div className="w-1/2 flex flex-col">
+            <div className="flex-1 flex items-center justify-between">
+              <div className="flex-1">
+                <div className="mb-2">
                   <p className="font-light">Address</p>
                 </div>
 
@@ -157,7 +157,7 @@ const NearExp = () => {
                 </div>
               </div>
 
-              <div class="flex-1 flex justify-end">
+              <div className="flex-1 flex justify-end">
                 <div>
                   <button className="p-2">
                     <svg
@@ -201,9 +201,9 @@ const NearExp = () => {
               </div>
             </div>
 
-            <div class="flex-1 flex items-center justify-between mt-8">
-              <div class="flex-1">
-                <div class="mb-2">
+            <div className="flex-1 flex items-center justify-between mt-8">
+              <div className="flex-1">
+                <div className="mb-2">
                   <p className="font-light">Hours</p>
                 </div>
 
@@ -217,7 +217,7 @@ const NearExp = () => {
               </div>
             </div>
 
-            <div class="flex-1">
+            <div className="flex-1">
               <div className="overflow-hidden">
                 <div className="container mx-auto font-extralight">
                   <div className="invisible my-5">Media Coverage</div>
@@ -228,8 +228,8 @@ const NearExp = () => {
           </div>
         </div>
         <hr />
-        <div class="container mx-auto flex mt-10">
-          <div class="w-1/2 flex items-center justify-between">
+        <div className="container mx-auto flex mt-10">
+          <div className="w-1/2 flex items-center justify-between">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/image.webp"
               alt=""
@@ -237,10 +237,10 @@ const NearExp = () => {
             />
           </div>
 
-          <div class="w-1/2 flex flex-col">
-            <div class="flex-1 flex items-center justify-between">
-              <div class="flex-1">
-                <div class="mb-2">
+          <div className="w-1/2 flex flex-col">
+            <div className="flex-1 flex items-center justify-between">
+              <div className="flex-1">
+                <div className="mb-2">
                   <p className="font-light">Address</p>
                 </div>
 
@@ -254,7 +254,7 @@ const NearExp = () => {
                 </div>
               </div>
 
-              <div class="flex-1 flex justify-end">
+              <div className="flex-1 flex justify-end">
                 <div>
                   <button className="p-2">
                     <svg
@@ -298,9 +298,9 @@ const NearExp = () => {
               </div>
             </div>
 
-            <div class="flex-1 flex items-center justify-between mt-8">
-              <div class="flex-1">
-                <div class="mb-2">
+            <div className="flex-1 flex items-center justify-between mt-8">
+              <div className="flex-1">
+                <div className="mb-2">
                   <p className="font-light">Hours</p>
                 </div>
 
@@ -314,7 +314,7 @@ const NearExp = () => {
               </div>
             </div>
 
-            <div class="flex-1">
+            <div className="flex-1">
               <div className="overflow-hidden">
                 <div className="container mx-auto font-extralight">
                   <div className="invisible my-5">Media Coverage</div>

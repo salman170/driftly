@@ -36,7 +36,7 @@ const HeroImage = () => {
     <>
       <header>
         <div
-          class='relative overflow-hidden bg-cover bg-no-repeat'
+          className='relative overflow-hidden bg-cover bg-no-repeat'
           style={{
             backgroundPosition: '50%',
 
@@ -45,10 +45,10 @@ const HeroImage = () => {
             height: '350px',
           }}
         >
-          <div class='absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed'>
-            <div class='container mx-auto px-4 flex h-full mt-10'>
-              <div class='p-6 text-left text-white md:px-12'>
-                <div class='mt-2 text-xl font-bold tracking-tight md:text-4xl xl:text-4xl'>
+          <div className='absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed'>
+            <div className='container mx-auto px-4 flex h-full mt-10'>
+              <div className='p-6 text-left text-white md:px-12'>
+                <div className='mt-2 text-xl font-bold tracking-tight md:text-4xl xl:text-4xl'>
                   We sell cars, but <br></br>we aren't car salesmen <br />
                   <span>Hotel Inner Circle</span>
                 </div>
@@ -142,11 +142,11 @@ const ImageBanner = () => {
 const CardLayout = () => {
   return (
     <>
-      <div class='my-12 mx-auto px-4 md:px-12 bg-black text-white'>
-        <div class='flex flex-wrap -mx-1 lg:-mx-4'>
-          <div class='container mx-auto px-4 flex h-full mt-10'>
-            <div class='text-left text-white  lg:pt-2'>
-              <div class='mt-2 text-xs font-extralight tracking-tight md:text-4xl xl:text-m'>
+      <div className='my-12 mx-auto px-4 md:px-12 bg-black text-white'>
+        <div className='flex flex-wrap -mx-1 lg:-mx-4'>
+          <div className='container mx-auto px-4 flex h-full mt-10'>
+            <div className='text-left text-white  lg:pt-2'>
+              <div className='mt-2 text-xs font-extralight tracking-tight md:text-4xl xl:text-m'>
                 Our Values
               </div>
 
@@ -156,22 +156,22 @@ const CardLayout = () => {
               </div>
             </div>
           </div>
-          <div class='container mx-auto px-4 flex h-full mt-3 pl-1'>
-            <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
-              <article class='overflow-hidden'>
+          <div className='container mx-auto px-4 flex h-full mt-3 pl-1'>
+            <div className='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+              <article className='overflow-hidden'>
                 <a href='/'>
                   <img
                     alt='Placeholder'
-                    class='block h-auto w-full'
+                    className='block h-auto w-full'
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-1.webp'
                   />
                 </a>
 
-                <a href='/' class='block max-w-sm pt-2'>
-                  <h5 class='text-xl font-normal tracking-tight'>
+                <a href='/' className='block max-w-sm pt-2'>
+                  <h5 className='text-xl font-normal tracking-tight'>
                     Customer Obsessed
                   </h5>
-                  <p class='font-light text-sm text-white'>
+                  <p className='font-light text-sm text-white'>
                     We put the customer first in everything we do. We want to be
                     famous for delivering the best experience and wowing our
                     customers.
@@ -179,42 +179,42 @@ const CardLayout = () => {
                 </a>
               </article>
             </div>
-            <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
-              <article class='overflow-hidden'>
+            <div className='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+              <article className='overflow-hidden'>
                 <a href='/'>
                   <img
                     alt='Placeholder'
-                    class='block h-auto w-full'
+                    className='block h-auto w-full'
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-2.webp'
                   />
                 </a>
 
-                <a href='/' class='block max-w-sm pt-2'>
-                  <h5 class='mb-2 text-xl font-normal tracking-tight'>
+                <a href='/' className='block max-w-sm pt-2'>
+                  <h5 className='mb-2 text-xl font-normal tracking-tight'>
                     Fast Drivers
                   </h5>
-                  <p class='font-light text-sm text-white '>
+                  <p className='font-light text-sm text-white '>
                     We have an entrepreneurial passion for working at speed. We
                     move fast and drive fast towards our goals.
                   </p>
                 </a>
               </article>
             </div>
-            <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
-              <article class='overflow-hidden'>
+            <div className='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+              <article className='overflow-hidden'>
                 <a href='/'>
                   <img
                     alt='Placeholder'
-                    class='block h-auto w-full'
+                    className='block h-auto w-full'
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-3.webp'
                   />
                 </a>
 
-                <a href='/' class='block max-w-sm pt-2'>
-                  <h5 class='mb-2 text-xl font-normal tracking-tight'>
+                <a href='/' className='block max-w-sm pt-2'>
+                  <h5 className='mb-2 text-xl font-normal tracking-tight'>
                     Data Driven
                   </h5>
-                  <p class='font-light text-sm text-white '>
+                  <p className='font-light text-sm text-white '>
                     Data is a part of our DNA and drives all decision making.
                     We're informed, results-driven and seek insights to help us
                     improve and grow.
@@ -222,21 +222,21 @@ const CardLayout = () => {
                 </a>
               </article>
             </div>
-            <div class='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
-              <article class='overflow-hidden'>
+            <div className='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4'>
+              <article className='overflow-hidden'>
                 <a href='/'>
                   <img
                     alt='Placeholder'
-                    class='block h-auto w-full'
+                    className='block h-auto w-full'
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/image-4.webp'
                   />
                 </a>
 
-                <a href='/' class='block max-w-sm pt-2'>
-                  <h5 class='mb-2 text-xl font-normal tracking-tight'>
+                <a href='/' className='block max-w-sm pt-2'>
+                  <h5 className='mb-2 text-xl font-normal tracking-tight'>
                     Team Players
                   </h5>
-                  <p class='font-light text-sm text-white '>
+                  <p className='font-light text-sm text-white '>
                     We're better as a team than as individuals. Everyone counts.
                     We're here to have fun and win together on this exciting
                     journey.

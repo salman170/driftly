@@ -79,10 +79,10 @@ export default function LimitedEditonCarSlider() {
             swiper.params.navigation.prevEl = navigationPrevRef.current;
             swiper.params.navigation.nextEl = navigationNextRef.current;
           }}
-          // autoplay={{
-          //   delay: 4000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             640: {
               slidesPerView: 1,

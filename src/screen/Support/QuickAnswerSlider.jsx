@@ -6,9 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 
 import BMWX7 from "../../assets/Home/BMW X7.png";
-import MercedesAMGGLC from "../../assets/Home/Mercedes AMG GLC.png";
-import AudiQ2 from "../../assets/Home/Audi Q2.png";
-import Porsche from "../../assets/Home/Porsche.png";
+// import MercedesAMGGLC from "../../assets/Home/Mercedes AMG GLC.png";
+// import AudiQ2 from "../../assets/Home/Audi Q2.png";
+// import Porsche from "../../assets/Home/Porsche.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -19,23 +19,26 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
-export default function PopularCarsSlider() {
+export default function QuickAnswerSlider() {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
   const data = [
-    { img: BMWX7, title: "BMWX7" },
-    { img: MercedesAMGGLC, title: "Mercedes AMG GLC" },
-    { img: AudiQ2, title: "Audi Q2" },
-    { img: Porsche, title: "Porsche" },
-    { img: BMWX7, title: "BMWX7" },
-    { img: MercedesAMGGLC, title: "Mercedes AMG GLC" },
-    { img: AudiQ2, title: "Audi Q2" },
-    { img: Porsche, title: "Porsche" },
+    { img: BMWX7, title: "Purchasing from Driftly" },
+    { img: BMWX7, title: "Financing with Driftly" },
+    { img: BMWX7, title: "How it Works?" },
+    { img: BMWX7, title: "Quality Inventory" },
+    { img: BMWX7, title: "Do Driftly sell new cars?" },
+    { img: BMWX7, title: "Where are Driftly cars located?" },
+    { img: BMWX7, title: "Can I test drive the car?" },
+    { img: BMWX7, title: "How can I see the car before I buy it?" },
   ];
 
   return (
     <>
+      <div className="mt-14   text-[2.8rem] font-extralight text-[#5E5E5E] container mx-auto">
+        Quick Answers
+      </div>
       <div className="container relative mx-auto overflow-visible select-none">
         <Swiper
           navigation={{
@@ -56,19 +59,19 @@ export default function PopularCarsSlider() {
               spaceBetween: 5,
             },
             768: {
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
             1024: {
-              slidesPerView: 3,
-              spaceBetween: 10,
-            },
-            1280: {
               slidesPerView: 4,
               spaceBetween: 10,
             },
+            1280: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
           }}
           modules={[Pagination, Navigation, Autoplay]}
-          className="flex flex-col-reverse pt-10 overflow-hidden bg-transparent mySwiper"
+          className="flex flex-col-reverse pt-10 -mt-6 bg-transparent over6flow-hidden mySwiper"
         >
           <div className="flex justify-end gap-4 mb-4 mr-10 -mt-10 ">
             <div
@@ -90,14 +93,9 @@ export default function PopularCarsSlider() {
             {data.map((x, i) => {
               return (
                 <SwiperSlide key={i} className="relative ">
-                  <div className="flex flex-col justify-center w-full overflow-hidden cursor-pointer h-[24rem]">
-                    <img
-                      src={x.img}
-                      alt=""
-                      srcSet=""
-                      className="scale-110 w-min"
-                    />
-                    <div className="mt-8 text-xl font-semibold ">{x.title}</div>
+                  <div className="flex flex-col justify-center  overflow-hidden cursor-pointer h-[24rem] border">
+                    <img src={x.img} alt="" srcSet="" className="h-full " />
+                    <div className="px-2 my-4 font-semibold">{x.title}</div>
                   </div>
                 </SwiperSlide>
               );

@@ -13,7 +13,7 @@ const Footer2 = () => {
         />
       </div>
       <div className="md:grid md:grid-cols-3 lg:grid-cols-4 text-[#acacac] gap-2 container mx-auto mb-6">
-        <div class="    md:text-left mb-3">
+        <div className="    md:text-left mb-3">
           {/* <p className="font-thin">
             If you need any help, we're available from{" "}
             <span className="font-bold">8am-8pm, 7 days</span> a week
@@ -125,14 +125,14 @@ const Footer2 = () => {
             SUBSCRIBE TO OUR NEWSLETTER
           </div>
 
-          <div class="relative">
+          <div className="relative">
             <input
               type="text"
-              class="bg-white h-10  px-4 w-full  focus:outline-none hover:cursor-pointer"
+              className="bg-white h-10  px-4 w-full  focus:outline-none hover:cursor-pointer"
               name=""
               placeholder="Enter email address"
             />
-            <button class="h-10 text-[#0cf2b4] absolute  text-2xl right-1 px-3  hover:scale-125">
+            <button className="h-10 text-[#0cf2b4] absolute  text-2xl right-1 px-3  hover:scale-125">
               <AiOutlineArrowRight />
             </button>
           </div>

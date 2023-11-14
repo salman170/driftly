@@ -5,10 +5,12 @@ import HeroImage from "../../assets/Car Care/CarCareHeroImage.png";
 import CoverExtended from "../../assets/Car Care/CoverExtended.png";
 import GuardPaint from "../../assets/Car Care/GuardPaint.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Header from "../../others/Header";
 
 const CarCare = () => {
   return (
     <div>
+      <Header />
       {/* Hero Section */}
       <section className="overflow-hidden">
         <div className="relative">

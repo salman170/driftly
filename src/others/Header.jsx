@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { RiCustomerService2Fill, RiUser6Fill } from "react-icons/ri";
 
 import { FaChevronDown } from "react-icons/fa";
@@ -7,6 +7,11 @@ import { AiFillHeart } from "react-icons/ai";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>
@@ -302,7 +307,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="px-5 py-6 space-y-6">
+            {/* <div className="px-5 py-6 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
                   href="/"
@@ -369,7 +374,7 @@ const Header = () => {
                   </a>
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

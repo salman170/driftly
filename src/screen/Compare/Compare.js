@@ -14,62 +14,62 @@ const CompareHero = () => {
   return (
     <>
       <div className="container p-5 mx-auto">
-        <nav class="bg-grey-light w-full rounded-md">
-          <ol class="list-reset flex">
+        <nav className="bg-grey-light w-full rounded-md">
+          <ol className="list-reset flex">
             <li>
               <a
                 href="/"
-                class="text-primary transition duration-150 ease-in-out font-extralight"
+                className="text-primary transition duration-150 ease-in-out font-extralight"
               >
                 All Cars
               </a>
             </li>
             <li>
-              <span class="mx-2 text-neutral-500 dark:text-neutral-400">
+              <span className="mx-2 text-neutral-500 dark:text-neutral-400">
                 &gt;
               </span>
             </li>
             <li>
-              <a href="/" class="text-[#0CF2B4]">
+              <a href="/" className="text-[#0CF2B4]">
                 Compare
               </a>
             </li>
           </ol>
         </nav>
         {/* compare block */}
-        <div class=" text-black">
-          <div class="flex flex-wrap -mx-1 lg:-mx-4">
-            {/* <div class='container mx-auto px-4 flex h-full mt-10'></div> */}
+        <div className=" text-black">
+          <div className="flex flex-wrap -mx-1 lg:-mx-4">
+            {/* <div className='container mx-auto px-4 flex h-full mt-10'></div> */}
             {/* card 1 */}
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4 p-2">
-              <div class="overflow-hidden">
-                <div class="block max-w-sm pt-2">
-                  <div class="text-4xl text-gray-500 font-extralight tracking-tight">
+            <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4 p-2">
+              <div className="overflow-hidden">
+                <div className="block max-w-sm pt-2">
+                  <div className="text-4xl text-gray-500 font-extralight tracking-tight">
                     Compare Car Model
                   </div>
                 </div>
               </div>
             </div>
             {/* card 2 */}
-            <div class="my-1 w-full md:w-1/2 lg:my-4  lg:w-1/4 p-2">
-              <div class="w-30 bg-white shadow rounded">
+            <div className="my-1 w-full md:w-1/2 lg:my-4  lg:w-1/4 p-2">
+              <div className="w-30 bg-white shadow rounded">
                 {" "}
                 <div
-                  class="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center"
+                  className="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center"
                   style={{
                     backgroundImage:
                       "url('https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
                   }}
                 >
                   {" "}
-                  <div class="flex justify-between">
+                  <div className="flex justify-between">
                     {" "}
                     <input type="checkbox" />{" "}
-                    <button class="text-white hover:text-blue-500">
+                    <button className="text-white hover:text-blue-500">
                       {" "}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
+                        className="h-6 w-6"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -86,15 +86,15 @@ const CompareHero = () => {
                   </div>{" "}
                   <div>
                     {" "}
-                    <span class="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium select-none">
+                    <span className="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium select-none">
                       {" "}
                       available{" "}
                     </span>{" "}
                   </div>{" "}
                 </div>{" "}
-                <div class="p-4 flex flex-col items-left">
-                  <h1 class="text-gray-800 text-start mt-1">BMW X7</h1>{" "}
-                  <p class="text-gray-400 font-light text-xs text-left">
+                <div className="p-4 flex flex-col items-left">
+                  <h1 className="text-gray-800 text-start mt-1">BMW X7</h1>{" "}
+                  <p className="text-gray-400 font-light text-xs text-left">
                     {" "}
                     XDrive401 M Sport
                   </p>{" "}
@@ -136,23 +136,23 @@ const CompareHero = () => {
                       </text>
                     </svg>
                   </button>
-                  <div class="flex justify-between w-full mt-4">
+                  <div className="flex justify-between w-full mt-4">
                     {" "}
-                    <div class="flex items-center text-gray-500">
+                    <div className="flex items-center text-gray-500">
                       {" "}
-                      <input id="input1" type="checkbox" class="mr-2" />{" "}
-                      <label for="input1" class="select-none cursor-pointer">
+                      <input id="input1" type="checkbox" className="mr-2" />{" "}
+                      <label for="input1" className="select-none cursor-pointer">
                         Compare
                       </label>{" "}
                     </div>{" "}
                     <div>
                       {" "}
-                      <button class="py-1 px-4 bg-white text-gray-600 rounded hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center">
+                      <button className="py-1 px-4 bg-white text-gray-600 rounded hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center">
                         {" "}
                         Add to List{" "}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="h-4 w-4 ml-2"
+                          className="h-4 w-4 ml-2"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -173,25 +173,25 @@ const CompareHero = () => {
             </div>
 
             {/* card 3 */}
-            <div class="my-1 w-full md:w-1/2 lg:my-4  lg:w-1/4 p-2">
-              <div class="w-30 bg-white shadow rounded">
+            <div className="my-1 w-full md:w-1/2 lg:my-4  lg:w-1/4 p-2">
+              <div className="w-30 bg-white shadow rounded">
                 {" "}
                 <div
-                  class="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center"
+                  className="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center"
                   style={{
                     backgroundImage:
                       "url('https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
                   }}
                 >
                   {" "}
-                  <div class="flex justify-between">
+                  <div className="flex justify-between">
                     {" "}
                     <input type="checkbox" />{" "}
-                    <button class="text-white hover:text-blue-500">
+                    <button className="text-white hover:text-blue-500">
                       {" "}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
+                        className="h-6 w-6"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -208,15 +208,15 @@ const CompareHero = () => {
                   </div>{" "}
                   <div>
                     {" "}
-                    <span class="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium select-none">
+                    <span className="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium select-none">
                       {" "}
                       available{" "}
                     </span>{" "}
                   </div>{" "}
                 </div>{" "}
-                <div class="p-4 flex flex-col items-left">
-                  <h1 class="text-gray-800 text-start mt-1">BMW X7</h1>{" "}
-                  <p class="text-gray-400 font-light text-xs text-left">
+                <div className="p-4 flex flex-col items-left">
+                  <h1 className="text-gray-800 text-start mt-1">BMW X7</h1>{" "}
+                  <p className="text-gray-400 font-light text-xs text-left">
                     {" "}
                     XDrive401 M Sport
                   </p>{" "}
@@ -258,23 +258,23 @@ const CompareHero = () => {
                       </text>
                     </svg>
                   </button>
-                  <div class="flex justify-between w-full mt-4">
+                  <div className="flex justify-between w-full mt-4">
                     {" "}
-                    <div class="flex items-center text-gray-500">
+                    <div className="flex items-center text-gray-500">
                       {" "}
-                      <input id="input1" type="checkbox" class="mr-2" />{" "}
-                      <label for="input1" class="select-none cursor-pointer">
+                      <input id="input1" type="checkbox" className="mr-2" />{" "}
+                      <label for="input1" className="select-none cursor-pointer">
                         Compare
                       </label>{" "}
                     </div>{" "}
                     <div>
                       {" "}
-                      <button class="py-1 px-4 bg-white text-gray-600 rounded hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center">
+                      <button className="py-1 px-4 bg-white text-gray-600 rounded hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center">
                         {" "}
                         Add to List{" "}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="h-4 w-4 ml-2"
+                          className="h-4 w-4 ml-2"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -294,25 +294,25 @@ const CompareHero = () => {
               </div>
             </div>
             {/* card 4 */}
-            <div class="my-1 w-full md:w-1/2 lg:my-4  lg:w-1/4 p-2">
-              <div class="w-30 bg-white shadow rounded">
+            <div className="my-1 w-full md:w-1/2 lg:my-4  lg:w-1/4 p-2">
+              <div className="w-30 bg-white shadow rounded">
                 {" "}
                 <div
-                  class="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center"
+                  className="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center"
                   style={{
                     backgroundImage:
                       "url('https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
                   }}
                 >
                   {" "}
-                  <div class="flex justify-between">
+                  <div className="flex justify-between">
                     {" "}
                     <input type="checkbox" />{" "}
-                    <button class="text-white hover:text-blue-500">
+                    <button className="text-white hover:text-blue-500">
                       {" "}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
+                        className="h-6 w-6"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -329,15 +329,15 @@ const CompareHero = () => {
                   </div>{" "}
                   <div>
                     {" "}
-                    <span class="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium select-none">
+                    <span className="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium select-none">
                       {" "}
                       available{" "}
                     </span>{" "}
                   </div>{" "}
                 </div>{" "}
-                <div class="p-4 flex flex-col items-left">
-                  <h1 class="text-gray-800 text-start mt-1">BMW X7</h1>{" "}
-                  <p class="text-gray-400 font-light text-xs text-left">
+                <div className="p-4 flex flex-col items-left">
+                  <h1 className="text-gray-800 text-start mt-1">BMW X7</h1>{" "}
+                  <p className="text-gray-400 font-light text-xs text-left">
                     {" "}
                     XDrive401 M Sport
                   </p>{" "}
@@ -382,23 +382,23 @@ const CompareHero = () => {
                       </svg>
                     </button>
                   </div>
-                  <div class="flex justify-between w-full mt-4">
+                  <div className="flex justify-between w-full mt-4">
                     {" "}
-                    <div class="flex items-center text-gray-500">
+                    <div className="flex items-center text-gray-500">
                       {" "}
-                      <input id="input1" type="checkbox" class="mr-2" />{" "}
-                      <label for="input1" class="select-none cursor-pointer">
+                      <input id="input1" type="checkbox" className="mr-2" />{" "}
+                      <label for="input1" className="select-none cursor-pointer">
                         Compare
                       </label>{" "}
                     </div>{" "}
                     <div>
                       {" "}
-                      <button class="py-1 px-4 bg-white text-gray-600 rounded hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center">
+                      <button className="py-1 px-4 bg-white text-gray-600 rounded hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center">
                         {" "}
                         Add to List{" "}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="h-4 w-4 ml-2"
+                          className="h-4 w-4 ml-2"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
