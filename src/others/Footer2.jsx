@@ -55,10 +55,10 @@ const Footer2 = () => {
         <div className="grid grid-cols-2 gap-1 mb-3 sm:grid-cols-3 md:col-span-2">
           <div className="space-y-2">
             <div className="cursor-pointer hover:text-white">
-              <Link to="/sell">Search cars</Link>
+              <Link to="/find-a-car">Search cars</Link>
             </div>
             <div className="cursor-pointer hover:text-white">
-              <Link to="/sell">Sell/Trade</Link>
+              <Link to="/find-a-car">Sell/Trade</Link>
             </div>
 
             <div className="cursor-pointer hover:text-white">

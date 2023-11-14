@@ -66,10 +66,10 @@ const HeroSection = () => {
         </div>
         <div className="flex gap-4">
           <div className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-6 py-3 cursor-pointer text-white hover:bg-white">
-            <Link to="/sell">FIND YOUR CAR </Link>
+            <Link to="/find-a-car">FIND YOUR CAR </Link>
           </div>
           <div className="hover:bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-6 py-3 cursor-pointer bg-white text-black hover:text-white">
-            <Link to="/sell"> SELL YOUR CAR </Link>
+            <Link to="/find-a-car"> SELL YOUR CAR </Link>
           </div>
         </div>
       </div>

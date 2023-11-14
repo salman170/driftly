@@ -239,7 +239,7 @@ const CarCareExtended = () => {
               warranty or your manufacturer’s warranty if you do so before it
               expires and within 12 months after receiving your Drivley car.
             </div>
-            <Link to="/sell">
+            <Link to="/find-a-car">
               <div className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-6 py-3 cursor-pointer text-white">
                 Search Cars
               </div>

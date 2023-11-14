@@ -58,7 +58,7 @@ const Header = () => {
             </div>
 
             <nav className="hidden space-x-5 md:flex">
-              <Link to="/sell" className="font-medium cursor-pointer">
+              <Link to="/find-a-car" className="font-medium cursor-pointer">
                 FIND CAR
               </Link>
 

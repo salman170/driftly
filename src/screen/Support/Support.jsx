@@ -10,8 +10,7 @@ const Support = () => {
   return (
     <div className="">
       <Header />
-      
-      <HeroSection  />
+      <HeroSection />
       <section className="px-2">
         <ContactDetailsNumber />
         <QuickAnswerSlider />
