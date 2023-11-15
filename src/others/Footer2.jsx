@@ -5,15 +5,17 @@ import { Link } from "react-router-dom";
 const Footer2 = () => {
   return (
     <div className="px-1 text-sm bg-black md:px-0">
-      <div className="container flex w-full pt-10 mx-auto ">
-        <img
-          className="mb-6 h-14 -ml-3"
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/Driftly_Logo_Reverse.webp"
-          alt=""
-        />
-      </div>
+      <Link to="/">
+        <div className="container flex w-full pt-10 mx-auto ">
+          <img
+            className="w-auto h-10 mb-2 -ml-4 sm:h-16"
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/Driftly_Logo_Reverse.webp"
+            alt=""
+          />
+        </div>
+      </Link>
       <div className="md:grid md:grid-cols-3 lg:grid-cols-4 text-[#acacac] gap-2 container mx-auto mb-6">
-        <div className="    md:text-left mb-3">
+        <div className="mb-3 md:text-left">
           {/* <p className="font-thin">
             If you need any help, we're available from{" "}
             <span className="font-bold">8am-8pm, 7 days</span> a week
@@ -128,7 +130,7 @@ const Footer2 = () => {
           <div className="relative">
             <input
               type="text"
-              className="bg-white h-10  px-4 w-full  focus:outline-none hover:cursor-pointer"
+              className="w-full h-10 px-4 bg-white focus:outline-none hover:cursor-pointer"
               name=""
               placeholder="Enter email address"
             />
@@ -144,7 +146,9 @@ const Footer2 = () => {
         <div>
           <span className="mr-2 cursor-pointer hover:text-white">Site map</span>
           <span className="text-lg cursor-default">l</span>
-          <span className="ml-2 cursor-pointer hover:text-white">Terms of use</span>
+          <span className="ml-2 cursor-pointer hover:text-white">
+            Terms of use
+          </span>
         </div>
       </div>
     </div>

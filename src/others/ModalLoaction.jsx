@@ -1,28 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import Mumbai from "../assets/Home/Mumbai.png";
 import Bangalore from "../assets/Home/Bangalore.png";
 import NewDelhi from "../assets/Home/New Delhi.png";
 import Hyderabad from "../assets/Home/Hyderabad.png";
 import { AiOutlineClose } from "react-icons/ai";
+import { LocationContext } from "../context/Location";
 // import { useLocation, useNavigate } from "react-router-dom";
 
 const ModalLoaction = ({ visible, setShowMyModal }) => {
-//   const navigate = useNavigate();
+  //   const navigate = useNavigate();
 
-//   useEffect(() => {
-//     const hasVisited = localStorage.getItem("hasVisited");
-//     if (!hasVisited) {
-//       setShowMyModal(true);
-//       localStorage.setItem("hasVisited", "true");
-//     }
-//   }, [navigate]);
+  //   useEffect(() => {
+  //     const hasVisited = localStorage.getItem("hasVisited");
+  //     if (!hasVisited) {
+  //       setShowMyModal(true);
+  //       localStorage.setItem("hasVisited", "true");
+  //     }
+  //   }, [navigate]);
 
   //   const handleOnClose = (e) => {
   //     if (e.target.id === "container") onClose();
   //   };
-  if (!visible) return null;
+  const LocContext = useContext(LocationContext);
 
-  const handleOnClose = () => setShowMyModal(false);
+  if (!LocContext.openLoc) return null;
+
+  const handleOnClose = () => LocContext.setOpenLoc(false);
 
   const data = [
     {
@@ -42,6 +45,12 @@ const ModalLoaction = ({ visible, setShowMyModal }) => {
       val: "NewDelhi",
     },
   ];
+
+  const handleClick = (val) => {
+    LocContext.setLoc(val);
+    LocContext.setOpenLoc(false);
+  };
+
   return (
     <div
       id="container"
@@ -53,7 +62,7 @@ const ModalLoaction = ({ visible, setShowMyModal }) => {
         <div className="flex justify-center gap-8 ">
           {data.map((x, i) => {
             return (
-              <div key={i} className="">
+              <div key={i} className="" onClick={() => handleClick(x.val)}>
                 <div className="px-8 py-6 mb-4 border border-[#D1D1D1] cursor-pointer rounded-xl hover:bg-[#E9E9E9] hover:shadow-lg">
                   <div className="h-20 ">
                     <img src={x.img} alt={x.val} srcSet="" className="" />

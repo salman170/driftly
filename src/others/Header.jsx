@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { LocationContext } from "../context/Location";
 import { Link, useLocation } from "react-router-dom";
 import { RiCustomerService2Fill, RiUser6Fill } from "react-icons/ri";
 
@@ -13,9 +14,10 @@ const Header = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+  const LocContext = useContext(LocationContext);
+
   return (
     <>
-
       <div className="sticky top-0 z-10 bg-white shadow-md">
         <div className="px-4 sm:px-6">
           <div className="container flex items-center justify-between py-4 mx-auto border-gray-100 md:justify-start md:space-x-10">
@@ -84,8 +86,11 @@ const Header = () => {
             </nav>
 
             <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0 ">
-              <div className="flex items-center gap-3 mr-4 cursor-pointer">
-                <div className="uppercase"> Mumabi</div>{" "}
+              <div
+                onClick={() => LocContext.setOpenLoc(true)}
+                className="flex items-center gap-3 mr-4 cursor-pointer"
+              >
+                <div className="uppercase"> {LocContext.loc}</div>{" "}
                 <FaChevronDown className="text-[#0BF2B3] font-bold" />
               </div>
               <div className="relative group">

@@ -48,7 +48,7 @@ const Home = () => {
 const HeroSection = () => {
   return (
     <div
-      className={`h-screen relative bg-no-repeat bg-cover bg-center`}
+      className={`h-screen relative bg-no-repeat bg-cover bg-center bg-black`}
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
       {/* <img
@@ -69,7 +69,7 @@ const HeroSection = () => {
             <Link to="/find-a-car">FIND YOUR CAR </Link>
           </div>
           <div className="hover:bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-6 py-3 cursor-pointer bg-white text-black hover:text-white">
-            <Link to="/find-a-car"> SELL YOUR CAR </Link>
+            <Link to="/sell"> SELL YOUR CAR </Link>
           </div>
         </div>
       </div>
