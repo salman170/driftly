@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../others/Header";
 import HeroImage from "../../assets/Sell/SellHero.png";
 import CustomerReview from "../Home/CustomerReview";
+import axios from "axios";
 
 const Sell = () => {
   return (
@@ -16,10 +17,24 @@ const Sell = () => {
 
 const HeroSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [data, setData] = useState(null);
 
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value);
+  const handleSearch = async (event) => {
+    try {
+      // Make the API call
+      const response = await axios.get(`https://test=${searchTerm}`);
+      // const response = await axios.get(`https://app.turtlemint.com/api/findregistrationresult?registration=${searchTerm}`);
+      // Assuming the response data is an object with some properties, adjust this based on the actual API response
+      setData(response.data);
+    } catch (error) {
+      // Handle errors if any
+      console.error("Error fetching data:", error);
+    }
   };
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
   return (
     <div
@@ -45,12 +60,15 @@ const HeroSection = () => {
           <input
             type="text"
             placeholder="Enter license plate"
-            className=" px-8 py-4  border border-gray-300 rounded bg-opacity-60 bg-[#FFFFFF] placeholder:text-black outline-none  text-black focus:bg-opacity-100 font-text-xl w-[40rem]"
+            className=" px-8 py-4  border border-gray-300 rounded bg-opacity-60 bg-[#FFFFFF] placeholder:text-black outline-none  text-black focus:bg-opacity-100 font-text-xl w-[40rem] uppercase"
             value={searchTerm}
-            onChange={handleChange}
+            onChange={(event) => setSearchTerm(event.target.value)}
           />
         </div>
-        <div className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-10 py-4 cursor-pointer text-white hover:bg-white">
+        <div
+          onClick={handleSearch}
+          className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-10 py-4 cursor-pointer text-white hover:bg-white"
+        >
           GET MY OFFER
           {/* <Link to="/find-a-car">GET MY OFFER </Link> */}
         </div>
@@ -88,7 +106,7 @@ const HowSellingToDriftlyWorks = () => {
       <div className="flex items-center justify-between pt-4">
         <div className="w-full text-center ">
           <div>GET OFFER</div>
-           <div className="pt-2 text-sm font-extralight">
+          <div className="pt-2 text-sm font-extralight">
             Give us a few details and we will give you a real offer in just 2
             minutes
           </div>
@@ -96,7 +114,7 @@ const HowSellingToDriftlyWorks = () => {
         <div className="w-full "></div>
         <div className="w-full text-center ">
           <div>TRADE IN / SELL</div>
-           <div className="pt-2 text-sm font-extralight">
+          <div className="pt-2 text-sm font-extralight">
             Trade in your old vehicle for a new one or sell it to Driftly.
             Either way we pick it up!
           </div>
@@ -104,7 +122,7 @@ const HowSellingToDriftlyWorks = () => {
         <div className="w-full "></div>
         <div className="w-full text-center ">
           <div>GET PAID</div>
-           <div className="pt-2 text-sm font-extralight">
+          <div className="pt-2 text-sm font-extralight">
             After a quick, on-site review of the vehicle, we’ll either cut you a
             check, or hand over the keys to your new ride!
           </div>

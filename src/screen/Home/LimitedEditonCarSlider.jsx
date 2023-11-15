@@ -5,9 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 
-import JeepWrangler from "../../assets/Home/Jeep Wrangler.png";
 import BMWi3 from "../../assets/Home/BMW i3.png";
-import AudiQ5 from "../../assets/Home/Audi Q5.png";
+// import JeepWrangler from "../../assets/Home/Jeep Wrangler.png";
+// import AudiQ5 from "../../assets/Home/Audi Q5.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,7 +24,7 @@ export default function LimitedEditonCarSlider() {
 
   const data = [
     {
-      img: JeepWrangler,
+      img: BMWi3,
       title: "Jeep Wrangler",
       detail: "Automatic (Torque Converter)",
       power: "1998 cc",
@@ -38,14 +38,14 @@ export default function LimitedEditonCarSlider() {
       type: "Petrol & Diesel",
     },
     {
-      img: AudiQ5,
+      img: BMWi3,
       title: "Audi Q5",
       detail: "4WD / AWD",
       power: "1968 to 1984 cc",
       type: "Petrol & Diesel",
     },
     {
-      img: JeepWrangler,
+      img: BMWi3,
       title: "Jeep Wrangler",
       detail: "Automatic (Torque Converter)",
       power: "1998 cc",
@@ -59,7 +59,7 @@ export default function LimitedEditonCarSlider() {
       type: "Petrol & Diesel",
     },
     {
-      img: AudiQ5,
+      img: BMWi3,
       title: "Audi Q5",
       detail: "4WD / AWD",
       power: "1968 to 1984 cc",

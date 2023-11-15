@@ -310,7 +310,7 @@ const BrowsebyBodyType = () => {
     {
       title: "Coupe",
       img1: require("../../assets/Home/COUPE.png"),
-      img2: require("../../assets/Home/COUPE-B.png"),
+      img2: require("../../assets/Home/CoupeUpdated.png"),
       content:
         "A two-door car with a sleek design, often emphasizing style and performance. Known for its sporty appearance.",
     },
