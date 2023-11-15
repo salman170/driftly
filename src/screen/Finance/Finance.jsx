@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Header from "../../others/Header";
 
 const Finance = () => {
   return (
-    <div>Finance</div>
-  )
-}
+    <>
+      <Header />
+      <div className="h-screen">Finance</div>
+    </>
+  );
+};
 
-export default Finance
+export default Finance;
