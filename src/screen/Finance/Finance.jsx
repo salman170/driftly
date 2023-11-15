@@ -5,7 +5,7 @@ const Finance = () => {
   return (
     <>
       <Header />
-      <div className="h-screen">Finance</div>
+      <div className="h-[50vh]">Finance</div>
     </>
   );
 };

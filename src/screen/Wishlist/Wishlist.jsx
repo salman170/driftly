@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Header from "../../others/Header";
 
 const Wishlist = () => {
   return (
-    <div>Wishlist</div>
-  )
-}
+    <>
+      <Header />
+      <div className="h-[50vh]">Wishlist</div>
+    </>
+  );
+};
 
-export default Wishlist
+export default Wishlist;

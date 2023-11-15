@@ -42,7 +42,7 @@ const ModalLoaction = ({ visible, setShowMyModal }) => {
     },
     {
       img: NewDelhi,
-      val: "NewDelhi",
+      val: "New Delhi",
     },
   ];
 

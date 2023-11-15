@@ -387,8 +387,8 @@ export const EmailForm = ({ setFormNumber }) => {
     // Add validation logic for email, etc.
     if (formData.fullName && formData.email) {
       // setFormNumber(2);
-      alert("Proceeding...");
-      alert(`Name: ${formData.fullName}   Email: ${formData.email}`);
+      // alert("Proceeding...");
+      // alert(`Name: ${formData.fullName}   Email: ${formData.email}`);
       alert("form submitted successfully!");
       history("/");
     } else {
