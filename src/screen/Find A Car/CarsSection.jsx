@@ -42,7 +42,7 @@ const CarsSection = () => {
           </select>
         </div>
       </div>
-      <div className="h-[200vh] overflow-y-scroll pb-10">
+      <div className="h-[200vh] overflow-y-scroll pb-10 px-1">
         <CarCart />
       </div>
     </div>

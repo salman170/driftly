@@ -19,6 +19,7 @@ import Accounts from "./screen/Accounts/Accounts";
 import FindACar from "./screen/Find A Car/FindACar";
 import Sell from "./screen/Sell/Sell";
 import ModalLoaction from "./others/ModalLoaction";
+import ManualSell from "./screen/Sell/ManualSell";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           />
           <Route exact path="/car-lists" element={<CarList />} />
           <Route exact path="/sell" element={<Sell />} />
+          <Route exact path="/select-manual" element={<ManualSell />} />
           <Route exact path="/find-a-car" element={<FindACar />} />
           <Route exact path="/finance" element={<Finance />} />
           <Route exact path="/compare" element={<Compare />} />

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Header from "../../others/Header";
-import { Footer } from "../About/About";
 import { AiFillCloseCircle, AiFillHeart } from "react-icons/ai";
 import { BsChevronDown } from "react-icons/bs";
 

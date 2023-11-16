@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { AiFillHeart } from "react-icons/ai";
 
 const CarCart = () => {
-  
   const [selectedCars, setSelectedCars] = useState([]);
-  
+
   const data = [
     {
       carName: "BMW X7",
@@ -161,11 +160,14 @@ const CarCart = () => {
   // };
 
   return (
-    <div className="container flex flex-wrap gap-4 mx-auto xl:gap-2">
+    <div className="container flex flex-wrap gap-5 mx-auto 2xl:gap-4">
       {data.map((x, i) => {
         const isFavorite = selectedCars.includes(i);
         return (
-          <div key={i} className="w-[300px] bg-white shadow-lg shadow-gray-300">
+          <div
+            key={i}
+            className="w-[280px] bg-white shadow-lg shadow-gray-300 hover:shadow-2xl hover:shadow-gray-500"
+          >
             <div className="relative">
               <img src={x.img} alt={x.carName} className="w-full" />
               <div className="bg-[#00F2B4] px-4 py-2.5 bg-opacity-50 text-white rounded-tl-xl absolute bottom-0 right-0">

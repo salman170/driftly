@@ -3,6 +3,7 @@ import Header from "../../others/Header";
 import HeroImage from "../../assets/Sell/SellHero.png";
 import CustomerReview from "../Home/CustomerReview";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Sell = () => {
   return (
@@ -71,6 +72,11 @@ const HeroSection = () => {
         >
           GET MY OFFER
           {/* <Link to="/find-a-car">GET MY OFFER </Link> */}
+        </div>
+
+        <div className="mt-4 text-xl font-extralight">
+          Don’t have your license plate number?{" "}
+          <Link to="/select-manual" className="text-[#00BAB8] font-bold">Select your car </Link>
         </div>
       </div>
     </div>
