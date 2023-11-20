@@ -38,7 +38,7 @@ const SearchPanel = () => {
         />
         <button type="submit" className="absolute top-0 right-0 mt-5 mr-4">
           <svg
-            className="w-4 h-4 text-gray-600 fill-current"
+            className="w-4 h-4 text-[#00BAB8] fill-current"
             xmlns="http://www.w3.org/2000/svg"
             xlinkHref="http://www.w3.org/1999/xlink" // Change from 'xmlns:xlink' to 'xlinkHref'
             version="1.1"

@@ -75,10 +75,10 @@ const CompareHero = () => {
                   </div>
                 </div>
                 <div class="p-4 flex flex-col items-left">
-                  <div class="flex justify-between w-full">
+                  <div class="flex justify-between w-full ">
                     <div class="flex items-center text-gray-500">
                       <label
-                        for="input1"
+                        htmlFor="input1"
                         class="select-none cursor-pointer text-lg text-black"
                       >
                         BMW X7
@@ -160,7 +160,7 @@ const CompareHero = () => {
                   <div class="flex justify-between w-full">
                     <div class="flex items-center text-gray-500">
                       <label
-                        for="input1"
+                        htmlFor="input1"
                         class="select-none cursor-pointer text-lg text-black"
                       >
                         BMW X7
@@ -241,7 +241,7 @@ const CompareHero = () => {
                   <div class="flex justify-between w-full">
                     <div class="flex items-center text-gray-500">
                       <label
-                        for="input1"
+                        htmlFor="input1"
                         class="select-none cursor-pointer text-lg text-black"
                       >
                         BMW X7

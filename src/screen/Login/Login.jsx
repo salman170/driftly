@@ -36,6 +36,12 @@ const Login = () => {
 };
 
 export const NumberForm = ({ setFormNumber }) => {
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1); // This will navigate back to the previous page
+  };
+
   const handleSubmitMobile = (event) => {
     event.preventDefault(); // Prevents the default form submission behavior
     // alert("hello");
@@ -102,10 +108,13 @@ export const NumberForm = ({ setFormNumber }) => {
             />
           </div>
         </div>
-        <div className="p-1.5 text-sm border rounded-full bg-[#f9f9f9] font-extralight w-min absolute top-4 right-4 cursor-pointer hover:shadow-lg">
-          <Link to="/">
-            <AiOutlineClose />
-          </Link>
+        <div
+          onClick={handleGoBack}
+          className="p-1.5 text-sm border rounded-full bg-[#f9f9f9] font-extralight w-min absolute top-4 right-4 cursor-pointer hover:shadow-lg"
+        >
+          {/* <Link to="/"> */}
+          <AiOutlineClose />
+          {/* </Link> */}
         </div>
       </div>
     </form>
@@ -389,8 +398,8 @@ export const EmailForm = ({ setFormNumber }) => {
       // setFormNumber(2);
       // alert("Proceeding...");
       // alert(`Name: ${formData.fullName}   Email: ${formData.email}`);
-      alert("form submitted successfully!");
-      history("/");
+      // alert("form submitted successfully!");
+      history("/select-manual");
     } else {
       alert("Please fill in both Full Name and Email.");
     }

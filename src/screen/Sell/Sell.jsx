@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Header from "../../others/Header";
 import HeroImage from "../../assets/Sell/SellHero.png";
 import CustomerReview from "../Home/CustomerReview";
-import axios from "axios";
+// import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Sell = () => {
@@ -18,28 +18,28 @@ const Sell = () => {
 
 const HeroSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
 
-  const handleSearch = async (event) => {
-    try {
-      // Make the API call
-      const response = await axios.get(`https://test=${searchTerm}`);
-      // const response = await axios.get(`https://app.turtlemint.com/api/findregistrationresult?registration=${searchTerm}`);
-      // Assuming the response data is an object with some properties, adjust this based on the actual API response
-      setData(response.data);
-    } catch (error) {
-      // Handle errors if any
-      console.error("Error fetching data:", error);
-    }
-  };
+  // const handleSearch = async (event) => {
+  //   try {
+  //     // Make the API call
+  //     const response = await axios.get(`https://test=${searchTerm}`);
+  //     // const response = await axios.get(`https://app.turtlemint.com/api/findregistrationresult?registration=${searchTerm}`);
+  //     // Assuming the response data is an object with some properties, adjust this based on the actual API response
+  //     setData(response.data);
+  //   } catch (error) {
+  //     // Handle errors if any
+  //     console.error("Error fetching data:", error);
+  //   }
+  // };
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+  // useEffect(() => {
+  //   console.log(data);
+  // }, [data]);
 
   return (
     <div
-      className={`h-screen relative bg-no-repeat bg-cover bg-center`}
+      className={`h-screen relative bg-no-repeat bg-cover bg-center `}
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
       {/* <img
@@ -61,24 +61,34 @@ const HeroSection = () => {
           <input
             type="text"
             placeholder="Enter license plate"
+            required
             className=" px-8 py-4  border border-gray-300 rounded bg-opacity-60 bg-[#FFFFFF] placeholder:text-black outline-none  text-black focus:bg-opacity-100 font-text-xl w-[40rem] uppercase"
             value={searchTerm}
             onChange={(event) => setSearchTerm(event.target.value)}
           />
         </div>
-        <div
-          onClick={handleSearch}
-          className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-10 py-4 cursor-pointer text-white hover:bg-white"
-        >
-          GET MY OFFER
-          {/* <Link to="/find-a-car">GET MY OFFER </Link> */}
-        </div>
+        <Link to="/select-manual">
+          <div
+            // onClick={handleSearch}
+            className="bg-gradient-to-l select-none from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-10 py-4 cursor-pointer text-white hover:bg-white"
+          >
+            GET MY OFFER
+            {/* <Link to="/find-a-car">GET MY OFFER </Link> */}
+          </div>
+        </Link>
 
         <div className="mt-4 text-xl font-extralight">
           Don’t have your license plate number?{" "}
-          <Link to="/select-manual" className="text-[#00BAB8] font-bold">Select your car </Link>
+          <Link to="/login" className="text-[#00BAB8] font-bold">
+            Select your car{" "}
+          </Link>
         </div>
       </div>
+      {/* {!searchTerm && (
+        <div className="absolute flex justify-end w-full h-full bg-[#00000030] bg-opacity-20">
+          <div className="bg-white w-[500px] h-[90%] rounded-l-2xl shadow shadow-black"></div>
+        </div>
+      )} */}
     </div>
   );
 };
