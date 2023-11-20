@@ -6,7 +6,7 @@ const Footer2 = () => {
   return (
     <div className="px-1 text-sm bg-black md:px-0">
       <Link to="/">
-        <div className="container flex w-full pt-10 mx-auto ">
+        <div className="container flex w-full pt-10 mx-auto select-none ">
           <img
             className="w-auto h-10 mb-2 -ml-4 sm:h-16"
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/banners/Driftly_Logo_Reverse.webp"
