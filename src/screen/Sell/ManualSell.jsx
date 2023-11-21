@@ -15,9 +15,11 @@ import Chrysler from "../../assets/Home/Chrysler.png";
 import Nisan from "../../assets/Home/Nisan.png";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import Select from "react-select";
+import ModalSell from "./ModalSell";
 
 const ManualSell = () => {
   const [miniStep, setMiniStep] = useState(1);
+  const [visible, setVisible] = useState(false);
 
   const handleArrowLeftClick = () => {
     // Ensure miniStep doesn't go below 1
@@ -122,10 +124,18 @@ const ManualSell = () => {
           ) : miniStep === 7 ? (
             <StepThirdOfSecond setMiniStep={setMiniStep} />
           ) : (
-            miniStep === 8 && <StepOneOfThird setMiniStep={setMiniStep} />
+            miniStep > 7 && (
+              <StepOneOfThird
+                setMiniStep={setMiniStep}
+                setVisible={setVisible}
+              />
+            )
           )}
         </div>
       </div>
+      {miniStep === 8 && (
+        <ModalSell visible={visible} setVisible={setVisible} />
+      )}
     </>
   );
 };
@@ -609,7 +619,7 @@ const StepThirdOfSecond = ({ setMiniStep }) => {
         <div>
           <div className="mb-4 text-4xl">Vehicle History</div>
           <div className="text-xl font-semibold">
-           How many keys do you have for this vehicle?
+            How many keys do you have for this vehicle?
           </div>
         </div>
         <div className="text-right">Step 2 of 3</div>
@@ -621,7 +631,6 @@ const StepThirdOfSecond = ({ setMiniStep }) => {
         <div className="px-10 py-2.5 bg-[#F4F4F4] hover:bg-[#363636] w-min hover:text-white cursor-pointer rounded-xl border whitespace-nowrap">
           2 KEY
         </div>
-        
       </div>
       <div className="text-xl font-semibold">
         Does your currently have a current loan vehicle?
@@ -652,29 +661,31 @@ const StepThirdOfSecond = ({ setMiniStep }) => {
   );
 };
 
-const StepOneOfThird = ({ setMiniStep }) => {
+const StepOneOfThird = ({ setMiniStep, setVisible }) => {
   return (
     <div>
       <div className="flex justify-between pt-16">
         <div>
           <div className="mb-4 text-4xl">Thank you for contacting us</div>
-          <div className="lg:w-2/3 font-extralight">We evaluated thousand of similar cars based on condition, mileage and vehicle history to arrive at your offer.  </div>
+          <div className="lg:w-2/3 font-extralight">
+            We evaluated thousand of similar cars based on condition, mileage
+            and vehicle history to arrive at your offer.{" "}
+          </div>
         </div>
         <div className="text-right">Step 3 of 3</div>
       </div>
       <div className="flex gap-10 py-10">
-        
         <div
           className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-10 py-3 cursor-pointer text-white hover:bg-white hover:shadow-xl select-none "
-          onClick={() => setMiniStep(8)}
+          onClick={() => setVisible(true)}
         >
           BOOK INSPECTION
-        </div> 
+        </div>
         <div
           className="hover:bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-14 py-3 cursor-pointer hover:text-white hover:shadow-xl select-none border"
           onClick={() => setMiniStep((prevStep) => Math.max(1, prevStep - 1))}
         >
-          SAVE DETAILS 
+          SAVE DETAILS
         </div>
       </div>
     </div>

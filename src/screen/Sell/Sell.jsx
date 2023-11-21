@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import Header from "../../others/Header";
 import HeroImage from "../../assets/Sell/SellHero.png";
 import CustomerReview from "../Home/CustomerReview";
