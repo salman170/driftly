@@ -26,12 +26,14 @@ import Nisan from "../../assets/Home/Nisan.png";
 import DriftyBenefitsSlider from "./DriftyBenefitsSlider";
 import PopularCarsSlider from "./PopularCarsSlider";
 import LimitedEditonCarSlider from "./LimitedEditonCarSlider";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Home = () => {
   return (
     <div className="">
       <Header />
       <HeroSection />
+      <BotPopup />
       <DriftlyBenefits />
       <HDW />
       <BrowseByLifestyle />
@@ -409,6 +411,136 @@ const PopularCars = () => {
           <PopularCarsSlider />
         </div>
       </div>
+    </div>
+  );
+};
+
+const BotPopup = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedIndices, setSelectedIndices] = useState([]);
+  const questionData = [
+    {
+      quest: "How to buy a car from Drively?",
+      answer: [
+        "Buying from Drively is a simple 3 step process- ",
+        "1. Choose your car:     Browse through thousands of cars on our website. Find the car that fits your requirements using our dynamic filters. Virtually inspect the features.    ",
+        "2. Book online in a click: Pay a nominal amount and reserve your car.        ",
+        "3. Pay at delivery:  Complete the payment and documentation process at the time of delivery and we will initiate the transfer process on your behalf.",
+      ],
+    },
+    {
+      quest: "Can I get my car financed?",
+      answer: [
+        "Yes, Driftly provides financing options for purchasing a car. Our financing process is designed to be simple and accessible, offering you flexibility in securing your desired vehicle. Feel free to explore our website for more details or contact our support team for personalized assistance.",
+      ],
+    },
+    {
+      quest: "How does Drively works?",
+      answer: [
+        "For Buyers ",
+        "1. Browse Online - Sell/Trade tab    ",
+        "2. Book online in a click:  Pay a nominal amount and reserve your car.        ",
+        "3. Pay at delivery:  Complete the payment and documentation process at the time of delivery and we will initiate the transfer process on your behalf.",
+        "For Seller ",
+        "1. Tell us about your vehicle - Find car tab    ",
+        "2. Verify all your car details and close the deal ",
+        "3. Get paid",
+      ],
+    },
+  ];
+
+  const handleDivClick = (index) => {
+    setSelectedIndices([...selectedIndices, index]);
+  };
+
+  return (
+    <div className="fixed z-10 bottom-10 right-10">
+      {open ? (
+        <div className="w-[25rem] rounded-3xl overflow-hidden shadow-2xl  ">
+          <div className="text-white bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] px-8 py-6 flex justify-between ">
+            <div>
+              <div className="text-2xl font-semibold">Welcome</div>
+              <div>What can we help with today?</div>
+            </div>
+            <AiOutlineClose
+              onClick={() => setOpen(false)}
+              className="text-xl cursor-pointer"
+            />
+          </div>
+          <div className="px-8 py-6 bg-white h-[28rem] overflow-y-scroll">
+            {selectedIndices?.map((selectedIndex, i) => {
+              return (
+                <>
+                  <div className="flex justify-end">
+                    <div
+                      key={i}
+                      className="px-6 py-3 mt-1 mb-4 border rounded-l-full rounded-br-full bg-[#363636] text-white  text-right"
+                    >
+                      {questionData[selectedIndex].quest}
+                    </div>
+                  </div>
+
+                  <div
+                    key={i}
+                    className="px-6 py-3 mt-1 mb-4 border rounded-r-2xl rounded-bl-xl bg-[#F4F4F4]  w-[90%]"
+                  >
+                    {questionData[selectedIndex].answer.map((line, index) => {
+                      return <div className="mb-2">{line}</div>;
+                    })}
+                  </div>
+                </>
+              );
+            })}
+            <div className="mb-2 text-center">Popular topics:</div>
+            <div className="w-[90%]">
+              <div>
+                {questionData.map((x, i) => {
+                  return (
+                    <div
+                      key={i}
+                      className="px-6 py-3 mt-1 mb-4 border rounded-full hover:bg-[#363636] hover:text-white cursor-pointer "
+                      onClick={() => handleDivClick(i)}
+                    >
+                      {x.quest}
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="text-[#7B7B7B] space-y-3 text-sm mt-6">
+                <div>
+                  If you need any help, we’re available from{" "}
+                  <span className="font-semibold ">9am-8pm, 7 days</span> a week
+                </div>
+                <div>
+                  Call us on{" "}
+                  <a
+                    href="tel:+91 98488 98488"
+                    className="font-semibold hover:text-black "
+                  >
+                    +91 98488 98488
+                  </a>
+                </div>
+                <div>
+                  Whatsapp us{" "}
+                  <a
+                    href="whatsapp://send?phone=919848898488"
+                    className="font-semibold hover:text-black"
+                  >
+                    +91 98488 98488
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div
+          onClick={() => setOpen(true)}
+          className="w-10 h-10 xl:w-14 xl:h-14 bg-gradient-to-t from-[#00BAB8] to-[#0BF2B3]   text-white  rounded-l-full rounded-tr-full   select-none pt-2 my-auto text-2xl text-center cursor-pointer "
+        >
+          . . .
+        </div>
+      )}
     </div>
   );
 };
