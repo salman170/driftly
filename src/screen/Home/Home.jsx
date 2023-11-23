@@ -456,7 +456,7 @@ const BotPopup = () => {
   return (
     <div className="fixed z-10 bottom-10 right-10">
       {open ? (
-        <div className="w-[25rem] rounded-3xl overflow-hidden shadow-2xl  ">
+        <div className="w-[24rem] rounded-3xl overflow-hidden shadow-2xl bg-white ">
           <div className="text-white bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] px-8 py-6 flex justify-between ">
             <div>
               <div className="text-2xl font-semibold">Welcome</div>
@@ -467,14 +467,18 @@ const BotPopup = () => {
               className="text-xl cursor-pointer"
             />
           </div>
-          <div className="px-8 py-6 bg-white h-[28rem] overflow-y-scroll">
+          <div
+            className={`mx-8 my-6 bg-white ${
+              selectedIndices.length ? "h-[28rem]" : "h-[22rem]"
+            } overflow-y-scroll`}
+          >
             {selectedIndices?.map((selectedIndex, i) => {
               return (
                 <>
                   <div className="flex justify-end">
                     <div
                       key={i}
-                      className="px-6 py-3 mt-1 mb-4 border rounded-l-full rounded-br-full bg-[#363636] text-white  text-right"
+                      className="px-6 py-3 mt-1 mb-4 mr-1 border rounded-l-full rounded-br-full bg-[#363636] text-white  text-right"
                     >
                       {questionData[selectedIndex].quest}
                     </div>
@@ -482,7 +486,7 @@ const BotPopup = () => {
 
                   <div
                     key={i}
-                    className="px-6 py-3 mt-1 mb-4 border rounded-r-2xl rounded-bl-xl bg-[#F4F4F4]  w-[90%]"
+                    className="px-6 py-3 mt-1 mb-4 border rounded-r-[1.5rem] rounded-bl-[1.5rem] bg-[#F4F4F4]  w-[90%]"
                   >
                     {questionData[selectedIndex].answer.map((line, index) => {
                       return <div className="mb-2">{line}</div>;
@@ -492,13 +496,13 @@ const BotPopup = () => {
               );
             })}
             <div className="mb-2 text-center">Popular topics:</div>
-            <div className="w-[90%]">
+            <div className="w-[95%]">
               <div>
                 {questionData.map((x, i) => {
                   return (
                     <div
                       key={i}
-                      className="px-6 py-3 mt-1 mb-4 border rounded-full hover:bg-[#363636] hover:text-white cursor-pointer "
+                      className="px-6 py-3 mt-1 mb-4 border rounded-r-full rounded-bl-full hover:bg-[#363636] hover:text-white cursor-pointer shadow-lg"
                       onClick={() => handleDivClick(i)}
                     >
                       {x.quest}
@@ -530,13 +534,30 @@ const BotPopup = () => {
                   </a>
                 </div>
               </div>
+              {selectedIndices.length ? (
+                <div
+                  className="mt-2 text-sm text-right cursor-pointer text-[#00BAB8] underline underline-offset-2 "
+                  onClick={() => setSelectedIndices([])}
+                >
+                  Clear
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </div>
       ) : (
         <div
           onClick={() => setOpen(true)}
-          className="w-10 h-10 xl:w-14 xl:h-14 bg-gradient-to-t from-[#00BAB8] to-[#0BF2B3]   text-white  rounded-l-full rounded-tr-full   select-none pt-2 my-auto text-2xl text-center cursor-pointer "
+          // onDoubleClick={() => {
+          //   window.scrollTo({
+          //     top: 0,
+          //     behavior: "smooth", // Optional smooth scrolling
+          //   });
+          // }}
+          
+          className="w-10 h-10 xl:w-14 xl:h-14 bg-gradient-to-t from-[#00BAB8] to-[#0BF2B3]   text-white  rounded-l-full rounded-tr-full   select-none pt-2 my-auto text-2xl text-center cursor-pointer   "
         >
           . . .
         </div>
