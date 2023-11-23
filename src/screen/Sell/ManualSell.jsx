@@ -54,21 +54,21 @@ const ManualSell = () => {
               miniStep > 1 && miniStep !== 5 && miniStep !== 8
                 ? "bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3]"
                 : "border border-black bg-white "
-            } `}
+            } ${miniStep > 7 && "opacity-0"} `}
           ></div>
           <div
             className={`w-3 h-3  rounded-full ${
               miniStep > 2 && miniStep !== 6 && miniStep !== 5 && miniStep !== 8
                 ? "bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3]"
                 : "border border-black bg-white"
-            } `}
+            } ${miniStep > 7 && "opacity-0"} `}
           ></div>
           <div
             className={`w-3 h-3  rounded-full ${
               miniStep === 4
                 ? "bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3]"
                 : "border border-black bg-white"
-            } `}
+            } ${miniStep > 4 && "opacity-0"} `}
           ></div>
           <div
             className={`w-3 h-3  rounded-full ${
@@ -96,7 +96,11 @@ const ManualSell = () => {
                 : miniStep === 9 && "h-[0%]"
             } bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] -z-10`}
           ></div>
-          <div className="absolute w-0.5 h-[56.25%] border border-dashed -z-20"></div>
+          <div
+            className={`absolute w-0.5 ${
+              miniStep < 4 ? "h-[56.25%]" : miniStep < 7 ? "h-[37.5%]" : "h-0"
+            } border border-dashed -z-20`}
+          ></div>
         </div>
         <div className="col-span-11 ">
           {miniStep === 1 ? (
