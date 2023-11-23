@@ -1,21 +1,11 @@
 import React, { useState } from "react";
 import Header from "../../others/Header";
 import HeroImage from "../../assets/Sell/Mannual-Select-HeroImage.png";
-import MercedesBenz from "../../assets/Home/MercedesBenz.png";
-import Audi from "../../assets/Home/Audi.png";
-import BMW from "../../assets/Home/BMW.png";
-import LR from "../../assets/Home/LandRover.png";
-import Jeep from "../../assets/Home/Jeep.png";
-import Jaguar from "../../assets/Home/Jaguar.png";
-import Volvo from "../../assets/Home/Volvo.png";
-import Mini from "../../assets/Home/Mini.png";
-import Lexus from "../../assets/Home/Lexus.png";
-import DC from "../../assets/Home/DC.png";
-import Chrysler from "../../assets/Home/Chrysler.png";
-import Nisan from "../../assets/Home/Nisan.png";
+
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import Select from "react-select";
 import ModalSell from "./ModalSell";
+import LogoRender from "../Home/LogoRender";
 
 const ManualSell = () => {
   const [miniStep, setMiniStep] = useState(1);
@@ -141,24 +131,11 @@ const ManualSell = () => {
 };
 
 const StepOneOfOne = ({ setMiniStep }) => {
-  const data = [
-    MercedesBenz,
-    Audi,
-    BMW,
-    LR,
-    Jeep,
-    Jaguar,
-    Volvo,
-    Mini,
-    Lexus,
-    DC,
-    Chrysler,
-    Nisan,
-  ];
+  const [clickedImage, setClickedImage] = useState(null);
 
   return (
-    <>
-      <div className="flex justify-between pt-16">
+    <div className="py-16 ">
+      <div className="flex justify-between ">
         <div>
           <div className="mb-2 text-4xl">Car Details</div>
           <div className="text-xl font-semibold">Select your car brand</div>
@@ -195,18 +172,16 @@ const StepOneOfOne = ({ setMiniStep }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-6 gap-2 pt-10 border-none">
-        {data.map((x, i) => (
-          <div
-            key={i}
-            className={`flex items-center justify-center py-5 cursor-pointer border `}
-          >
-            <img src={x} alt={` ${x}`} className="mx" />
-          </div>
-        ))}
-      </div>
+      <LogoRender
+        clickedImage={clickedImage}
+        setClickedImage={setClickedImage}
+      />
 
-      <div className="flex justify-end py-10">
+      <div
+        className={`flex justify-end pt-2 ${
+          clickedImage ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <div
           className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-10 py-3 cursor-pointer text-white hover:bg-white hover:shadow-xl select-none"
           onClick={() => setMiniStep(2)}
@@ -214,7 +189,7 @@ const StepOneOfOne = ({ setMiniStep }) => {
           PROCEED
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

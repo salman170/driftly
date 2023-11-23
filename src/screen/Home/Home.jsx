@@ -437,11 +437,11 @@ const BotPopup = () => {
     {
       quest: "How does Drively works?",
       answer: [
-        "For Buyers ",
+        "For Buyers: ",
         "1. Browse Online - Sell/Trade tab    ",
         "2. Book online in a click:  Pay a nominal amount and reserve your car.        ",
         "3. Pay at delivery:  Complete the payment and documentation process at the time of delivery and we will initiate the transfer process on your behalf.",
-        "For Seller ",
+        "For Seller: ",
         "1. Tell us about your vehicle - Find car tab    ",
         "2. Verify all your car details and close the deal ",
         "3. Get paid",
