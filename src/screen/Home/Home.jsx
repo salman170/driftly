@@ -202,7 +202,7 @@ export const DCEC = ({ butVisible }) => {
             Driftly Customer Experience Center
           </div>
           <div className="mb-4">
-            Visit nearest Drively customer experience centre to <br />
+            Visit nearest Driftly customer experience centre to <br />
             enjoy free test drives and much more
           </div>
           {butVisible && (
@@ -420,9 +420,9 @@ const BotPopup = () => {
   const [selectedIndices, setSelectedIndices] = useState([]);
   const questionData = [
     {
-      quest: "How to buy a car from Drively?",
+      quest: "How to buy a car from Driftly?",
       answer: [
-        "Buying from Drively is a simple 3 step process- ",
+        "Buying from Driftly is a simple 3 step process- ",
         "1. Choose your car:     Browse through thousands of cars on our website. Find the car that fits your requirements using our dynamic filters. Virtually inspect the features.    ",
         "2. Book online in a click: Pay a nominal amount and reserve your car.        ",
         "3. Pay at delivery:  Complete the payment and documentation process at the time of delivery and we will initiate the transfer process on your behalf.",
@@ -435,7 +435,7 @@ const BotPopup = () => {
       ],
     },
     {
-      quest: "How does Drively works?",
+      quest: "How does Driftly works?",
       answer: [
         "For Buyers: ",
         "1. Browse Online - Sell/Trade tab    ",
@@ -556,7 +556,7 @@ const BotPopup = () => {
           //     behavior: "smooth", // Optional smooth scrolling
           //   });
           // }}
-          
+
           className="w-10 h-10 xl:w-14 xl:h-14 bg-gradient-to-t from-[#00BAB8] to-[#0BF2B3]   text-white  rounded-l-full rounded-tr-full   select-none pt-2 my-auto text-2xl text-center cursor-pointer   "
         >
           . . .
