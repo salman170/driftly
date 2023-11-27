@@ -425,28 +425,28 @@ export const EmailForm = ({ setFormNumber }) => {
               name="fullName"
               id=""
               required
-              className="bg-[#F4F4F4]  px-2 py-2 outline-none w-full rounded-lg"
-              placeholder="Enter Full Name"
+              className="bg-[#F4F4F4]  px-6 py-3 outline-none w-full "
+              placeholder="Enter full name here"
               value={formData.fullName}
               onChange={handleChange}
             />
           </div>
           <div>
-            <div className="mt-4 mb-1 text-sm">Email Address</div>
+            <div className="mt-6 mb-1 text-sm">Email Address</div>
             <input
               type="email"
               name="email"
               id=""
               required
-              className="bg-[#F4F4F4]  px-2 py-2 outline-none w-full rounded-lg"
-              placeholder="Enter Email"
+              className="bg-[#F4F4F4]  px-6 py-3 outline-none w-full "
+              placeholder="Enter email"
               value={formData.email}
               onChange={handleChange}
             />
           </div>
         </div>
         <div>
-          <div className="mt-12 mb-4">
+          <div className="mt-10 mb-4">
             <span>By logging in, I agree to</span>{" "}
             <Link to="/privacy" className="text-[#00BAB8]">
               terms & privacy policy

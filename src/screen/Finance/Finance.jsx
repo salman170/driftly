@@ -48,7 +48,7 @@ const Finance = () => {
                 : " border-2"
             }  cursor-pointer   rounded-r-full rounded-bl-full whitespace-nowrap   hover:shadow-xl`}
           >
-            <span className="text-lg font-semibold ">EMI</span>
+            <span className="text-lg font-semibold ">EMI Calculator</span>
             <div className="text-sm">How much EMI you have to pay?</div>
           </div>
           <div
@@ -81,7 +81,7 @@ const Finance = () => {
 
 const TabOne = () => {
   return (
-    <div className="p-10 mx-auto h-[50vh]">
+    <div className="p-10 mx-auto ">
       <div className="grid grid-cols-2 gap-x-6 gap-y-10">
         <div className="">
           <div className="mb-2 text-xl font-semibold">Car Loan Required</div>
@@ -230,7 +230,7 @@ const TabTwo = () => {
   }, [principalAmount, totalAmount]);
 
   return (
-    <div className="p-10 mx-auto">
+    <div className="p-10 ">
       <div className="grid grid-cols-2 gap-6">
         <div>
           <div className="mb-10">
@@ -354,7 +354,6 @@ const TabTwo = () => {
                 style={{
                   strokeDasharray: "938",
                   strokeDashoffset: `${perCentag}`,
-                  
                 }}
               />
             </svg>
@@ -377,7 +376,109 @@ const TabTwo = () => {
 };
 
 const TabThree = () => {
-  return <div>Form</div>;
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    loanAmount: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevents the default form submission behavior
+    // Add validation logic for email, etc.
+    if (formData.fullName && formData.email) {
+      // setFormNumber(2);
+      // alert("Proceeding...");
+      alert(
+        `Name: ${formData.fullName}   Email: ${formData.email}  Phone: ${formData.phone} Loan Amount: ${formData.loanAmount}`
+      );
+      alert("form submitted successfully!");
+    } else {
+      alert("Please fill in both Full Name and Email.");
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div className="grid grid-cols-2 gap-6 p-10">
+        <div>
+          <div className="mb-1 text-xl font-semibold">Full Name</div>
+          <input
+            type="text"
+            name="fullName"
+            id=""
+            required
+            className="w-full px-6 py-3 bg-white outline-none"
+            placeholder="Enter Full Name"
+            value={formData.fullName}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <div className="mb-1 text-xl font-semibold">Mobile Number</div>
+          <div className="flex px-2 py-2 bg-white ">
+            <div className="px-4 my-auto border-r border-black">+91</div>
+            <div>
+              <input
+                type="tel"
+                name="phone"
+                id=""
+                required
+                pattern="[0-9]{10}"
+                className="bg-[#ffffff] ml-4 px-2 py-1 outline-none"
+                // className="bg-[#F4F4F4] ml-4 px-2 py-1 outline-none invalid:border border-0 border-gray-300  invalid:border-red-500"
+                placeholder="Enter Mobile Number"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="mt-4 mb-1 text-xl font-semibold">Email Address</div>
+          <input
+            type="email"
+            name="email"
+            id=""
+            required
+            className="w-full px-6 py-3 bg-white outline-none"
+            placeholder="Enter Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <div className="mt-4 mb-1 text-xl font-semibold">Loan Amount</div>
+          <input
+            type="text"
+            name="loanAmount"
+            id=""
+            required
+            className="w-full px-6 py-3 bg-white outline-none"
+            placeholder="Enter Model"
+            value={formData.loanAmount}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex items-end mt-4">
+          <button
+            type="submit"
+            className="mt-2 text-center w-full text-xl font-semibold cursor-pointer bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] text-white py-3 px-3 rounded-r-full rounded-bl-full"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  );
 };
 
 export default Finance;
