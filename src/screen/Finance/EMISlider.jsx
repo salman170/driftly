@@ -17,13 +17,8 @@ const EMISlider = ({ MIN, MAX, value, setValue, steps }) => {
       border-radius: 50%;
       border: 2px solid red;
       border-color: #00BAB8;
-      top: -9px;
+      top: -8px;
       background-color: white;
-    }
-
-    .track-1 {
-      background-color: red;
-      z-index: 40;
     }
   `;
 

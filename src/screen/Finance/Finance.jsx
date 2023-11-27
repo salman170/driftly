@@ -27,7 +27,7 @@ const Finance = () => {
           </div>
         </div>
       </section>
-      <section className="container flex gap-6 mx-auto my-16 ">
+      <section className="container flex gap-6 mx-auto my-16 select-none">
         <div className="select-none">
           <div
             onClick={() => setSelected(1)}
@@ -186,6 +186,7 @@ const TabTwo = () => {
   const [value1, setValue1] = useState(initialValue1);
   const [value2, setValue2] = useState(initialValue2);
   const [value3, setValue3] = useState(initialValue3);
+  const [perCentag, setPerCentag] = useState(5.056);
 
   const [monthlyEMI, setMonthlyEMI] = useState(8379);
   const [principalAmount, setPrincipalAmount] = useState(100000);
@@ -205,7 +206,7 @@ const TabTwo = () => {
       (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
 
     return emi;
-  }, [value1, value2, value3,principalAmount]);
+  }, [value1, value2, value3, principalAmount]);
 
   useEffect(() => {
     // Update EMI and other related values when any of the sliders change
@@ -214,7 +215,6 @@ const TabTwo = () => {
     setTotalInterest(emi * value3 * 12 - principalAmount);
     setTotalAmount(principalAmount + totalInterest);
   }, [value1, value2, value3, principalAmount, totalInterest, calculateEMI]);
-  
 
   // Function to reset value to initial state
   const resetValue = () => {
@@ -223,9 +223,15 @@ const TabTwo = () => {
     setValue3(initialValue3);
   };
 
+  useEffect(() => {
+    const am = 938 - (principalAmount / totalAmount) * 938;
+    console.log(principalAmount, totalAmount, am);
+    setPerCentag(am);
+  }, [principalAmount, totalAmount]);
+
   return (
     <div className="p-10 mx-auto">
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-6">
         <div>
           <div className="mb-10">
             <div className="flex items-end justify-between mb-2 ">
@@ -277,7 +283,12 @@ const TabTwo = () => {
             />
           </div>
 
-          <div className="mb-10 text-[#00BAB8] underline underline-offset-2 text-right cursor-pointer" onClick={resetValue}>Rest All</div>
+          <div
+            className="mb-10 text-[#00BAB8] underline underline-offset-2 text-right cursor-pointer"
+            onClick={resetValue}
+          >
+            Refresh
+          </div>
 
           <div className="flex items-end justify-between mb-4 border-b">
             <div className="font-light ">Monthly EMI</div>
@@ -313,6 +324,50 @@ const TabTwo = () => {
                 .toFixed()
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-center ">
+          <div className="flex items-center justify-center bg-[#8e8e8e]  rounded-full lg:w-60 lg:h-60 xl:w-80 xl:h-80 relative">
+            {/* <svg width="100%" height="100%" viewBox="0 0 230 230">
+              {/* <circle cx="115" cy="115" r="80"></circle>
+              <path d="M115,115 L115,5 A110,110 0 0,1 190,35 z"></path>
+            </svg> */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="100%"
+              height="100%"
+            >
+              {/* <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#e91e63" />
+                  <stop offset="100%" stop-color="#673ab7" />
+                </linearGradient>
+              </defs> */}
+              <circle
+                cx="160"
+                cy="160"
+                r="151.3"
+                strokeLinecap="round"
+                className="stroke-[18] fill-none stroke-[#00BAB8]"
+                style={{
+                  strokeDasharray: "938",
+                  strokeDashoffset: `${perCentag}`,
+                  
+                }}
+              />
+            </svg>
+            <div className="bg-[#F4F4F4] rounded-full lg:w-48 lg:h-48 xl:w-72 xl:h-72 absolute  "></div>
+          </div>
+          <div className="flex gap-4 mt-10">
+            <div className="flex items-center justify-center gap-2 ">
+              <div className="w-8 h-4 bg-[#00BAB8] rounded-full"></div>
+              <div>Principal amount</div>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <div className="w-8 h-4 bg-[#8e8e8e] rounded-full"></div>
+              <div>Interest amount</div>
             </div>
           </div>
         </div>
