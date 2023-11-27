@@ -181,7 +181,10 @@ const LogoRender = ({clickedImage,setClickedImage}) => {
             className={`flex items-center justify-center cursor-pointer border p-2 group  overflow-hidden hover:shadow-xl  ${
               x.name === clickedImage ? 'bg-gradient-to-tr select-none to-[#00BAB8] from-[#0BF2B3] via-[#0BF2B3] shadow-xl' : ''
             }`}
-            onClick={() => handleImageClick(x.name)}
+            onClick={() => {
+              handleImageClick(x.name);
+              window.scrollTo(0, 200);
+            }}
          >
             <img src={x.img} alt={` ${x.name}`} className="scale-[0.6] group-hover:scale-90 duration-500" />
           </div>

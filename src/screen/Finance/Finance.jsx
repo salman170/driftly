@@ -6,7 +6,7 @@ import EMISlider from "./EMISlider";
 const Finance = () => {
   const [selected, setSelected] = useState(1);
   return (
-    <>
+    <div className="scroll-smooth">
       <Header />
       <section className="overflow-hidden">
         <div className="relative">
@@ -30,7 +30,10 @@ const Finance = () => {
       <section className="container flex gap-6 mx-auto my-16 select-none">
         <div className="select-none">
           <div
-            onClick={() => setSelected(1)}
+            onClick={() => {
+              setSelected(1);
+              window.scrollTo(0, 200);
+            }}
             className={`px-6 py-3 mb-6 ${
               selected === 1
                 ? "bg-gradient-to-tr from-[#0BF2B3] to-[#00BAB8] text-white shadow-xl"
@@ -41,7 +44,10 @@ const Finance = () => {
             <div className="text-sm">How much loan you are eligible for?</div>
           </div>
           <div
-            onClick={() => setSelected(2)}
+            onClick={() => {
+              setSelected(2);
+              window.scrollTo(0, 200);
+            }}
             className={`px-6 py-3 mb-6 ${
               selected === 2
                 ? "bg-gradient-to-tr from-[#0BF2B3] to-[#00BAB8] text-white shadow-xl"
@@ -52,7 +58,10 @@ const Finance = () => {
             <div className="text-sm">How much EMI you have to pay?</div>
           </div>
           <div
-            onClick={() => setSelected(3)}
+            onClick={() => {
+              setSelected(3);
+              window.scrollTo(0, 200);
+            }}
             className={`px-6 py-3 mb-6 ${
               selected === 3
                 ? "bg-gradient-to-tr from-[#0BF2B3] to-[#00BAB8] text-white shadow-xl"
@@ -75,7 +84,7 @@ const Finance = () => {
           )}
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
@@ -108,7 +117,6 @@ const TabOne = () => {
             <input
               type="text"
               placeholder="Excluding LTA and Medical Allowances"
-              autoFocus
               className=" px-4 py-2.5  border-y border-r border-gray-300 rounded-r-lg bg-opacity-60 bg-[#FFFFFF] placeholder:text-gray-300 outline-none  text-black focus:bg-opacity-100 font-text-xl w-full"
             />
           </div>
@@ -124,7 +132,6 @@ const TabOne = () => {
             <input
               type="text"
               placeholder="Per Month"
-              autoFocus
               className=" px-4 py-2.5  border-y border-r border-gray-300 rounded-r-lg bg-opacity-60 bg-[#FFFFFF] placeholder:text-gray-300 outline-none  text-black focus:bg-opacity-100 font-text-xl w-full"
             />
           </div>
@@ -137,8 +144,7 @@ const TabOne = () => {
             </div>
             <input
               type="text"
-              placeholder=""
-              autoFocus
+              placeholder=" Existing Loan Rate of Interest"
               className=" px-4 py-2.5  border-y border-r border-gray-300 rounded-r-lg bg-opacity-60 bg-[#FFFFFF] placeholder:text-gray-300 outline-none  text-black focus:bg-opacity-100 font-text-xl w-full"
             />
           </div>
@@ -148,7 +154,6 @@ const TabOne = () => {
           <input
             type="text"
             placeholder="Total years"
-            autoFocus
             className=" px-4 py-2.5  border border-gray-300 rounded-lg bg-opacity-60 bg-[#FFFFFF] placeholder:text-gray-300 outline-none  text-black focus:bg-opacity-100 font-text-xl w-full"
           />
         </div>
@@ -214,7 +219,10 @@ const TabTwo = () => {
     setMonthlyEMI(emi.toFixed());
     setTotalInterest(emi * value3 * 12 - principalAmount);
     setTotalAmount(principalAmount + totalInterest);
-  }, [value1, value2, value3, principalAmount, totalInterest, calculateEMI]);
+    const am = 938 - (principalAmount / totalAmount) * 938;
+    setPerCentag(am);
+    
+  }, [value1, value2, value3, principalAmount, totalInterest,totalAmount, calculateEMI]);
 
   // Function to reset value to initial state
   const resetValue = () => {
@@ -223,15 +231,10 @@ const TabTwo = () => {
     setValue3(initialValue3);
   };
 
-  useEffect(() => {
-    const am = 938 - (principalAmount / totalAmount) * 938;
-    console.log(principalAmount, totalAmount, am);
-    setPerCentag(am);
-  }, [principalAmount, totalAmount]);
 
   return (
     <div className="p-10 ">
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid gap-6 xl:grid-cols-2">
         <div>
           <div className="mb-10">
             <div className="flex items-end justify-between mb-2 ">
@@ -248,6 +251,7 @@ const TabTwo = () => {
               setValue={setValue1}
               steps={steps1}
               MAX={MAX1}
+              points={[]}
             />
           </div>
           <div className="mb-10">
@@ -264,6 +268,7 @@ const TabTwo = () => {
               setValue={setValue2}
               steps={steps2}
               MAX={MAX2}
+              points={[]}
             />
           </div>
           <div className="mb-6">
@@ -280,6 +285,11 @@ const TabTwo = () => {
               setValue={setValue3}
               steps={steps3}
               MAX={MAX3}
+              points = {[
+                1,  2,  3,  4,  5,  6,  7,  8,  9, 10,
+               11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+               21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+              ]}
             />
           </div>
 
@@ -327,7 +337,7 @@ const TabTwo = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center ">
+        <div className="flex-col items-center hidden xl:flex ">
           <div className="flex items-center justify-center bg-[#8e8e8e]  rounded-full lg:w-60 lg:h-60 xl:w-80 xl:h-80 relative">
             {/* <svg width="100%" height="100%" viewBox="0 0 230 230">
               {/* <circle cx="115" cy="115" r="80"></circle>
@@ -463,7 +473,7 @@ const TabThree = () => {
             id=""
             required
             className="w-full px-6 py-3 bg-white outline-none"
-            placeholder="Enter Model"
+            placeholder="Enter Loan Amount (₹)"
             value={formData.loanAmount}
             onChange={handleChange}
           />

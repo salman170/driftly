@@ -10,6 +10,7 @@ import ExpAuto from "../../assets/Home/automated.png";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsChevronDown } from "react-icons/bs";
+import Header from "../../others/Header";
 
 const CarCareExtended = () => {
   const [include, setInclude] = useState(true);
@@ -106,6 +107,7 @@ const CarCareExtended = () => {
 
   return (
     <div>
+      <Header />
       {/* Hero Section */}
       <section className="overflow-hidden">
         <div className="relative">

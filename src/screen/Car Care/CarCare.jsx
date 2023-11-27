@@ -145,8 +145,8 @@ const CarCare = () => {
           Find your perfect Driftly car and get it delivered to your doorstep
         </div>
 
-        <div className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-6 py-3 cursor-pointer text-white hover:bg-white mx-auto mt-10">
-          <Link to="/find-a-car">SEARCH CAR </Link>
+        <div className="mt-10 text-center ">
+          <Link to="/find-a-car" className=" px-6 py-3 bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] cursor-pointer text-white uppercase whitespace-nowrap hover:bg-white rounded-r-full rounded-bl-full w-min">SEARCH CAR </Link>
         </div>
 
         <div className="bg-[#F8F8F8]   container mx-auto absolute inset-0 top-10 -z-10  "></div>

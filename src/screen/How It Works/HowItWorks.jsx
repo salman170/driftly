@@ -4,20 +4,20 @@ import VideoThumbnail from "../../assets/How It Works/Videothumbnail.png";
 import ForBuyer from "./ForBuyer";
 import ForSellers from "./ForSellers";
 import CustomerReview from "../Home/CustomerReview";
-import Header  from "../../others/Header";
+import Header from "../../others/Header";
 // import { ImPlay3 } from "react-icons/im";
 
 const HowItWorks = () => {
   const [buyer, setBuyer] = useState(true);
   return (
     <>
-    <Header />
+      <Header />
       {/* Hero Section */}
       <section className="overflow-hidden">
         <div className="relative">
           <img src={HeroImage} alt="" srcSet="" className="w-full" />
-          <div className="container mx-auto absolute  text-white  top-1/3 left-40">
-            <div className="text-5xl mb-4">
+          <div className="container absolute mx-auto text-white top-1/3 left-40">
+            <div className="mb-4 text-5xl">
               Buying & Selling <br /> made easy
             </div>
             <div className="mb-2">
@@ -32,9 +32,12 @@ const HowItWorks = () => {
       {/* Button Section  */}
       <section>
         <div className="flex justify-center my-12">
-          <div className="flex border rounded-full border-gray-300 select-none">
+          <div className="flex border border-gray-300 rounded-full select-none">
             <div
-              onClick={() => setBuyer(true)}
+              onClick={() => {
+                setBuyer(true);
+                window.scrollTo(0, 350);
+              }}
               className={`px-7 rounded-full ${
                 buyer && "bg-gray-900 text-white"
               } py-3  cursor-pointer  duration-200 `}
@@ -42,7 +45,10 @@ const HowItWorks = () => {
               For Buyers
             </div>
             <div
-              onClick={() => setBuyer(false)}
+              onClick={() =>  {
+                setBuyer(false);
+                window.scrollTo(0, 350);
+              }}
               className={`px-7 rounded-full ${
                 !buyer && "bg-gray-900 text-white"
               } py-3  cursor-pointer  duration-200`}
@@ -60,10 +66,10 @@ const HowItWorks = () => {
 
       {/* Video Section  */}
       <section className="overflow-hidden">
-        <div className="mt-20 mb-10 relative">
+        <div className="relative mt-20 mb-10">
           <img src={VideoThumbnail} alt="" srcSet="" className="w-full" />
-          <div className=" lg:absolute top-1/3 left-10 container mx-auto w-full  lg:text-white font-extralight text-black mt-4 lg:mt-0">
-            <div className="text-4xl  mb-4">Ready for your next great car?</div>
+          <div className="container w-full mx-auto mt-4 text-black lg:absolute top-1/3 left-10 lg:text-white font-extralight lg:mt-0">
+            <div className="mb-4 text-4xl">Ready for your next great car?</div>
             <div className="mb-4">
               Search, order, customise and finance your car - <br />
               All from the comfort of your sofa and get a <br /> doorstep
@@ -73,10 +79,10 @@ const HowItWorks = () => {
               Checkout our inventory
             </div>
           </div>
-          {/* <div className="absolute top-1/2  text-3xl w-min rounded-full bg-white bg-opacity-20 text-white flex justify-center items-end border p-4 ">
+          {/* <div className="absolute flex items-end justify-center p-4 text-3xl text-white bg-white border rounded-full top-1/2 w-min bg-opacity-20 ">
             <ImPlay3 />
           </div> */}
-          {/* <div className="absolute  top-1/2 text-8xl w-min rounded-full bg-white bg-opacity-10 text-white ">
+          {/* <div className="absolute text-white bg-white rounded-full top-1/2 text-8xl w-min bg-opacity-10 ">
             <BsPlayCircle />
           </div> */}
         </div>

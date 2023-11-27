@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slider";
 
-const EMISlider = ({ MIN, MAX, value, setValue, steps }) => {
+const EMISlider = ({ MIN, MAX, value, setValue, steps, points }) => {
   const styles = `
     .slider {
       width: 100%;
@@ -20,6 +20,15 @@ const EMISlider = ({ MIN, MAX, value, setValue, steps }) => {
       top: -8px;
       background-color: white;
     }
+    .slider .mark {
+      width: 2px;
+      height: 2pxpx;
+      cursor: pointer;
+      border-radius: 50%;
+      border: 2px solid red;
+      border-color: #00BAB8;
+      background-color: white;
+    }
   `;
 
   return (
@@ -29,6 +38,7 @@ const EMISlider = ({ MIN, MAX, value, setValue, steps }) => {
       <div className="mb-4">
         <Slider
           className="slider "
+          marks={points}
           min={MIN}
           max={MAX}
           step={steps}

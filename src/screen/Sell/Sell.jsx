@@ -50,7 +50,7 @@ const HeroSection = () => {
         /> */}
       <div className="absolute bottom-[24%] left-[8%]  text-white">
         <div className="mb-1 text-4xl font-extralight">Sell Cars</div>
-        <div className="text-6xl font-extralight">Get a real Offer </div>
+        <div className="text-6xl font-extralight">Get a best Offer </div>
         <div className="text-6xl font-extralight">
           in just <span className="font-bold">5 minutes</span>
         </div>
@@ -67,12 +67,12 @@ const HeroSection = () => {
             onChange={(event) => setSearchTerm(event.target.value)}
           />
         </div>
-        <Link to="/select-manual">
+        <Link to="/login">
           <div
             // onClick={handleSearch}
             className="bg-gradient-to-l select-none from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-10 py-4 cursor-pointer text-white hover:bg-white"
           >
-            GET MY OFFER
+            Post an ADD
             {/* <Link to="/find-a-car">GET MY OFFER </Link> */}
           </div>
         </Link>
