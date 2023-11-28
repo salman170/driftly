@@ -13,7 +13,7 @@ const RangeSlider = ({ MIN, MAX, values, setValues,steps }) => {
   .slider .thumb {
     width: 20px;
     height: 20px;
-    cursor: pointer;
+    cursor: grab;
     border-radius: 50%;
     border: 2px solid red;
     border-color:  #00BAB8;
@@ -21,9 +21,26 @@ const RangeSlider = ({ MIN, MAX, values, setValues,steps }) => {
     background-color: white;
   }
 
-  .track-1 {
-    background-color: red;
-    z-index: 40;
+  // .track-1 {
+  //   background-color: red;
+  //   z-index: 40;
+  // }
+
+  .slider .track-0 {
+    width: 100%;
+    height: 4px;
+    background-color: #F4F4F4;
+   
+  }
+  .slider .track-1 {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, #00BAB8, #0BF2B3);
+  }
+  .slider .track-2 {
+    width: 100%;
+    height: 4px;
+    background: #F4F4F4;
   }
   
   `;
@@ -32,7 +49,7 @@ const RangeSlider = ({ MIN, MAX, values, setValues,steps }) => {
     <>
       <style>{styles}</style>
 
-      <div className="mb-4">
+      <div className="pb-4 overflow-hidden">
         <Slider
           className="slider "
           min={MIN}

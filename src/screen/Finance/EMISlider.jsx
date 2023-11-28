@@ -6,14 +6,14 @@ const EMISlider = ({ MIN, MAX, value, setValue, steps, points }) => {
     .slider {
       width: 100%;
       height: 4px;
-      background: linear-gradient(to left, #00BAB8, #0BF2B3);
+     
       margin-top: 20px;
     }
 
     .slider .thumb {
       width: 20px;
       height: 20px;
-      cursor: pointer;
+      cursor: grab;
       border-radius: 50%;
       border: 2px solid red;
       border-color: #00BAB8;
@@ -22,11 +22,23 @@ const EMISlider = ({ MIN, MAX, value, setValue, steps, points }) => {
     }
     .slider .mark {
       width: 2px;
-      height: 2pxpx;
       cursor: pointer;
       border-radius: 50%;
       border: 2px solid red;
       border-color: #00BAB8;
+      // background-color: white;
+      top:1px;
+    }
+    
+    .slider .track-0 {
+      width: 100%;
+      height: 4px;
+      
+      background: linear-gradient(to left, #00BAB8, #0BF2B3);
+    }
+    .slider .track-1 {
+      width: 100%;
+      height: 4px;
       background-color: white;
     }
   `;
@@ -35,10 +47,10 @@ const EMISlider = ({ MIN, MAX, value, setValue, steps, points }) => {
     <>
       <style>{styles}</style>
 
-      <div className="mb-4">
+      <div className="pb-4 overflow-hidden">
         <Slider
           className="slider "
-          marks={points}
+          // marks={points}
           min={MIN}
           max={MAX}
           step={steps}
