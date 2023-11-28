@@ -59,19 +59,19 @@ const HeroSection = () => {
         srcSet=""
         className="w-full h-full"
       /> */}
-      <div className="absolute bottom-[28%] left-[8%]  text-white">
-        <div className="text-6xl font-extralight">The New</div>
-        <div className="text-6xl">Car Feeling</div>
+      <div className="absolute bottom-32 md:bottom-[28%] left-5 md:left-[8%]  text-white">
+        <div className="text-4xl lg:text-6xl font-extralight">The New</div>
+        <div className="text-4xl lg:text-6xl">Car Feeling</div>
         <div className="text-xl">For a price you love</div>
         <div className="my-4 font-extralight">
           Buy and finance refurbished pre-owned cars entirely online
         </div>
-        <div className="flex gap-4">
-          <div className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-6 py-3 cursor-pointer text-white hover:bg-white">
-            <Link to="/find-a-car">FIND YOUR CAR </Link>
+        <div className="flex flex-wrap gap-2 md:gap-4">
+          <div className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap md:uppercase px-6 py-3 cursor-pointer text-white hover:bg-white">
+            <Link to="/find-a-car">Find Your Car </Link>
           </div>
-          <div className="hover:bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-6 py-3 cursor-pointer bg-white text-black hover:text-white">
-            <Link to="/sell"> SELL YOUR CAR </Link>
+          <div className="hover:bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap md:uppercase px-6 py-3 cursor-pointer bg-white text-black hover:text-white">
+            <Link to="/sell"> Sell Your Car </Link>
           </div>
         </div>
       </div>
@@ -81,11 +81,11 @@ const HeroSection = () => {
 
 const DriftlyBenefits = () => {
   return (
-    <div className="container relative py-20 mx-auto">
-      <div className="absolute text-5xl top-16 left-[5%] font-light">
+    <div className="container relative mx-auto ">
+      <div className="absolute text-3xl md:text-5xl top-16 left-[5%] font-light">
         Driftly Benefits
       </div>
-      <div className="mt-4 lg:ml-16">
+      <div className="px-2 pt-20 pb-10 mt-4 md:pb-16 lg:ml-16">
         <DriftyBenefitsSlider />
       </div>
     </div>
@@ -142,7 +142,7 @@ const HDW = () => {
     <section className="overflow-hidden">
       <div className="relative ">
         <img src={VideoThumbnail} alt="" srcSet="" className="w-full" />
-        <div className=" lg:absolute top-1/3 left-[8%] container mx-auto w-full  lg:text-white font-extralight text-black mt-4 lg:mt-0">
+        <div className=" lg:absolute top-1/3 left-[8%] container mx-auto w-full  lg:text-white font-extralight text-black mt-4 lg:mt-0 p-1">
           <div className="mb-4 text-5xl font-light">How Driftly Works</div>
           <div className="mb-6">
             Search, order, customise and finance your <br />
@@ -454,7 +454,7 @@ const BotPopup = () => {
   };
 
   return (
-    <div className="fixed z-10 bottom-10 right-10">
+    <div className="fixed z-10 bottom-5 right-5 md:bottom-10 md:right-10">
       {open ? (
         <div className="w-[24rem] rounded-3xl overflow-hidden shadow-2xl bg-white ">
           <div className="text-white bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] px-8 py-6 flex justify-between ">

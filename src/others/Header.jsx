@@ -138,8 +138,8 @@ const Header = () => {
                 <div>
                   <img
                     className="w-auto h-8"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt="Workflow"
+                    src={require("../assets/Logo/LogoIcon.png")}
+                    alt="Driftly"
                   />
                 </div>
 

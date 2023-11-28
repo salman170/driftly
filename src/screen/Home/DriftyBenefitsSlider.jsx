@@ -138,7 +138,8 @@ export default function DriftyBenefitsSlider() {
               spaceBetween: 5,
             },
             768: {
-              slidesPerView: 2.5,
+              slidesPerView: 2,
+              spaceBetween: 5,
             },
             1024: {
               slidesPerView: 3,
@@ -153,7 +154,7 @@ export default function DriftyBenefitsSlider() {
           className="flex flex-col-reverse py-10 overflow-hidden bg-transparent mySwiper"
         >
            
-          <div className="flex justify-end gap-4 mb-4 mr-10 -mt-10 ">
+          <div className="flex gap-4 mb-4 ml-2 -mt-6 md:-mt-10 md:mr-10 md:justify-end ">
             <div
               ref={navigationPrevRef}
               className=" p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125"

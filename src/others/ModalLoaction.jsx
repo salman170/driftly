@@ -57,15 +57,15 @@ const ModalLoaction = ({ visible, setShowMyModal }) => {
       //   onClick={handleOnClose}
       className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-black bg-opacity-60 backdrop-blur"
     >
-      <div className="relative p-12 m-1 overflow-hidden text-center bg-white select-none lg:w-2/3 rounded-2xl">
-        <div className="pb-10 text-3xl">Select Location</div>
-        <div className="flex flex-wrap justify-center gap-8 ">
+      <div className="relative px-4 py-6 m-1 overflow-hidden text-center bg-white select-none md:p-12 lg:w-2/3 rounded-2xl">
+        <div className="pb-4 text-2xl md:pb-10 md:text-3xl">Select Location</div>
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8 ">
           {data.map((x, i) => {
             return (
               <div key={i} className="" onClick={() => handleClick(x.val)}>
                 <div className="px-2 py-3 lg:px-8 lg:py-6 mb-4 border border-[#D1D1D1] cursor-pointer rounded-xl hover:bg-[#E9E9E9] hover:shadow-lg">
-                  <div className="lg:h-20 ">
-                    <img src={x.img} alt={x.val} srcSet="" className="" />
+                  <div className="flex items-end justify-center item lg:h-20">
+                    <img src={x.img} alt={x.val} srcSet="" className="h-10 md:h-14 lg:h-16" />
                   </div>
                 </div>
                 <div className="text-lg">{x.val}</div>
