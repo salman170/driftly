@@ -145,7 +145,7 @@ const QuickAnswer2 = () => {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {questionsData.map((x, i) => {
           return (
-            <div className="hover:bg-gradient-to-t from-[#00BAB8] to-[#0BF2B3] rounded-lg p-6 shadow-xl border relative cursor-pointer hover:text-white group">
+            <div key={i} className="hover:bg-gradient-to-t from-[#00BAB8] to-[#0BF2B3] rounded-lg p-6 shadow-xl border relative cursor-pointer hover:text-white group">
               <div className="mb-2 text-3xl">
                 {x.title}
                 <br /> {x.title2}

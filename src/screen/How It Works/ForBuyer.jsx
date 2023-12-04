@@ -71,8 +71,8 @@ const ForBuyer = () => {
   return (
     <div >
      
-      <div className="   p-24 relative ">
-        <div className=" lg:flex items-end gap-8 mb-2">
+      <div className="relative p-24 ">
+        <div className="items-end gap-8 mb-2 lg:flex">
           <img src={ForBuyer1} alt="" srcSet="" />
           <div>
             <div className="text-[9rem] text-[#BFBFBF] -mb-10 -ml-4">01</div>
@@ -80,17 +80,17 @@ const ForBuyer = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-x-2 gap-y-12 mb-20 container mx-auto lg:px-24 py-12">
+        <div className="container grid py-12 mx-auto mb-20 lg:grid-cols-2 gap-x-2 gap-y-12 lg:px-24">
           {data[0].map((x, i) => {
             return (
-              <div className="flex gap-4">
+              <div key={i} className="flex gap-4">
                 <div className="w-16">
                   <div className="w-8 h-8 bg-gradient-to-tr from-[#00bbb8] to-[#0cf2b4] rounded-full flex justify-center items-center text-white text-xl pt-1">
                     &#10003;
                   </div>
                 </div>
-                <div key={i}>
-                  <div className="font-bold mb-4">{x.title}</div>
+                <div >
+                  <div className="mb-4 font-bold">{x.title}</div>
                   <div className="mb-2">{x.body}</div>
                   <div className="text-[#00BAB8] underline cursor-pointer underline-offset-2 font-semibold">
                     {x.link}
@@ -100,24 +100,24 @@ const ForBuyer = () => {
             );
           })}
         </div>
-        <div className=" lg:flex items-end gap-8 mb-2 justify-end">
+        <div className="items-end justify-end gap-8 mb-2 lg:flex">
           <div>
             <div className="text-[9rem] text-[#BFBFBF] -mb-10 -ml-4">02</div>
             <div className="text-5xl">Make it Yours</div>
           </div>
           <img src={ForBuyer2} alt="" srcSet="" />
         </div>
-        <div className="grid lg:grid-cols-2 gap-x-2 gap-y-12 mb-20 container mx-auto lg:px-24 pt-12">
+        <div className="container grid pt-12 mx-auto mb-20 lg:grid-cols-2 gap-x-2 gap-y-12 lg:px-24">
           {data[1].map((x, i) => {
             return (
-              <div className="flex gap-4">
+              <div  key={i} className="flex gap-4">
                 <div className="w-16">
                   <div className="w-8 h-8 bg-gradient-to-tr from-[#00bbb8] to-[#0cf2b4] rounded-full flex justify-center items-center text-white text-xl pt-1">
                     &#10003;
                   </div>
                 </div>
-                <div key={i}>
-                  <div className="font-bold mb-4">{x.title}</div>
+                <div>
+                  <div className="mb-4 font-bold">{x.title}</div>
                   <div className="mb-2">{x.body}</div>
                   <div className="text-[#00BAB8] underline cursor-pointer underline-offset-2 font-semibold">
                     {x.link}
@@ -127,17 +127,17 @@ const ForBuyer = () => {
             );
           })}
         </div>
-        <div className=" lg:flex items-end gap-8 ">
+        <div className="items-end gap-8 lg:flex">
           <img src={ForBuyer3} alt="" srcSet="" />
           <div>
             <div className="text-[9rem] text-[#BFBFBF] -mb-10 -ml-4">03</div>
             <div className="text-5xl">Get it Delivered</div>
           </div>
         </div>
-        <div className="grid lg:grid-cols-2 gap-x-2 gap-y-12 container mx-auto lg:px-24 pt-12 ">
+        <div className="container grid pt-12 mx-auto lg:grid-cols-2 gap-x-2 gap-y-12 lg:px-24 ">
           {data[2].map((x, i) => {
             return (
-              <div className="flex gap-4">
+              <div key={i} className="flex gap-4">
                 <div className="w-16">
                   <div className="w-8 h-8 bg-gradient-to-tr from-[#00bbb8] to-[#0cf2b4] rounded-full flex justify-center items-center text-white text-xl pt-1">
                     &#10003;
@@ -149,8 +149,8 @@ const ForBuyer = () => {
                   srcSet=""
                   className="h-min w-min scale-[1.20]"
                 /> */}
-                <div key={i}>
-                  <div className="font-bold mb-4">{x.title}</div>
+                <div >
+                  <div className="mb-4 font-bold">{x.title}</div>
                   <div className="mb-2">{x.body}</div>
                   <div className="text-[#00BAB8] underline cursor-pointer underline-offset-2 font-semibold">
                     {x.link}

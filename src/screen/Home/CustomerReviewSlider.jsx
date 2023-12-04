@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
-import customerReview from "./../../assets/How It Works/CustomerReview1.png"
+import customerReview from "./../../assets/How It Works/CustomerReview1.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -104,7 +104,7 @@ export default function CustomerReviewSlider() {
           modules={[Pagination, Navigation, Autoplay]}
           className="relative overflow-visible customerSwiper"
         >
-          <div className="absolute z-10 flex  gap-4 right-2 md:right-20  -top-16 ">
+          <div className="absolute z-10 hidden gap-4 md:flex right-2 md:right-20 -top-16 ">
             <div
               ref={navigationPrevRef}
               className=" p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125"
@@ -122,14 +122,20 @@ export default function CustomerReviewSlider() {
             return (
               <SwiperSlide
                 key={i}
-                className="relative h-full overflow-hidden border-2   "
+                className="relative h-full overflow-hidden border-2 "
               >
-                <div className=" overflow-hidden bg-[#171614]  duration-200 grid grid-cols-3">
-                  <div className="p-4 my-auto space-y-3 text-left h-full lg:p-6  text-white flex flex-col justify-center ">
-                    <div className="mb-3 lg:text-2xl font-semibold uppercase ml-6">
+                <div className=" overflow-hidden bg-[#171614]  duration-200  grid sm:grid-cols-3">
+                  <img
+                    src={customerReview}
+                    srcSet=""
+                    className="w-full py-6 sm:hidden"
+                    alt=""
+                  />{" "}
+                  <div className="flex flex-col justify-center h-full p-4 my-auto space-y-3 text-left text-white lg:p-6 ">
+                    <div className="px-2 mb-3 font-semibold uppercase md:px-6 lg:text-2xl">
                       " {x.name} "
                     </div>
-                    <div className="flex  gap-4">
+                    <div className="flex gap-4">
                       <div className="w-1.5 round3 bg-gradient-to-tr from-[#00bbb8] to-[#0cf2b4] h-full rounded-full"></div>
                       <div className="pt-4">
                         <span className="font-medium lg:font-bold">
@@ -139,7 +145,7 @@ export default function CustomerReviewSlider() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-span-2">
+                  <div className="hidden col-span-2 sm:block">
                     <img
                       src={customerReview}
                       srcSet=""
@@ -147,7 +153,6 @@ export default function CustomerReviewSlider() {
                       alt=""
                     />
                   </div>
-
                   {/* <div className="p-4 my-auto space-y-3 text-left sm:w-1/2 lg:p-6">
                     <div className="h-0.5 bg-[#1D3A8A] mb-6 group-hover:w-[100%] w-[50%] duration-300"></div>
                     <div className="mb-3 text-xl font-semibold uppercase">

@@ -136,11 +136,13 @@ const Header = () => {
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
+                  <Link to="/">
                   <img
                     className="w-auto h-8"
                     src={require("../assets/Logo/LogoIcon.png")}
                     alt="Driftly"
                   />
+                  </Link>
                 </div>
 
                 <div className="-mr-2">
@@ -151,8 +153,7 @@ const Header = () => {
                   >
                     <span className="sr-only">Close menu</span>
 
-                    {/* Heroicon name: outline/x */}
-
+                 
                     <svg
                       className="w-6 h-6"
                       xmlns="http://www.w3.org/2000/svg"
@@ -172,13 +173,13 @@ const Header = () => {
                 </div>
               </div>
 
-              <div className="mt-6">
+              {/* <div className="mt-6">
                 <nav className="grid gap-y-8">
                   <a
                     href="/"
                     className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
                   >
-                    {/* Heroicon name: outline/chart-bar */}
+                    
 
                     <svg
                       className="flex-shrink-0 h-6 w-6 text-[#ea580c]"
@@ -205,8 +206,7 @@ const Header = () => {
                     href="/"
                     className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
                   >
-                    {/* Heroicon name: outline/cursor-click */}
-
+                  
                     <svg
                       className="flex-shrink-0 h-6 w-6 text-[#ea580c]"
                       xmlns="http://www.w3.org/2000/svg"
@@ -232,7 +232,7 @@ const Header = () => {
                     href="/"
                     className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
                   >
-                    {/* Heroicon name: outline/shield-check */}
+                  
 
                     <svg
                       className="flex-shrink-0 h-6 w-6 text-[#ea580c]"
@@ -259,8 +259,7 @@ const Header = () => {
                     href="/"
                     className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
                   >
-                    {/* Heroicon name: outline/view-grid */}
-
+                   
                     <svg
                       className="flex-shrink-0 h-6 w-6 text-[#ea580c]"
                       xmlns="http://www.w3.org/2000/svg"
@@ -286,7 +285,7 @@ const Header = () => {
                     href="/"
                     className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
                   >
-                    {/* Heroicon name: outline/refresh */}
+                    {/* Heroicon name: outline/refresh
 
                     <svg
                       className="flex-shrink-0 h-6 w-6 text-[#ea580c]"
@@ -309,77 +308,10 @@ const Header = () => {
                     </span>
                   </a>
                 </nav>
-              </div>
+              </div> */}
             </div>
 
-            {/* <div className="px-5 py-6 space-y-6">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="/"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Pricing
-                </a>
-
-                <a
-                  href="/"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Docs
-                </a>
-
-                <a
-                  href="/"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Enterprise
-                </a>
-
-                <a
-                  href="/"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Blog
-                </a>
-
-                <a
-                  href="/contact"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Contact Us
-                </a>
-
-                <a
-                  href="/"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  FAQs
-                </a>
-
-                <a
-                  href="/events"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Events
-                </a>
-              </div>
-
-              <div>
-                <a
-                  href="/"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#ea580c] hover:bg-[#ea580c]"
-                >
-                  Sign up
-                </a>
-
-                <p className="mt-6 text-base font-medium text-center text-gray-500">
-                  Existing customer?
-                  <a href="/" className="text-[#ea580c] hover:text-[#ea580c]">
-                    Sign in
-                  </a>
-                </p>
-              </div>
-            </div> */}
+           
           </div>
         </div>
       </div>

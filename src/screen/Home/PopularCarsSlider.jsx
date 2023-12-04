@@ -51,26 +51,31 @@ export default function PopularCarsSlider() {
             disableOnInteraction: false,
           }}
           breakpoints={{
+            100: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
             640: {
               slidesPerView: 1,
-              spaceBetween: 5,
+              spaceBetween: 10,
             },
             768: {
               slidesPerView: 2,
+              spaceBetween: 20,
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 10,
+              spaceBetween: 20,
             },
             1280: {
-              slidesPerView: 4,
-              spaceBetween: 10,
+              slidesPerView: 3,
+              spaceBetween: 20,
             },
           }}
           modules={[Pagination, Navigation, Autoplay]}
           className="flex flex-col-reverse pt-10 overflow-hidden bg-transparent mySwiper"
         >
-          <div className="flex justify-end gap-4 mb-4 mr-10 -mt-10 ">
+          <div className="justify-end hidden gap-4 mb-4 mr-10 -mt-10 md:flex ">
             <div
               ref={navigationPrevRef}
               className=" p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125"
@@ -89,7 +94,7 @@ export default function PopularCarsSlider() {
           <div className="pb-10 overflow-hidden">
             {data.map((x, i) => {
               return (
-                <SwiperSlide key={i} className="relative ">
+                <SwiperSlide key={i} className="relative flex flex-col items-center" >
                   <div className="flex flex-col justify-center w-full overflow-hidden cursor-pointer h-[24rem]">
                     <img
                       src={x.img}

@@ -1,12 +1,15 @@
 import React, { useRef, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
+// import Header from "../../others/Header";
 
 const Login = () => {
   const [formNumber, setFormNumber] = useState(1);
 
   // const handleOnClose = () => {};
   return (
+    <>
+     {/* <Header /> */}
     <div className="flex items-center justify-center w-full h-screen">
       <div className="flex shadow-xl shadow-[#707070] rounded-3xl">
         <div className="relative">
@@ -32,6 +35,7 @@ const Login = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

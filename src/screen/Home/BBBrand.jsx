@@ -31,10 +31,12 @@ import Tata from "../../assets/BrandsLogo/Tata.png";
 import Toyota from "../../assets/BrandsLogo/Toyota.png";
 import Volkswagen from "../../assets/BrandsLogo/Volkswagen.png";
 import Volvo from "../../assets/BrandsLogo/Volvo.png";
+import { useState } from "react";
 
-const LogoRender = ({clickedImage,setClickedImage}) => {
-  
-  
+const BBBrand = () => {
+  const [clickedImage, setClickedImage] = useState(null);
+  const [full, setFull] = useState(false);
+
   const data = [
     {
       img: AstonMartin,
@@ -165,33 +167,44 @@ const LogoRender = ({clickedImage,setClickedImage}) => {
       name: "Volvo",
     },
   ];
-  
+
   const handleImageClick = (name) => {
     setClickedImage(name);
     // You can perform additional actions based on the clicked image name
-    console.log('Clicked image:', name);
+    console.log("Clicked image:", name);
   };
-  
+
   return (
-    <div>
-      <div className="grid grid-cols-4 gap-2 pt-10 duration-1000 border-none lg:gap-4 lg:grid-cols-10">
-        {data.map((x, i) => (
+    <>
+      <div className="grid grid-cols-2 gap-2 px-10 pt-5 mt-10 duration-1000 border-none md:pt-10 sm:grid-cols-4 lg:gap-4 lg:grid-cols-5">
+        {data.slice(0, full ? data.length : 10).map((x, i) => (
           <div
             key={i}
             className={`flex items-center justify-center cursor-pointer border p-2 group  overflow-hidden hover:shadow-xl  ${
-              x.name === clickedImage ? 'bg-gradient-to-tr select-none to-[#00BAB8] from-[#0BF2B3] via-[#0BF2B3] shadow-xl' : ''
+              x.name === clickedImage
+                ? "bg-gradient-to-tr select-none to-[#00BAB8] from-[#0BF2B3] via-[#0BF2B3] shadow-xl"
+                : ""
             }`}
             onClick={() => {
               handleImageClick(x.name);
-              window.scrollTo(0, 200);
             }}
-         >
-            <img src={x.img} alt={` ${x.name}`} className="scale-[0.6] group-hover:scale-90 duration-500" />
+          >
+            <img
+              src={x.img}
+              alt={` ${x.name}`}
+              className="scale-[0.6] group-hover:scale-[0.8] duration-500"
+            />
           </div>
         ))}
       </div>
-    </div>
+      <div
+        onClick={() => setFull(!full)}
+        className="hover:bg-gradient-to-l select-none from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-12 py-3 cursor-pointer bg-white text-black hover:text-white border border-gray-300 mx-auto mt-10 lg:mt-14"
+      >
+        {full ? "View Less" : "View More"}
+      </div>
+    </>
   );
 };
 
-export default LogoRender;
+export default BBBrand;

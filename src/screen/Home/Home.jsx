@@ -10,36 +10,28 @@ import ExpKey from "../../assets/Home/key.png";
 import ExpArtboard from "../../assets/Home/Artboard.png";
 import ExpAuto from "../../assets/Home/automated.png";
 import ExpArt from "../../assets/Home/Art.png";
-import MercedesBenz from "../../assets/Home/MercedesBenz.png";
-import Audi from "../../assets/Home/Audi.png";
-import BMW from "../../assets/Home/BMW.png";
-import LR from "../../assets/Home/LandRover.png";
-import Jeep from "../../assets/Home/Jeep.png";
-import Jaguar from "../../assets/Home/Jaguar.png";
-import Volvo from "../../assets/Home/Volvo.png";
-import Mini from "../../assets/Home/Mini.png";
-import Lexus from "../../assets/Home/Lexus.png";
-import DC from "../../assets/Home/DC.png";
-import Chrysler from "../../assets/Home/Chrysler.png";
-import Nisan from "../../assets/Home/Nisan.png";
 
 import DriftyBenefitsSlider from "./DriftyBenefitsSlider";
 import PopularCarsSlider from "./PopularCarsSlider";
 import LimitedEditonCarSlider from "./LimitedEditonCarSlider";
 import { AiOutlineClose } from "react-icons/ai";
+import BBBrand from "./BBBrand";
 
 const Home = () => {
   return (
     <div className="">
       <Header />
       <HeroSection />
-      <BotPopup />
+      <div className="hidden md:block">
+        <BotPopup />
+      </div>
       <DriftlyBenefits />
       <HDW />
       <BrowseByLifestyle />
       <LimitedEditions />
       <PopularCars />
-      <BrowseByBrand />
+
+      <BrowseByBrand2 />
       <BrowsebyBodyType />
       <DCEC />
       <CustomerReview />
@@ -50,7 +42,7 @@ const Home = () => {
 const HeroSection = () => {
   return (
     <div
-      className={`h-screen relative bg-no-repeat bg-cover bg-center bg-black`}
+      className={`h-screen relative bg-no-repeat bg-cover bg-right md:bg-center bg-black`}
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
       {/* <img
@@ -82,10 +74,10 @@ const HeroSection = () => {
 const DriftlyBenefits = () => {
   return (
     <div className="container relative mx-auto ">
-      <div className="absolute text-3xl md:text-5xl top-16 left-[5%] font-light">
+      <div className="absolute flex items-center justify-center h-20 px-2 pb-20 mt-10 text-3xl font-light md:h-40 md:text-5xl">
         Driftly Benefits
       </div>
-      <div className="px-2 pt-20 pb-10 mt-4 md:pb-16 lg:ml-16">
+      <div className="px-2 pt-10 pb-10 mt-4 lg:pt-20 md:pb-16 lg:ml-16">
         <DriftyBenefitsSlider />
       </div>
     </div>
@@ -103,10 +95,10 @@ const BrowseByLifestyle = () => {
   ];
   return (
     <div className=" pt-20  bg-[#000000]">
-      <div className="container mx-auto mb-10 text-4xl font-light text-white pl-14">
+      <div className="container px-2 mx-auto mb-10 text-4xl font-light text-white lg:pl-14 lg:text-5xl">
         Browse by Lifestyle
       </div>
-      <div className="container flex justify-center gap-4 mx-auto xl:gap-8 ">
+      <div className="container grid grid-cols-3 gap-2 mx-auto lg:grid-cols-6 ">
         {data.map((x, i) => {
           return (
             <div key={i} className="cursor-pointer group">
@@ -127,7 +119,7 @@ const BrowseByLifestyle = () => {
 const LimitedEditions = () => {
   return (
     <div className=" pt-20  bg-[#000000]">
-      <div className="container pl-16 mx-auto mb-10 text-4xl font-light text-white">
+      <div className="container px-2 mx-auto mb-10 text-4xl font-light text-white lg:text-5xl lg:pl-16 md:text-4xl">
         Limited Editions
       </div>
       <div>
@@ -143,14 +135,17 @@ const HDW = () => {
       <div className="relative ">
         <img src={VideoThumbnail} alt="" srcSet="" className="w-full" />
         <div className=" lg:absolute top-1/3 left-[8%] container mx-auto w-full  lg:text-white font-extralight text-black mt-4 lg:mt-0 p-1">
-          <div className="mb-4 text-5xl font-light">How Driftly Works</div>
+          <div className="mb-4 text-3xl font-light md:text-5xl">
+            How Driftly Works
+          </div>
           <div className="mb-6">
-            Search, order, customise and finance your <br />
-            car - All from the comfort of your sofa and get <br />a doorstep
-            delivery
+            Search, order, customise and finance your{" "}
+            <br className="hidden md:block" />
+            car - All from the comfort of your sofa and get{" "}
+            <br className="hidden md:block" />a doorstep delivery
           </div>
           <Link to="/how-it-works">
-            <div className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-6 py-3 cursor-pointer text-white">
+            <div className="bg-gradient-to-l from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-6 py-3 mb-4 cursor-pointer text-white">
               KNOW MORE
             </div>
           </Link>
@@ -197,7 +192,7 @@ export const DCEC = ({ butVisible }) => {
     <section className="overflow-hidden bg-[#171614]">
       <div className="relative mb-10 ">
         <img src={CustomerExp} alt="" srcSet="" className="w-full" />
-        <div className=" lg:absolute top-1/4 left-[8%] container mx-auto w-full  text-white font-extralight  mt-10 lg:mt-0">
+        <div className=" px-2 lg:absolute top-1/4 left-[8%] container mx-auto w-full  text-white font-extralight  mt-10 lg:mt-0">
           <div className="mb-4 text-4xl">
             Driftly Customer Experience Center
           </div>
@@ -238,41 +233,13 @@ export const DCEC = ({ butVisible }) => {
   );
 };
 
-const BrowseByBrand = () => {
-  const data = [
-    MercedesBenz,
-    Audi,
-    BMW,
-    LR,
-    Jeep,
-    Jaguar,
-    Volvo,
-    Mini,
-    Lexus,
-    DC,
-    Chrysler,
-    Nisan,
-  ];
+const BrowseByBrand2 = () => {
   return (
     <div className="container relative pt-16 mx-auto">
       <div className="absolute mb-10 text-4xl font-light left-[4%]">
         Browse by Brands
       </div>
-      <div className="grid grid-cols-6 mx-10 mt-16 mb-20 border-none">
-        {data.map((x, i) => (
-          <div
-            key={i}
-            className={`flex items-center justify-center py-5 ${
-              i >= 0 && i < 6 ? "border-b" : ""
-            } ${i === 5 || i === 11 ? "" : "border-r"}`}
-          >
-            <img src={x} alt={` ${x}`} className="mx" />
-          </div>
-        ))}
-      </div>
-      <div className="hover:bg-gradient-to-l select-none from-[#00BAB8] to-[#0BF2B3] rounded-r-full rounded-bl-full w-min whitespace-nowrap uppercase px-8 py-3 cursor-pointer bg-white text-black hover:text-white border border-gray-300 mx-auto">
-        View More
-      </div>
+      <BBBrand />
     </div>
   );
 };
@@ -326,11 +293,11 @@ const BrowsebyBodyType = () => {
   ];
 
   return (
-    <div className="container pt-10 mx-auto pb-14">
+    <div className="container pt-10 mx-auto pb-14 ">
       <div className="container pl-16 mx-auto mb-10 text-4xl font-light ">
         Browse by Body type
       </div>
-      <div className="flex overflow-hidden duration-500">
+      <div className="hidden overflow-hidden duration-500 lg:flex">
         {data.map((x, i) => {
           return (
             <div
@@ -396,6 +363,19 @@ const BrowsebyBodyType = () => {
           );
         })}
       </div>
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+        {data.map((x, i) => {
+          return (
+            <div
+              key={i}
+              className="flex flex-col items-center py-4 text-center rounded-r-full rounded-bl-full cursor-pointer hover:shadow hover:text-white hover:bg-gradient-to-t from-[#00BAB8] to-[#0BF2B3]"
+            >
+              <div className="mb-2 text-lg">{x.title}</div>
+              <img src={x.img1} alt="" srcset="" />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -404,7 +384,7 @@ const PopularCars = () => {
   return (
     <div className="py-20 bg-[#F8F8F8] ">
       <div className="container relative mx-auto">
-        <div className="absolute text-4xl font-light left-[4%] -top-4">
+        <div className="container px-2 mx-auto text-4xl font-light lg:text-5xl lg:pl-16 md:text-4xl">
           Popular Cars
         </div>
         <div className="mt-4 lg:ml-14">

@@ -887,7 +887,7 @@ const ColourFilter = () => {
           <img
             src={require("../../assets/Home/otherColor.png")}
             alt=""
-            srcset=""
+            srcSet=""
             className="w-full h-full"
           />
         </div>

@@ -84,16 +84,21 @@ export default function LimitedEditonCarSlider() {
             disableOnInteraction: false,
           }}
           breakpoints={{
+            100: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
             640: {
               slidesPerView: 1,
-              spaceBetween: 5,
+              spaceBetween: 10,
             },
             768: {
               slidesPerView: 2,
+              spaceBetween: 20,
             },
             1024: {
               slidesPerView: 2,
-              spaceBetween: 10,
+              spaceBetween: 20,
             },
             1280: {
               slidesPerView: 3,
@@ -103,7 +108,7 @@ export default function LimitedEditonCarSlider() {
           modules={[Pagination, Navigation, Autoplay]}
           className="container flex flex-col-reverse pt-10 pl-10 pr-2 mx-auto overflow-hidden bg-transparent mySwiper"
         >
-          <div className="flex justify-end gap-4 mb-4 mr-20 -mt-10 ">
+          <div className="justify-end hidden gap-4 mb-4 mr-20 -mt-10 md:flex ">
             <div
               ref={navigationPrevRef}
               className=" p-1.5 sm:p-2 cursor-pointer font-bold text-2xl hover:text-[#0cf2b4] hover:scale-125 text-white"
