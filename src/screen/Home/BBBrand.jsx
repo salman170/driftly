@@ -32,9 +32,10 @@ import Toyota from "../../assets/BrandsLogo/Toyota.png";
 import Volkswagen from "../../assets/BrandsLogo/Volkswagen.png";
 import Volvo from "../../assets/BrandsLogo/Volvo.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const BBBrand = () => {
-  const [clickedImage, setClickedImage] = useState(null);
+  // const [clickedImage, setClickedImage] = useState(null);
   const [full, setFull] = useState(false);
 
   const data = [
@@ -168,11 +169,11 @@ const BBBrand = () => {
     },
   ];
 
-  const handleImageClick = (name) => {
-    setClickedImage(name);
-    // You can perform additional actions based on the clicked image name
-    console.log("Clicked image:", name);
-  };
+  // const handleImageClick = (name) => {
+  //   setClickedImage(name);
+  //   // You can perform additional actions based on the clicked image name
+  //   console.log("Clicked image:", name);
+  // };
 
   return (
     <>
@@ -180,20 +181,15 @@ const BBBrand = () => {
         {data.slice(0, full ? data.length : 10).map((x, i) => (
           <div
             key={i}
-            className={`flex items-center justify-center cursor-pointer border p-2 group  overflow-hidden hover:shadow-xl  ${
-              x.name === clickedImage
-                ? "bg-gradient-to-tr select-none to-[#00BAB8] from-[#0BF2B3] via-[#0BF2B3] shadow-xl"
-                : ""
-            }`}
-            onClick={() => {
-              handleImageClick(x.name);
-            }}
+            className={`flex items-center justify-center cursor-pointer border p-2 group  overflow-hidden hover:shadow-xl hover:bg-gradient-to-tr select-none to-[#00BAB8] from-[#0BF2B3] via-[#0BF2B3]  hover:border-0 `}
           >
-            <img
-              src={x.img}
-              alt={` ${x.name}`}
-              className="scale-[0.6] group-hover:scale-[0.8] duration-500"
-            />
+            <Link to="/find-a-car">
+              <img
+                src={x.img}
+                alt={` ${x.name}`}
+                className="scale-[0.6] group-hover:scale-[0.8] duration-500"
+              />
+            </Link>
           </div>
         ))}
       </div>

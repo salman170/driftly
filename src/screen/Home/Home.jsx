@@ -77,7 +77,7 @@ const DriftlyBenefits = () => {
       <div className="absolute flex items-center justify-center h-20 px-2 pb-20 mt-10 text-3xl font-light md:h-40 md:text-5xl">
         Driftly Benefits
       </div>
-      <div className="px-2 pt-10 pb-10 mt-4 lg:pt-20 md:pb-16 lg:ml-16">
+      <div className="px-2 pt-10 pb-10 mt-4 md:pt-20 md:pb-16 ">
         <DriftyBenefitsSlider />
       </div>
     </div>
@@ -85,13 +85,32 @@ const DriftlyBenefits = () => {
 };
 
 const BrowseByLifestyle = () => {
+ 
   const data = [
-    require("../../assets/Home/Family Friendly.png"),
-    require("../../assets/Home/Daily Commuter.png"),
-    require("../../assets/Home/Style Seeker.png"),
-    require("../../assets/Home/Outdoor Loving.png"),
-    require("../../assets/Home/Value For Money.png"),
-    require("../../assets/Home/Featured Packed.png"),
+    {
+      img: require("../../assets/Home/Family Friendly.png"),
+      title: "FamilyFriendly",
+    },
+    {
+      img: require("../../assets/Home/Daily Commuter.png"),
+      title: "DailyCommuter",
+    },
+    {
+      img: require("../../assets/Home/Style Seeker.png"),
+      title: "StyleSeeker",
+    },
+    {
+      img: require("../../assets/Home/Outdoor Loving.png"),
+      title: "OutdoorLoving",
+    },
+    {
+      img: require("../../assets/Home/Value For Money.png"),
+      title: "ValueForMoney",
+    },
+    {
+      img: require("../../assets/Home/Featured Packed.png"),
+      title: "FeaturedPacked",
+    },
   ];
   return (
     <div className=" pt-20  bg-[#000000]">
@@ -102,12 +121,15 @@ const BrowseByLifestyle = () => {
         {data.map((x, i) => {
           return (
             <div key={i} className="cursor-pointer group">
+              <Link to="/find-a-car" >
+
               <img
-                src={x}
+                src={x.img}
                 alt=""
                 srcSet=""
                 className="duration-200 select-none group-hover:-translate-y-2"
-              />
+              /> 
+              </Link>
             </div>
           );
         })}
@@ -345,6 +367,8 @@ const BrowsebyBodyType = () => {
               >
                 {x.content}
               </div>
+              <Link to="/find-a-car" >
+                
               <div
                 className={`${
                   select === i ? "block   mx-auto  text-sm mt-4 " : "hidden"
@@ -352,6 +376,7 @@ const BrowsebyBodyType = () => {
               >
                 BROWSE
               </div>
+              </Link>
               <div
                 className={`absolute inset-0 -z-10 mx-auto w-[280px] ${
                   select === i
@@ -363,7 +388,7 @@ const BrowsebyBodyType = () => {
           );
         })}
       </div>
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:hidden">
         {data.map((x, i) => {
           return (
             <div
@@ -371,7 +396,7 @@ const BrowsebyBodyType = () => {
               className="flex flex-col items-center py-4 text-center rounded-r-full rounded-bl-full cursor-pointer hover:shadow hover:text-white hover:bg-gradient-to-t from-[#00BAB8] to-[#0BF2B3]"
             >
               <div className="mb-2 text-lg">{x.title}</div>
-              <img src={x.img1} alt="" srcset="" />
+              <img src={x.img1} alt="" srcSet="" />
             </div>
           );
         })}
@@ -537,7 +562,7 @@ const BotPopup = () => {
           //   });
           // }}
 
-          className="w-10 h-10 xl:w-14 xl:h-14 bg-gradient-to-t from-[#00BAB8] to-[#0BF2B3]   text-white  rounded-l-full rounded-tr-full   select-none pt-2 my-auto text-2xl text-center cursor-pointer   "
+          className="w-10 h-10 xl:w-14 xl:h-14 bg-gradient-to-t from-[#00BAB8] to-[#0BF2B3]   text-white  rounded-l-full rounded-tr-full pt-0.5  select-none xl:pt-2 my-auto text-xl xl:text-2xl text-center cursor-pointer   "
         >
           . . .
         </div>
