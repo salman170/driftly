@@ -18,6 +18,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 export default function PopularCarsSlider() {
   const navigationPrevRef = useRef(null);
@@ -95,15 +96,17 @@ export default function PopularCarsSlider() {
             {data.map((x, i) => {
               return (
                 <SwiperSlide key={i} className="relative flex flex-col items-center" >
-                  <div className="flex flex-col justify-center w-full overflow-hidden cursor-pointer h-[24rem]">
+                   <Link to='/car-details'>
+                    <div className="flex flex-col justify-center w-full overflow-hidden cursor-pointer h-[24rem]">
                     <img
                       src={x.img}
                       alt=""
                       srcSet=""
                       className="scale-110 w-min"
-                    />
+                      />
                     <div className="mt-8 text-xl font-semibold ">{x.title}</div>
                   </div>
+                      </Link> 
                 </SwiperSlide>
               );
             })}

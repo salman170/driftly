@@ -17,6 +17,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 export default function LimitedEditonCarSlider() {
   const navigationPrevRef = useRef(null);
@@ -128,7 +129,9 @@ export default function LimitedEditonCarSlider() {
             {data.map((x, i) => {
               return (
                 <SwiperSlide key={i} className="relative pb-4 ">
+                    
                   <div className="flex flex-col justify-center w-full   h-[24rem] group">
+                  <Link to='/car-details'>
                     <img
                       src={x.img}
                       alt=""
@@ -144,6 +147,7 @@ export default function LimitedEditonCarSlider() {
                     <div className="mb-2 text-gray-500 group-hover:text-black">
                       <span>{x.power}</span> | <span>{x.type}</span>
                     </div>
+                  </Link>
                     <div className="flex gap-4 text-gray-500 group-hover:text-black ">
                       <input type="checkbox" name="compareCheckbox" id="" className="transform scale-125 cursor-pointer" />
                       <label htmlFor="compareCheckbox">COMPARE</label>

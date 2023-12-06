@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiFillHeart } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const CarCart = () => {
   const [selectedCars, setSelectedCars] = useState([]);
@@ -168,38 +169,40 @@ const CarCart = () => {
             key={i}
             className="w-[280px] bg-white shadow-lg shadow-gray-300 hover:shadow-2xl hover:shadow-gray-500"
           >
-            <div className="relative">
-              <img src={x.img} alt={x.carName} className="w-full" />
-              <div className="bg-[#00F2B4] px-4 py-2.5 bg-opacity-50 text-white rounded-tl-xl absolute bottom-0 right-0">
-                ₹ {x.price}
-              </div>
-              <AiFillHeart
-                className={`absolute text-2xl top-2 right-2 cursor-pointer ${
-                  isFavorite ? "text-red-500" : "text-white"
-                }`}
-                onClick={() => handleToggleFavorite(i)}
-              />
-            </div>
-            <div className="p-4">
-              <div className="flex items-end justify-between pb-2 ">
-                <div className="text-xl ">{x.carName}</div>
-                <div className="text-sm">EMI : {x.EMI}</div>
-              </div>
-              <div className=" mb-2 text-[#8A8A8A]">{x.detail} </div>
-              <div className=" mb-4 text-[#8A8A8A] font-light text-xs tracking-wider  flex  gap-2">
-                <div className="">{x.year}</div> |
-                <div className="">{x.fuel}</div>| <div>{x.kilometer}km</div>
-              </div>
-              <div className="flex gap-4  text-[#8A8A8A]">
-                <input
-                  type="checkbox"
-                  name="compareCheckbox"
-                  id=""
-                  className="transform scale-125 cursor-pointer"
+            <Link to="/car-details">
+              <div className="relative">
+                <img src={x.img} alt={x.carName} className="w-full" />
+                <div className="bg-[#00F2B4] px-4 py-2.5 bg-opacity-50 text-white rounded-tl-xl absolute bottom-0 right-0">
+                  ₹ {x.price}
+                </div>
+                <AiFillHeart
+                  className={`absolute text-2xl top-2 right-2 cursor-pointer ${
+                    isFavorite ? "text-red-500" : "text-white"
+                  }`}
+                  onClick={() => handleToggleFavorite(i)}
                 />
-                <label htmlFor="compareCheckbox ">COMPARE</label>
               </div>
-            </div>
+              <div className="p-4">
+                <div className="flex items-end justify-between pb-2 ">
+                  <div className="text-xl ">{x.carName}</div>
+                  <div className="text-sm">EMI : {x.EMI}</div>
+                </div>
+                <div className=" mb-2 text-[#8A8A8A]">{x.detail} </div>
+                <div className=" mb-4 text-[#8A8A8A] font-light text-xs tracking-wider  flex  gap-2">
+                  <div className="">{x.year}</div> |
+                  <div className="">{x.fuel}</div>| <div>{x.kilometer}km</div>
+                </div>
+                <div className="flex gap-4  text-[#8A8A8A]">
+                  <input
+                    type="checkbox"
+                    name="compareCheckbox"
+                    id=""
+                    className="transform scale-125 cursor-pointer"
+                  />
+                  <label htmlFor="compareCheckbox ">COMPARE</label>
+                </div>
+              </div>
+            </Link>
           </div>
         );
       })}
