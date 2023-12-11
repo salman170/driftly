@@ -13,6 +13,7 @@ import Finance from './screen/Finance/Finance';
 import Sell from './screen/Sell/Sell';
 import ExperienceCenter from './screen/About/ExperienceCenter';
 import Compare from './screen/Compare/Compare';
+import Dashboard from './screen/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route exact path='/car-care' element={<CarCare />} />
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/about' element={<About />} />
+          <Route exact path='/dashboard' element={<Dashboard />} />
           <Route
             exact
             path='/experience-center'
