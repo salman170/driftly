@@ -1,5 +1,5 @@
 // SidePanel.js
-import React from 'react';
+import React, { useState } from 'react';
 
 const SidePanel = ({ onOptionClick }) => {
   const options = [
@@ -25,8 +25,15 @@ const SidePanel = ({ onOptionClick }) => {
     },
   ];
 
+  const [activeOption, setActiveOption] = useState('My Orders');
+
+  const handleOptionClick = (label) => {
+    onOptionClick(label);
+    setActiveOption(label);
+  };
+
   return (
-    <div className='w-1/4  border'>
+    <div className='w-1/4 border' style={{ minWidth: '200px' }}>
       <div className='flex items-center border p-4'>
         <img
           src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driftly/icons/driftly-dummy-profile-picture.webp'
@@ -40,12 +47,16 @@ const SidePanel = ({ onOptionClick }) => {
       </div>
 
       <div className='p-4 mx-auto'>
-        <ul className=''>
+        <ul>
           {options.map(({ label, iconSrc }) => (
             <li
               key={label}
-              onClick={() => onOptionClick(label)}
-              className='cursor-pointer flex items-center mb-2 text-gray-400 no-underline border p-4 transition-transform transform hover:text-black hover:scale-105'
+              onClick={() => handleOptionClick(label)}
+              className={`cursor-pointer flex items-center mb-2 ${
+                activeOption === label
+                  ? 'text-black transform scale-105'
+                  : 'text-gray-400 hover:text-black hover:scale-105'
+              } no-underline border p-4 transition-transform`}
             >
               <img
                 src={iconSrc}

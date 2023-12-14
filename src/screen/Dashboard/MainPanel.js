@@ -1,53 +1,27 @@
 // MainPanel.js
-import React from 'react';
+import React, { useState } from 'react';
+import CarAlerts from './Car Alerts';
+import MyOrders from './MyOrders';
+import MyPurchases from './MyPurchases';
+import PersonalInformation from './PersonalInformaion';
 
 const MainPanel = ({ selectedOption }) => {
+  const [currentTab, setCurrentTab] = useState('Home');
+
+  const handleTabClick = (tab) => {
+    setCurrentTab(tab);
+  };
+
   const renderContent = () => {
     switch (selectedOption) {
       case 'Car Alerts':
-        return (
-          <>
-            <img
-              src='https://www.techniques-ingenieur.fr/actualite/wp-content/uploads/2015/10/google-doodle1024-1024x300.jpg'
-              alt='Placeholder'
-              className='w-full h-64 object-cover mb-4'
-            />
-            <p className='text-lg'>Car Alerts Side Panel</p>
-          </>
-        );
+        return <CarAlerts />;
       case 'My Orders':
-        return (
-          <div>
-            <img
-              src='https://www.techniques-ingenieur.fr/actualite/wp-content/uploads/2015/10/google-doodle1024-1024x300.jpg'
-              alt='Placeholder'
-              className='w-full h-64 object-cover mb-4'
-            />
-            <p className='text-lg'>My Orders Side Panel</p>
-          </div>
-        );
+        return <MyOrders />;
       case 'My Purchases':
-        return (
-          <div>
-            <img
-              src='https://www.techniques-ingenieur.fr/actualite/wp-content/uploads/2015/10/google-doodle1024-1024x300.jpg'
-              alt='Placeholder'
-              className='w-full h-64 object-cover mb-4'
-            />
-            <p className='text-lg'>My Purchases Side Panel</p>
-          </div>
-        );
+        return <MyPurchases />;
       case 'Personal Information':
-        return (
-          <div>
-            <img
-              src='https://www.techniques-ingenieur.fr/actualite/wp-content/uploads/2015/10/google-doodle1024-1024x300.jpg'
-              alt='Placeholder'
-              className='w-full h-64 object-cover mb-4'
-            />
-            <p className='text-lg'>Personal Information Side Panel</p>
-          </div>
-        );
+        return <PersonalInformation />;
       default:
         return (
           <>
@@ -58,58 +32,39 @@ const MainPanel = ({ selectedOption }) => {
   };
 
   return (
-    <div className='flex-1 p-4'>
-      <Seperator />
-      <h2 className='text-xl font-semibold mb-4'>Main Panel</h2>
+    <div className=''>
+      <Separator currentTab={currentTab} handleTabClick={handleTabClick} />
+
       {renderContent()}
     </div>
   );
 };
 
-const Seperator = () => {
+const Separator = ({ currentTab, handleTabClick }) => {
+  const tabs = ['Home', 'Account', 'Test Drive'];
+
   return (
-    <>
-      <nav class='bg-grey-light w-full rounded-md'>
-        <ol class='list-reset flex'>
-          <li>
-            <a
-              href='#'
-              class='text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600'
+    <nav className='w-full rounded-md p-4'>
+      <div className='flex items-center'>
+        {tabs.map((tab, index) => (
+          <React.Fragment key={index}>
+            {index > 0 && <span className='mx-2 text-gray-500'>&gt;</span>}
+            <button
+              type='button'
+              className={`${
+                currentTab === tab
+                  ? 'text-blue-600 font-semibold transform scale-105'
+                  : 'text-blue-500'
+              } transition duration-150 ease-in-out focus:outline-none text-left`}
+              onClick={() => handleTabClick(tab)}
             >
-              Home
-            </a>
-          </li>
-          <li>
-            <span class='mx-2 text-neutral-500 dark:text-neutral-400'>
-              &gt;
-            </span>
-          </li>
-          <li>
-            <a
-              href='#'
-              class='text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600'
-            >
-              Library
-            </a>
-          </li>
-          <li>
-            <span class='mx-2 text-neutral-500 dark:text-neutral-400'>
-              &gt;
-            </span>
-          </li>
-          <li class='text-neutral-500 dark:text-neutral-400'>Data</li>
-        </ol>
-      </nav>
-    </>
+              {tab}
+            </button>
+          </React.Fragment>
+        ))}
+      </div>
+    </nav>
   );
 };
 
-
-const myOrdersPanel = () => {
-  return (
-    <>
-    
-    </>
-  );
-}
 export default MainPanel;

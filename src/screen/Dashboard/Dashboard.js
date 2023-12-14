@@ -14,7 +14,7 @@ const Dashboard = () => {
   return (
     <>
       <Header />
-      <div className='container mx-auto flex border'>
+      <div className='container mx-auto flex border p-4'>
         <SidePanel onOptionClick={handleOptionClick} />
         <MainPanel selectedOption={selectedOption} />
       </div>
