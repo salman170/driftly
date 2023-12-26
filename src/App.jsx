@@ -20,6 +20,7 @@ import FindACar from "./screen/Find A Car/FindACar";
 import Sell from "./screen/Sell/Sell";
 import ModalLoaction from "./others/ModalLoaction";
 import ManualSell from "./screen/Sell/ManualSell";
+import Dashboard from "./screen/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
           <Route exact path="/compare" element={<Compare />} />
           <Route exact path="/wishlist" element={<Wishlist />} />
           <Route exact path="/accounts" element={<Accounts />} />
+          <Route exact path="/dashboard" element={<Dashboard />} />
           <Route exact path="/*" element={<NotFound />} />
         </Routes>
       </div>
